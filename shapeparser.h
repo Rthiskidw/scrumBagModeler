@@ -10,12 +10,14 @@
 #include <sstream>
 #include "shape.h"
 
-using namespace std;
+class shapeParser
+{
+public:
+    std::string getStringFromFile(std::ifstream &file);
 
-string getStringFromFile(ifstream &file);
+    shapes* getShapePtr(std::string shapeType);
 
-Shape* getShapePtr(string shapeType);
-
-void parseShape(vector<Shape*>& vShapeList);
+    void parseShape(std::vector<shapes*>& vShapeList);
+};
 
 #endif // SHAPEPARSER_H
