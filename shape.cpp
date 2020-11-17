@@ -1,6 +1,6 @@
-#include "shapes.h"
+#include "shape.h"
 
-shapes::shapes()
+Shape::Shape()
 {
 
 }
