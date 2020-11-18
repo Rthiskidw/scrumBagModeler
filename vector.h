@@ -1,5 +1,6 @@
 #ifndef VECTOR_H
 #define VECTOR_H
+<<<<<<< HEAD
 
 #include <algorithm> // std::copy
 using std::copy;
@@ -153,3 +154,7 @@ public:
 }
 
 #endif //VECTOR_H
+=======
+//INsert completed vector
+#endif // VECTOR_H
+>>>>>>> 77ebbbab09594738325cbdc76d2daf0e65ddaa4c
