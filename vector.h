@@ -4,11 +4,8 @@
 #include <algorithm> // std::copy
 #include <iomanip>
 #include <iostream>
-using std::cout;
-using std::copy;
+using namespace std;
 
-namespace myStd
-{
 
 template <class Type>
 class vector
@@ -185,7 +182,6 @@ public:
         return p;
     }
 };
-}
 
 #endif //VECTOR_H
 
