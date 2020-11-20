@@ -1,16 +1,10 @@
 #ifndef VECTOR_H
 #define VECTOR_H
-<<<<<<< HEAD
 
 #include <algorithm> // std::copy
 #include <iomanip>
 #include <iostream>
 using std::cout;
-=======
-<<<<<<< HEAD
-
-#include <algorithm> // std::copy
->>>>>>> 950a50a33096bbdefeed8788399a032b6a6ce4f1
 using std::copy;
 
 namespace myStd
@@ -21,11 +15,7 @@ class vector
 {
     /*
     vector of doubles much like stl vector container
-<<<<<<< HEAD
 
-=======
-    Adding comment to test...
->>>>>>> 950a50a33096bbdefeed8788399a032b6a6ce4f1
     NOTE: elem[n] is vector component n for all n >= 0 AND n < size_v
           size_v = the number of items stored in the vector
           space = the available storage capacity of the vector where size_v <= space
@@ -85,13 +75,9 @@ public:
     {
         reserve(newsize);
         for (int i = size_v; i < newsize; ++i)
-<<<<<<< HEAD
         {
             elem[i] = 0; // initialize new elements
         }
-=======
-            elem[i] = 0; // initialize new elements
->>>>>>> 950a50a33096bbdefeed8788399a032b6a6ce4f1
         size_v = newsize;
     }
 
@@ -108,7 +94,6 @@ public:
 
     void reserve(int newalloc)
     {
-<<<<<<< HEAD
         if (newalloc<=space)
             return; // never decrease allocation
         double* p = new double[newalloc]; // allocate new space
@@ -117,13 +102,6 @@ public:
         delete[ ] elem; // deallocate old space
         elem = p;
         space = newalloc;
-=======
-        // never decrease allocation
-        // allocate new space
-
-        // copy old elements
-        // deallocate old space
->>>>>>> 950a50a33096bbdefeed8788399a032b6a6ce4f1
     }
 
     using iterator = Type *;
@@ -157,7 +135,6 @@ public:
         return &elem[size_v];
     }
 
-<<<<<<< HEAD
     iterator insert(iterator p, const double &val) // insert a new element val before p
     {
         //make sure we have space
@@ -195,18 +172,6 @@ public:
         size_v++;//add 1 to size for the data you added to the list.
 
      return p;
-=======
-    iterator insert(iterator p, const Type &val) // insert a new element val before p
-    {
-        // make sure we have space
-
-        // the place to put value
-
-        // copy element one position to the right
-        // insert value
-
-        return nullptr; // temp remove & replace
->>>>>>> 950a50a33096bbdefeed8788399a032b6a6ce4f1
     }
 
     iterator erase(iterator p) // remove element pointed to by p
@@ -215,22 +180,13 @@ public:
             return p;
         for (iterator pos = p + 1; pos != end(); ++pos)
             *(pos - 1) = *pos; // copy element one position to the left
-<<<<<<< HEAD
         delete (end() - 1);
-=======
-        //delete (end() - 1);
->>>>>>> 950a50a33096bbdefeed8788399a032b6a6ce4f1
         --size_v;
         return p;
     }
 };
 }
 
-<<<<<<< HEAD
-=======
 #endif //VECTOR_H
-=======
-//INsert completed vector
->>>>>>> 950a50a33096bbdefeed8788399a032b6a6ce4f1
-#endif // VECTOR_H
->>>>>>> 77ebbbab09594738325cbdc76d2daf0e65ddaa4c
+
+
