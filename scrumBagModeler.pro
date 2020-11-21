@@ -12,12 +12,14 @@ SOURCES += \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
+    qtconversions.cpp \
     shape.cpp \
     shapeparser.cpp
 
 HEADERS += \
     login.h \
     mainwindow.h \
+    qtconversions.h \
     shape.h \
     shapeparser.h \
     vector.h

@@ -1,6 +1,8 @@
 #ifndef SHAPEPARSER_H
 #define SHAPEPARSER_H
 
+#include "shape.h"
+#include "qtconversions.h"
 #include <iostream>
 #include <string>
 #include <ios>
@@ -8,16 +10,12 @@
 #include <fstream>
 #include <vector>
 #include <sstream>
-#include "shape.h"
 
-class shapeParser
-{
-public:
-    std::string getStringFromFile(std::ifstream &file);
 
-    shapes* getShapePtr(std::string shapeType);
+std::string getStringFromFile(std::ifstream &file);
 
-    void parseShape(std::vector<shapes*>& vShapeList);
-};
+Shapes* getShapePtr(std::string shapeType);
+
+void parseShape(std::vector<Shapes*>& vShapeList);
 
 #endif // SHAPEPARSER_H
