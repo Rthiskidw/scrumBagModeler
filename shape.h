@@ -253,6 +253,7 @@ using namespace std;
 
 #include "vector.h"
 const int MAX_NUMBER_OF_POINTS = 5;     // Refer to Polyline Class.
+const int DEFAULT_VERTICES = 8;         // Refer to Polygon Class
 
 
 class Shapes : public QPainter
@@ -362,19 +363,31 @@ class Polygon : public Shapes
 {
 private:
 
-    QPoint point_side;
-    QPoint point_angle;
-    QPoint point_length;
-
+    Shapes_Vector<QPoint> vertVect;
+    QPoint vertsArray[DEFAULT_VERTICES];
+    int     numVerts;
 
 public:
-    Polygon(QPaintDevice* device = nullptr, int id = -1);
 
-    virtual ~Polygon() override {};
+    Polygon(QPaintDevice* dev = nullptr, int id = -1);
 
-    void set_points(const QPoint& point_side, const QPoint& point_angle, const QPoint& point_length);
+    ~Polygon() override {}
 
-    void draw(QPaintDevice *device) override;
+    virtual void draw(QPaintDevice *dev) override;
+
+    virtual void move(int x, int y, int vertex) override;
+
+    double area();
+
+    double perimeter();
+
+    void setNumVertices(int numVertices);
+
+    int getNumVertices()const;
+
+    void addVertex(const QPoint& vertex);
+
+    Shapes_Vector<QPoint>& getVertices();
 };
 
 

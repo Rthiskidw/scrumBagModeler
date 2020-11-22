@@ -8,7 +8,7 @@ using namespace std;
 
 
 template <class Type>
-class vector
+class Shapes_Vector
 {
     /*
     vector of doubles much like stl vector container
@@ -23,20 +23,20 @@ class vector
     Type *elem; // pointer to the elements (or 0)
     int space;    // number of elements plus number of free slots
 public:
-    vector() : size_v{0}, elem{nullptr}, space{0} {} // default constructor
+    Shapes_Vector() : size_v{0}, elem{nullptr}, space{0} {} // default constructor
 
-    explicit vector(int s) : size_v{s}, elem{new Type[s]}, space{s} // alternate constructor
+    explicit Shapes_Vector(int s) : size_v{s}, elem{new Type[s]}, space{s} // alternate constructor
     {
         for (int i = 0; i < size_v; ++i)
             elem[i] = 0; // elements are initialized
     }
 
-    vector(const vector &src) : size_v{src.size_v}, elem{new Type[src.size_v]}, space{src.space} // copy constructor
+    Shapes_Vector(const Shapes_Vector &src) : size_v{src.size_v}, elem{new Type[src.size_v]}, space{src.space} // copy constructor
     {
         copy(src.elem, src.elem + size_v, elem); // copy elements - std::copy() algorithm
     }
 
-    vector &operator=(const vector &src) // copy assignment
+    Shapes_Vector &operator=(const Shapes_Vector &src) // copy assignment
     {
         Type *p = new Type[src.size_v];       // allocate new space
         copy(src.elem, src.elem + src.size_v, p); // copy elements - std::copy() algorithm
@@ -46,7 +46,7 @@ public:
         return *this;  // return a self-reference
     }
 
-    ~vector() {
+    ~Shapes_Vector() {
         delete[] elem; // destructor
     }
 
@@ -180,6 +180,13 @@ public:
         delete (end() - 1);
         --size_v;
         return p;
+    }
+
+
+    void set(int index, const Type& stuff)
+    {
+        if(index < space)
+            elem[index] = stuff;
     }
 };
 
