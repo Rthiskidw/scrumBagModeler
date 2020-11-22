@@ -93,7 +93,7 @@ public:
     {
         if (newalloc<=space)
             return; // never decrease allocation
-        double* p = new double[newalloc]; // allocate new space
+        Type* p = new Type[newalloc]; // allocate new space
         for (int i=0; i<size_v; ++i)
             p[i]=elem[i]; // copy old elements
         delete[ ] elem; // deallocate old space
