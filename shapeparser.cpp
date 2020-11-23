@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 #include "shapeparser.h"
 #include <vector>
+=======
+#include "shapeParser.h"
+>>>>>>> f2ff9fffe2932f4b1b788669f30656961dd509d2
 
 string getStringFromFile(ifstream &file)
 {
@@ -11,6 +15,7 @@ string getStringFromFile(ifstream &file)
     return temp;
 }
 
+<<<<<<< HEAD
 Shapes* getShapePtr(string shapeType, string color, int penWidth, string penStyle, string capStyle,
                     string joinStyle, string brushColor, string brushStyle, int tempNumDimensions, int *tempDimensions)
 {
@@ -79,13 +84,54 @@ Shapes* getShapePtr(string shapeType, string color, int penWidth, string penStyl
         QString textString =QString::fromStdString(penStyle);
 
         shapePtr = new Text(colorConversion(color), textString, font, QPoint(tempDimensions[0], tempDimensions[1]), alignmentConversion(capStyle), tempDimensions[2], tempDimensions[3] );
+=======
+Shape* getShapePtr(string shapeType)
+{
+    Shape* shapePtr = nullptr;
+
+    if(shapeType == SHAPE_LIST[LINE])
+    {
+        shapePtr = new Line();
+    }
+    else if(shapeType == SHAPE_LIST[POLYLINE])
+    {
+        shapePtr = new Polyline();
+    }
+    else if(shapeType == SHAPE_LIST[POLYGON])
+    {
+        shapePtr = new Polygon();
+    }
+    else if(shapeType == SHAPE_LIST[RECTANGLE])
+    {
+        shapePtr = new Rectangle();
+    }
+    else if(shapeType == SHAPE_LIST[SQUARE])
+    {
+        shapePtr = new Square();
+    }
+    else if(shapeType == SHAPE_LIST[ELLIPSE])
+    {
+        shapePtr = new Ellipse();
+    }
+    else if(shapeType == SHAPE_LIST[CIRCLE])
+    {
+        shapePtr = new Circle();
+    }
+    else if(shapeType == SHAPE_LIST[TEXT])
+    {
+        shapePtr = new Text();
+>>>>>>> f2ff9fffe2932f4b1b788669f30656961dd509d2
     }
 
 
     return shapePtr;
 }
 
+<<<<<<< HEAD
 void parseShape(std::vector<Shapes*>& vShapeList)
+=======
+void parseShape(vector<Shape*>& vShapeList)
+>>>>>>> f2ff9fffe2932f4b1b788669f30656961dd509d2
 {
     int    tempId = 0;
     int    tempNumDimensions = 0;
@@ -93,7 +139,11 @@ void parseShape(std::vector<Shapes*>& vShapeList)
     string dimensionsString;
 
     ifstream dataFile;
+<<<<<<< HEAD
     dataFile.open("shapes.txt");
+=======
+    dataFile.open("Shapes");
+>>>>>>> f2ff9fffe2932f4b1b788669f30656961dd509d2
 
     while(dataFile)
     {
@@ -103,9 +153,18 @@ void parseShape(std::vector<Shapes*>& vShapeList)
 
         dimensionsString = getStringFromFile(dataFile);
 
+<<<<<<< HEAD
         int dimensions;
 
         std::vector<int> vDimensions;
+=======
+        Shape *shapePtr = nullptr;
+        shapePtr = getShapePtr(tempName);
+
+        int dimensions;
+
+        vector<int> vDimensions;
+>>>>>>> f2ff9fffe2932f4b1b788669f30656961dd509d2
 
         istringstream buffer(dimensionsString);
 
@@ -113,12 +172,18 @@ void parseShape(std::vector<Shapes*>& vShapeList)
         {
             vDimensions.push_back(dimensions);
 
+<<<<<<< HEAD
             if((buffer >> std::ws).peek() == ',')
+=======
+            char cTemp = buffer.peek();
+            if(cTemp == ",")
+>>>>>>> f2ff9fffe2932f4b1b788669f30656961dd509d2
             {
                 buffer.ignore();
             }
         }
 
+<<<<<<< HEAD
         int *tempDimensions;
         tempDimensions = new int[vDimensions.size()];
 
@@ -171,12 +236,154 @@ void parseShape(std::vector<Shapes*>& vShapeList)
                                    brushColor, brushStyle, tempNumDimensions, tempDimensions);
         }
         shapePtr->set_id(tempId);
+=======
+        tempNumDimensions = vDimensions.size();
+
+        shapePtr ->setInfo(tempId, tempName, tempNumDimensions, vDimensions);
+
+        QPen pen;
+
+        string color = getStringFromFile(dataFile);
+        int penWidth = stoi(getStringFromFile(dataFile));
+        string penStyle = getStringFromFile(dataFile);
+        string capStyle = getStringFromFile(dataFile);
+        string joinStyle = getStringFromFile(dataFile);
+
+        pen.setColor(QColor(color.c_str()));
+        pen.setWidth(penWidth);
+        pen.setStyle(penStyleConversion(penStyle));
+        pen.setCapStyle(penCapConversion(capStyle));
+        pen.setJoinStyle(penJoinConversion(joinStyle));
+
+        shapePtr->setPen(pen);
+
+        if(tempName != "Line" && tempName != "Polyline")
+        {
+            Qbrush brush;
+
+            string brushColor = getStringFromFile(dataFile);
+            string brushStyle = getStringFromFile(dataFile);
+
+            brush.setColor(QColor(brushColor.c_str()));
+            brush.setStyle(brushStyleConversion(brushStyle));
+
+            shapePtr-> setBrush(brush);
+        }
+>>>>>>> f2ff9fffe2932f4b1b788669f30656961dd509d2
 
         vShapeList.push_back(shapePtr);
 
         dataFile.ignore(numeric_limits<streamsize>::max(), '\n');
     }
+<<<<<<< HEAD
 
     dataFile.close();
 }
 
+=======
+}
+
+Qt::PenStyle penStyleConversion(string style)
+{
+    Qt::PenStyle tempStyle;
+
+    if(style == "NoPen")
+    {
+        tempStyle = Qt::NoPen;
+    }
+    else if(style == "SolidLine")
+    {
+        tempStyle = Qt::SolidLIne;
+    }
+    else if(style == "DashLine")
+    {
+        tempStyle = Qt::DashLine;
+    }
+    else if(style == "DotLine")
+    {
+        tempStyle = Qt::DotLine;
+    }
+    else if(style == "DashDotLine")
+    {
+        tempStyle = Qt::DashDotLine(3);
+    }
+    else if(style == "DashDotDotLine")
+    {
+        tempStyle = Qt::DashDotDotLine;
+    }
+
+    return tempStyle;
+}
+
+Qt::PenCapStyle penStyleConversion(string capStyle)
+{
+    Qt::PenCapStyle tempCap;
+
+    if(capStyle == "FlatCap")
+    {
+        tempCap = Qt::FlatCap;
+    }
+    else if(capStyle == "SquareCap")
+    {
+        tempCap = Qt::SquareCap;
+    }
+    else if(capStyle == "RoundCap")
+    {
+        tempCap = Qt::RoundCap;
+    }
+
+    return tempCap;
+}
+
+Qt::PenJoinStyle penJoinConversion(string joinStyle)
+{
+    Qt::PenJoinStyle tempJoin;
+
+    if(joinStyle == "MiterJoin")
+    {
+        tempJoin = Qt::MilterJoin;
+    }
+    else if(joinStyle == "BevelJoin")
+    {
+        tempJoin = Qt::BevelJoin;
+    }
+    else if(joinStyle == "RoundJoin")
+    {
+        tempJoin = Qt::RoundJoin;
+    }
+    else if(joinStyle == "SvgMiterJoin")
+    {
+        tempJoin = Qt::SvgMiterJoin;
+    }
+
+    return tempJoin;
+}
+
+Qt::BrushStyle brushStyleConversion(string brushStyle)
+{
+    Qt::BrushStyle tempBrush;
+
+    if(brushStyle == "SolidPattern")
+    {
+        tempBrush = Qt::SolidPattern;
+    }
+    else if(brushStyle == "VerPattern")
+    {
+        tempBrush = Qt::VerPattern;
+    }
+    else if(brushStyle == "HorPattern")
+    {
+        tempBrush = Qt::HorPattern;
+    }
+    else if(brushStyle == "NoBrush")
+    {
+        tempBrush = Qt::NoBrush;
+    }
+    else if(brushStyle == "SolidPattern")
+    {
+        tempBrush = Qt::SolidPattern;
+    }
+
+    return tempBrush;
+}
+>>>>>>> f2ff9fffe2932f4b1b788669f30656961dd509d2
