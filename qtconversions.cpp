@@ -103,3 +103,88 @@ Qt::BrushStyle brushStyleConversion(string brushStyle)
 
     return tempBrush;
 }
+
+Qt::GlobalColor colorConversion(string color)
+{
+    Qt::GlobalColor tempColor;
+
+    if(color == "blue")
+    {
+        tempColor = Qt::blue;
+    }
+    else if(color == "green")
+    {
+        tempColor = Qt::green;
+    }
+    else if(color == "cyan")
+    {
+        tempColor = Qt::cyan;
+    }
+    else if(color == "red")
+    {
+        tempColor = Qt::red;
+    }
+    else if(color == "black")
+    {
+        tempColor = Qt::black;
+    }
+
+    return tempColor;
+}
+
+Qt::AlignmentFlag alignmentConversion(string align)
+{
+    Qt::AlignmentFlag tempFlag;
+    if(align == "AlignLeft")
+    {
+        tempFlag = Qt::AlignLeft;
+    }
+    else if(align == "AlignCenter")
+    {
+        tempFlag = Qt::AlignCenter;
+    }
+    else if(align == "AlignRight")
+    {
+        tempFlag = Qt::AlignRight;
+    }
+    return tempFlag;
+}
+
+QFont::Weight fontWeightConversion(string fontWeight)
+{
+    QFont::Weight tempWeight;
+    if(fontWeight == "Thin")
+    {
+        tempWeight = QFont::Thin;
+    }
+    else if(fontWeight == "Normal")
+    {
+        tempWeight = QFont::Normal;
+    }
+    else if(fontWeight == "Bold")
+    {
+        tempWeight = QFont::Bold;
+    }
+
+    return tempWeight;
+}
+
+QFont::Style fontStyleConversion(string fontStyle)
+{
+    QFont::Style tempStyle;
+    if(fontStyle == "SquareCap")
+    {
+        tempStyle = QFont::StyleNormal;
+    }
+    else if(fontStyle == "FlatCap")
+    {
+        tempStyle = QFont::StyleItalic;
+    }
+    else if(fontStyle == "RoundCap")
+    {
+        tempStyle = QFont::StyleOblique;
+    }
+
+    return tempStyle;
+}
+

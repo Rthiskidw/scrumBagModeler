@@ -12,4 +12,12 @@ Qt::PenJoinStyle penJoinConversion(string joinStyle);
 
 Qt::BrushStyle brushStyleConversion(string brushStyle);
 
+Qt::GlobalColor colorConversion(string color);
+
+Qt::AlignmentFlag alignmentConversion(string align);
+
+QFont::Weight fontWeightConversion(string fontWeight);
+
+QFont::Style fontStyleConversion(string fontStyle);
+
 #endif // QTCONVERSIONS_H
