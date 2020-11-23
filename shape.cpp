@@ -1,7 +1,6 @@
-<<<<<<< HEAD
+
 #include "shape.h"
-=======
->>>>>>> 7f11dab43727551713fbabb647bd679b5165bbe6
+
 
 /* shape.cpp */
 
@@ -792,7 +791,7 @@ void Text::set_text_box_height(int setHeight)
 
 // ******--> { MOVE } <--****** //
 
-void Text::move(int x, int y, int na)
+void Text::move(int x, int y, int a)
 {
     QPoint temp(x,y);
     location = temp;
