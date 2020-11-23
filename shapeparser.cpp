@@ -1,6 +1,8 @@
 #include "shapeparser.h"
 #include <vector>
 
+//!Gets a single string from the input file and extracts the useful information
+//! Retruns this information as a string
 string getStringFromFile(ifstream &file)
 {
     string temp;
@@ -11,6 +13,8 @@ string getStringFromFile(ifstream &file)
     return temp;
 }
 
+//! Gets a pointer to a new polymorphic shape depending on the string passed in
+//! Initializes the new shape with the data passed in the parameters
 Shapes* getShapePtr(string shapeType, string color, int penWidth, string penStyle, string capStyle,
                     string joinStyle, string brushColor, string brushStyle, int tempNumDimensions, int *tempDimensions)
 {
@@ -26,12 +30,14 @@ Shapes* getShapePtr(string shapeType, string color, int penWidth, string penStyl
     }
     else if(shapeType == "Polyline")
     {
+        //Creats an array of QPoints
         QPoint *values;
         values = new QPoint[tempNumDimensions / 2];
         for(int index = 0; index < tempNumDimensions/2; index++)
         {
             values[index] = QPoint(tempDimensions[index], tempDimensions[index + 1]);
         }
+
         shapePtr = new Polyline(colorConversion(color), penStyleConversion(penStyle), penCapConversion(capStyle), penJoinConversion(joinStyle),
                                 colorConversion(brushColor), brushStyleConversion(brushStyle), (tempNumDimensions/2), values);
         shapePtr->set_shape(Shapes::ShapeType::Polyline);
@@ -72,16 +78,19 @@ Shapes* getShapePtr(string shapeType, string color, int penWidth, string penStyl
     }
     else if(shapeType == "Text")
     {
+        //initializes a Qfont, sets the style and weight and family
+        //and is passed to set the font of the shape
         QFont font;
         font.setStyle(fontStyleConversion(brushColor));
         font.setWeight(fontWeightConversion(brushStyle));
         font.setFamily(joinStyle.c_str());
-        QString textString =QString::fromStdString(penStyle);
+        //converts string to QString
+        QString textString = QString::fromStdString(penStyle);
 
-        shapePtr = new Text(colorConversion(color), textString, font, QPoint(tempDimensions[0], tempDimensions[1]), alignmentConversion(capStyle), tempDimensions[2], tempDimensions[3] );
+        shapePtr = new Text(colorConversion(color), textString, font, QPoint(tempDimensions[0], tempDimensions[1]),
+                            alignmentConversion(capStyle), tempDimensions[2], tempDimensions[3] );
+        shapePtr->set_shape(Shapes::ShapeType::Text);
     }
-
-
     return shapePtr;
 }
 
@@ -140,11 +149,6 @@ void parseShape(std::vector<Shapes*>& vShapeList)
             string textFamily = getStringFromFile(dataFile);
             string textFontStyle  = getStringFromFile(dataFile);
             string fontWeight = getStringFromFile(dataFile);
-
-            QFont font;
-            font.setWeight(23);
-            font.setItalic(5);
-
 
             shapePtr = getShapePtr(tempName, textColor, textPointSize, textString, textAlignment, textFamily,
                                    textFontStyle, fontWeight, tempNumDimensions, tempDimensions);
