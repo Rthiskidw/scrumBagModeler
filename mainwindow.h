@@ -17,6 +17,7 @@ public:
 
 private slots:
     void on_actionLogin_triggered();
+    void on_actionContact_Us_triggered();
 
 private:
     Ui::MainWindow *ui;
