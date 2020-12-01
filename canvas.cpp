@@ -15,13 +15,9 @@ canvas::canvas(QWidget *parent)
 void canvas::paintEvent(QPaintEvent *)
 {
     QPainter painter(this);
-
-    //drawing line onto canvas
     QPen paintpen(Qt::black);
     paintpen.setWidth(6);
     painter.drawLine(10,10,100,100);
-
-
 
     for ( Shapes* shape : currentShapes)
     {
