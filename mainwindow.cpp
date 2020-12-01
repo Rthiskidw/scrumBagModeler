@@ -4,7 +4,7 @@
 #include "contactus.h"
 #include "shapeparser.h"
 #include "canvas.h"
-class canvas;
+//class canvas;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
