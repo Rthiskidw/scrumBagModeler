@@ -45,3 +45,22 @@ void MainWindow::on_polygon_button_clicked()
 {
 
 }
+
+void MainWindow::on_circle_button_clicked()
+{
+
+}
+
+void MainWindow::on_ellipse_button_clicked()
+{
+
+}
+
+void MainWindow::on_rectangle_button_clicked()
+{
+
+}
+void MainWindow::on_square_button_clicked()
+{
+
+}

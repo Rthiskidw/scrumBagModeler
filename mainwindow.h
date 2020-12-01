@@ -30,6 +30,14 @@ private slots:
 
     void on_polygon_button_clicked();
 
+    void on_circle_button_clicked();
+
+    void on_ellipse_button_clicked();
+
+    void on_rectangle_button_clicked();
+
+    void on_square_button_clicked();
+
 private:
     Ui::MainWindow *ui;
     QComboBox *shapeComboBox;
