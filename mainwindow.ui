@@ -14,20 +14,13 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="canvas" name="widget" native="true">
+   <widget class="canvas" name="canvas" native="true">
     <property name="geometry">
      <rect>
-<<<<<<< HEAD
-      <x>200</x>
-      <y>0</y>
-      <width>371</width>
-      <height>331</height>
-=======
       <x>220</x>
       <y>50</y>
       <width>741</width>
       <height>561</height>
->>>>>>> 5047d32539febbd772ff99c0798d4a70252595c9
      </rect>
     </property>
     <property name="autoFillBackground">
@@ -700,7 +693,7 @@
      <x>0</x>
      <y>0</y>
      <width>958</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">

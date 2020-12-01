@@ -16,6 +16,7 @@ class canvas : public QWidget
 public:
     explicit canvas(QWidget *parent = nullptr);
     void setShapeVector(const Shapes_Vector<Shapes*> v);
+    void gettingVectorFromMain(const Shapes_Vector<Shapes*> shapesVector);
 
 protected:
     void paintEvent(QPaintEvent *) override;

@@ -1,7 +1,3 @@
-
-#include "shape.h"
-
-
 /* shape.cpp */
 
 #include "shape.h"

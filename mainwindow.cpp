@@ -3,14 +3,18 @@
 #include "login.h"
 #include "contactus.h"
 #include "shapeparser.h"
+#include "canvas.h"
+class canvas;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    /*parseShape(shapeList);*/ //parsing shape file filling shape list
-    //giving canvas shapeList
+
+    parseShape(shapeList);                        //parsing shape file filling shape list
+    ui->canvas->gettingVectorFromMain(shapeList); //giving canvas shape vector
+
 }
 
 MainWindow::~MainWindow()

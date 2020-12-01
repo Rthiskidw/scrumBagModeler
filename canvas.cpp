@@ -5,12 +5,8 @@
 using namespace std;
 
 canvas::canvas(QWidget *parent)
-    : QWidget(parent),currentShapes{NULL}
+      : QWidget(parent),currentShapes{NULL}
 {  
-    parseShape(currentShapes);
-
-    qDebug() <<  QString::number(currentShapes[0]->get_id());
-
     setBackgroundRole(QPalette::Base);
     setAutoFillBackground(true);
 }
@@ -19,16 +15,18 @@ canvas::canvas(QWidget *parent)
 void canvas::paintEvent(QPaintEvent *)
 {
     QPainter painter(this);
-
     QPen paintpen(Qt::black);
     paintpen.setWidth(6);
     painter.drawLine(10,10,100,100);
-
-
 
     for ( Shapes* shape : currentShapes)
     {
         shape->draw(this);
     }
 
+}
+
+void canvas::gettingVectorFromMain(const Shapes_Vector<Shapes*> shapesVector)
+{
+    currentShapes = shapesVector;
 }

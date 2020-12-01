@@ -7,12 +7,13 @@
 #include <QGridLayout>
 #include "vector.h"
 #include "shape.h"
+class canvas;
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
-class Canvas;
+
 
 class MainWindow : public QMainWindow
 {
