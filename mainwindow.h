@@ -24,6 +24,12 @@ private slots:
     void on_actionLogin_triggered();
     void on_actionContact_Us_triggered();
 
+    void on_line_button_clicked();
+
+    void on_polyline_button_clicked();
+
+    void on_polygon_button_clicked();
+
 private:
     Ui::MainWindow *ui;
     QComboBox *shapeComboBox;
