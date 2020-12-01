@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
 
-    ui->shapeComboBox->addItem(tr("Polygon"));
+//   ui->shapeComboBox->addItem(tr("Polygon"));
 //    shapeLabel = new QLabel(tr("&Shape:"));
 //    shapeLabel->setBuddy(shapeComboBox);
 

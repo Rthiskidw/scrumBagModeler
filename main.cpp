@@ -6,7 +6,7 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    Login login;
-    login.show();
+    MainWindow window;
+    window.show();
     return a.exec();
 }
