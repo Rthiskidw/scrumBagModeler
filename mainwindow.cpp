@@ -9,19 +9,6 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-
-//   ui->shapeComboBox->addItem(tr("Polygon"));
-//    shapeLabel = new QLabel(tr("&Shape:"));
-//    shapeLabel->setBuddy(shapeComboBox);
-
-//    QGridLayout *mainLayout = new QGridLayout;
-
-//    mainLayout->setColumnStretch(0, 1);
-//    mainLayout->setColumnStretch(3, 1);
-//    mainLayout->addWidget(shapeComboBox,2,1);
-//    setLayout(mainLayout);
-
-
 }
 
 MainWindow::~MainWindow()
