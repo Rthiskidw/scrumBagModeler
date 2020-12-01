@@ -5,6 +5,8 @@
 #include <QPen>
 #include <QPixmap>
 #include <QWidget>
+#include "vector.h"
+#include "shape.h"
 
 class canvas : public QWidget
 {
@@ -12,7 +14,13 @@ class canvas : public QWidget
 public:
     explicit canvas(QWidget *parent = nullptr);
 
+protected:
+    void paintEvent(QPaintEvent *event) override;
+
 signals:
+
+private:
+    const Shapes_Vector<Shapes*> currentShapes;
 
 };
 
