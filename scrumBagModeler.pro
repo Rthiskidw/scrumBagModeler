@@ -9,20 +9,25 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    contactus.cpp \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
+    qtconversions.cpp \
     shape.cpp \
     shapeparser.cpp
 
 HEADERS += \
+    contactus.h \
     login.h \
     mainwindow.h \
+    qtconversions.h \
     shape.h \
     shapeparser.h \
     vector.h
 
 FORMS += \
+    contactus.ui \
     login.ui \
     mainwindow.ui
 
