@@ -7,7 +7,7 @@
 #include <QGridLayout>
 #include "vector.h"
 #include "shape.h"
-class canvas;
+#include "canvas.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
