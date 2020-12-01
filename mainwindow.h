@@ -5,6 +5,8 @@
 #include <QComboBox>
 #include <QLabel>
 #include <QGridLayout>
+#include "vector.h"
+#include "shape.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -26,7 +28,8 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    QComboBox *shapeComboBox;
-    QLabel    *shapeLabel;
+    QComboBox              *shapeComboBox;
+    QLabel                 *shapeLabel;
+    Shapes_Vector<Shapes*>  shapeList;
 };
 #endif // MAINWINDOW_H

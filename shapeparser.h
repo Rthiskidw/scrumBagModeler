@@ -40,7 +40,7 @@ Shapes* getShapePtr(string shapeType, string color, int penWidth, string penStyl
  * Tracks the number of shapes that are entering the vector.
  * \param v_shapes the vector of Shape pointers, passed in by reference
  */
-void parseShape(std::vector<Shapes*>& vShapeList);
+void parseShape(Shapes_Vector<Shapes*>& vShapeList);
 
 
 #endif // SHAPEPARSER_H

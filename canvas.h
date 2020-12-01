@@ -7,20 +7,23 @@
 #include <QWidget>
 #include "vector.h"
 #include "shape.h"
+#include "shapeparser.h"
 
 class canvas : public QWidget
 {
     Q_OBJECT
+
 public:
     explicit canvas(QWidget *parent = nullptr);
+    void setShapeVector(const Shapes_Vector<Shapes*> v);
 
 protected:
-    void paintEvent(QPaintEvent *event) override;
+    void paintEvent(QPaintEvent *) override;
 
 signals:
 
 private:
-    const Shapes_Vector<Shapes*> currentShapes;
+     Shapes_Vector<Shapes*> currentShapes;
 
 };
 

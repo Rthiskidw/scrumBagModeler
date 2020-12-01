@@ -94,7 +94,7 @@ Shapes* getShapePtr(string shapeType, string color, int penWidth, string penStyl
     return shapePtr;
 }
 
-void parseShape(std::vector<Shapes*>& vShapeList)
+void parseShape(Shapes_Vector<Shapes*>& vShapeList)
 {
     int    tempId = 0;
     int    tempNumDimensions = 0;
