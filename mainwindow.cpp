@@ -15,7 +15,6 @@ MainWindow::MainWindow(QWidget *parent)
     parseShape(shapeList);                              //parsing shape file filling shape list
     ui->CanvasObject->gettingVectorFromMain(shapeList); //giving canvas shape vector
 
-    ui->setupUi(this);
     ui->shapeMenu->setCurrentWidget(ui->logo_page);
 }
 
