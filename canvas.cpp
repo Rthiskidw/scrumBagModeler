@@ -20,7 +20,7 @@ void canvas::paintEvent(QPaintEvent *)
     painter.drawLine(10,10,100,100);
 
     //int j = currentShapes[0]->get_id();
-    //commenting
+    //changing
 
 
     for ( Shapes* shape : currentShapes)
