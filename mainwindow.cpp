@@ -15,6 +15,8 @@ MainWindow::MainWindow(QWidget *parent)
     parseShape(shapeList);                              //parsing shape file filling shape list
     ui->CanvasObject->gettingVectorFromMain(shapeList); //giving canvas shape vector
 
+    ui->setupUi(this);
+    ui->shapeMenu->setCurrentWidget(ui->logo_page);
 }
 
 MainWindow::~MainWindow()
@@ -64,7 +66,8 @@ void MainWindow::on_ellipse_button_clicked()
 
 void MainWindow::on_rectangle_button_clicked()
 {
-
+    ui->shapeMenu->addWidget(ui->addRect_page);
+    ui->shapeMenu->setCurrentWidget(ui->addRect_page);
 }
 void MainWindow::on_square_button_clicked()
 {

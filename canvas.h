@@ -1,10 +1,16 @@
 #ifndef CANVAS_H
 #define CANVAS_H
 
-#include <QBrush>
-#include <QPen>
-#include <QPixmap>
+
+#include <QFile>
+#include <QTextStream>
+#include "shape.h"
+#include "vector.h"
+#include <QPaintEvent>
 #include <QWidget>
+#include <QMessageBox>
+#include <QCoreApplication>
+#include <QDir>
 #include "vector.h"
 #include "shape.h"
 #include "shapeparser.h"
