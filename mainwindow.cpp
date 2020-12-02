@@ -12,8 +12,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    parseShape(shapeList);                        //parsing shape file filling shape list
-    ui->canvas->gettingVectorFromMain(shapeList); //giving canvas shape vector
+    parseShape(shapeList);                              //parsing shape file filling shape list
+    ui->CanvasObject->gettingVectorFromMain(shapeList); //giving canvas shape vector
 
 }
 

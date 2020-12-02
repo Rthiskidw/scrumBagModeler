@@ -5,7 +5,7 @@
 using namespace std;
 
 canvas::canvas(QWidget *parent)
-      : QWidget(parent),currentShapes{NULL}
+      : QWidget(parent),currentShapes{0}
 {  
     setBackgroundRole(QPalette::Base);
     setAutoFillBackground(true);
@@ -18,6 +18,10 @@ void canvas::paintEvent(QPaintEvent *)
     QPen paintpen(Qt::black);
     paintpen.setWidth(6);
     painter.drawLine(10,10,100,100);
+
+    //int j = currentShapes[0]->get_id();
+
+
 
     for ( Shapes* shape : currentShapes)
     {

@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="canvas" name="canvas" native="true">
+   <widget class="canvas" name="CanvasObject" native="true">
     <property name="geometry">
      <rect>
       <x>220</x>
@@ -693,7 +693,7 @@
      <x>0</x>
      <y>0</y>
      <width>958</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
