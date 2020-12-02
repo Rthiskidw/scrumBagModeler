@@ -11,22 +11,34 @@ CONFIG += c++11
 SOURCES += \
     canvas.cpp \
     contactus.cpp \
+    ellipses.cpp \
+    line.cpp \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
+    polygon.cpp \
+    polyline.cpp \
     qtconversions.cpp \
+    rectangle.cpp \
     shape.cpp \
-    shapeparser.cpp
+    shapeparser.cpp \
+    textBox.cpp \
 
 HEADERS += \
     canvas.h \
     contactus.h \
+    ellipses.h \
+    line.h \
     login.h \
     mainwindow.h \
+    polygon.h \
+    polyline.h \
     qtconversions.h \
+    rectangle.h \
     shape.h \
     shapeparser.h \
-    vector.h
+    vector.h \
+    textBox.h \
 
 FORMS += \
     contactus.ui \
