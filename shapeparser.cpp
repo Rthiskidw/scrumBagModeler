@@ -1,4 +1,11 @@
 #include "shapeparser.h"
+#include "shape.h"
+#include "line.h"
+#include "rectangle.h"
+#include "polyline.h"
+#include "polygon.h"
+#include "ellipses.h"
+#include "textBox.h"
 #include <vector>
 
 //!Gets a single string from the input file and extracts the useful information
