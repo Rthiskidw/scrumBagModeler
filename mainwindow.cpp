@@ -40,12 +40,14 @@ void MainWindow::on_actionContact_Us_triggered()
 
 void MainWindow::on_line_button_clicked()
 {
-
+    ui->shapeMenu->addWidget(ui->addLine_page);
+    ui->shapeMenu->setCurrentWidget(ui->addLine_page);
 }
 
 void MainWindow::on_polyline_button_clicked()
 {
-
+    ui->shapeMenu->addWidget(ui->addPolyline_page);
+    ui->shapeMenu->setCurrentWidget(ui->addPolyline_page);
 }
 
 void MainWindow::on_polygon_button_clicked()
