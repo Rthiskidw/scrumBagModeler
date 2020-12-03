@@ -21,8 +21,6 @@ void ContactUs::on_submitButton_clicked()
     QString fileName = "feedback.txt";
     QFile file(fileName);
     QString feedback = ui->textEdit->toPlainText();
-
-    //if(file.open(QIODevice::WriteOnly | QIODevice::Append))
     if(file.open(QIODevice::Append))
     {
         QTextStream stream(&file);
