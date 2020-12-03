@@ -234,7 +234,7 @@
      <bool>true</bool>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="logo_page">
      <widget class="QLabel" name="logo_label">
@@ -250,13 +250,7 @@
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/new/prefix1/c3602dc5-b717-4b76-a16c-feb951f242e4_200x200.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-<<<<<<< HEAD
      <widget class="QLabel" name="label">
-=======
-    </widget>
-    <widget class="QWidget" name="addPolyline_page">
-     <widget class="QLabel" name="polyline_label">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -272,11 +266,7 @@
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-<<<<<<< HEAD
      <widget class="QLabel" name="label_3">
-=======
-     <widget class="QLabel" name="poly_penStyle_label">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -307,11 +297,7 @@
        <string>Text</string>
       </property>
      </widget>
-<<<<<<< HEAD
      <widget class="QLabel" name="label_117">
-=======
-     <widget class="QLabel" name="poly_penWidth_label">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -324,11 +310,7 @@
        <string>Text</string>
       </property>
      </widget>
-<<<<<<< HEAD
      <widget class="QTextEdit" name="text_box">
-=======
-     <widget class="QLineEdit" name="poly_penWidth_lineEdit">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -338,11 +320,7 @@
        </rect>
       </property>
      </widget>
-<<<<<<< HEAD
      <widget class="QLabel" name="label_107">
-=======
-     <widget class="QLabel" name="poly_penColor_label">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -364,64 +342,6 @@
         <height>21</height>
        </rect>
       </property>
-<<<<<<< HEAD
-=======
-      <item>
-       <property name="text">
-        <string>White</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Black</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Red</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Green</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Blue</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Cyan</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Magenta</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Yellow</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Grey</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QLabel" name="poly_penCap_label">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>160</y>
-        <width>121</width>
-        <height>16</height>
-       </rect>
-      </property>
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="text">
        <string>Text Allignment</string>
       </property>
@@ -451,11 +371,7 @@
        </property>
       </item>
      </widget>
-<<<<<<< HEAD
      <widget class="QLabel" name="label_105">
-=======
-     <widget class="QLabel" name="poly_penJoin_label">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -478,11 +394,7 @@
        </rect>
       </property>
      </widget>
-<<<<<<< HEAD
      <widget class="QLabel" name="label_102">
-=======
-     <widget class="QLabel" name="x1_label">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -495,14 +407,10 @@
        <string>Text Font Family</string>
       </property>
      </widget>
-<<<<<<< HEAD
      <widget class="QComboBox" name="text_fontfamily_box">
       <property name="enabled">
        <bool>true</bool>
       </property>
-=======
-     <widget class="QSpinBox" name="poly_x1_spinBox">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -526,11 +434,7 @@
        <bool>false</bool>
       </property>
      </widget>
-<<<<<<< HEAD
      <widget class="QLabel" name="label_103">
-=======
-     <widget class="QLabel" name="x2_label">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -543,11 +447,7 @@
        <string>Text Font Style</string>
       </property>
      </widget>
-<<<<<<< HEAD
      <widget class="QComboBox" name="text_fontstyle_box">
-=======
-     <widget class="QSpinBox" name="poly_y1_spinBox">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -557,11 +457,7 @@
        </rect>
       </property>
      </widget>
-<<<<<<< HEAD
      <widget class="QLabel" name="label_108">
-=======
-     <widget class="QSpinBox" name="poly_x2_spinBox">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -597,50 +493,7 @@
        <string>Box Width</string>
       </property>
      </widget>
-<<<<<<< HEAD
      <widget class="QSpinBox" name="text_box_width">
-=======
-     <widget class="QPushButton" name="cancelRectangle_button_5">
-      <property name="geometry">
-       <rect>
-        <x>50</x>
-        <y>530</y>
-        <width>71</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Cancel</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="y1_label">
-      <property name="geometry">
-       <rect>
-        <x>90</x>
-        <y>250</y>
-        <width>61</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Y1</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="y2_label">
-      <property name="geometry">
-       <rect>
-        <x>90</x>
-        <y>300</y>
-        <width>47</width>
-        <height>14</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Y2</string>
-      </property>
-     </widget>
-     <widget class="QSpinBox" name="poly_y2_spinBox">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -653,11 +506,7 @@
        <number>1000</number>
       </property>
      </widget>
-<<<<<<< HEAD
      <widget class="QLabel" name="label_104">
-=======
-     <widget class="QLabel" name="x3_label">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>30</x>
@@ -670,17 +519,12 @@
        <string>X</string>
       </property>
      </widget>
-<<<<<<< HEAD
      <widget class="QSpinBox" name="text_x">
-=======
-     <widget class="QLabel" name="y3_label">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>10</x>
         <y>460</y>
         <width>51</width>
-<<<<<<< HEAD
         <height>22</height>
        </rect>
       </property>
@@ -689,36 +533,6 @@
       </property>
      </widget>
      <widget class="QSpinBox" name="text_y">
-=======
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Y3</string>
-      </property>
-     </widget>
-     <widget class="QSpinBox" name="poly_x3_spinBox">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>370</y>
-        <width>42</width>
-        <height>22</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QSpinBox" name="poly_y3_spinBox">
-      <property name="geometry">
-       <rect>
-        <x>80</x>
-        <y>370</y>
-        <width>42</width>
-        <height>22</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLabel" name="x4_label">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>90</x>
@@ -731,17 +545,12 @@
        <number>500</number>
       </property>
      </widget>
-<<<<<<< HEAD
      <widget class="QSpinBox" name="text_y_2">
-=======
-     <widget class="QLabel" name="y4_label">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>90</x>
         <y>410</y>
         <width>51</width>
-<<<<<<< HEAD
         <height>22</height>
        </rect>
       </property>
@@ -750,36 +559,6 @@
       </property>
      </widget>
      <widget class="QLabel" name="label_111">
-=======
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Y4</string>
-      </property>
-     </widget>
-     <widget class="QSpinBox" name="poly_x4_spinBox">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>420</y>
-        <width>42</width>
-        <height>22</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QSpinBox" name="poly_y4_spinBox">
-      <property name="geometry">
-       <rect>
-        <x>80</x>
-        <y>420</y>
-        <width>42</width>
-        <height>22</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLabel" name="x5_label">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>90</x>
@@ -792,11 +571,7 @@
        <string>Box Height</string>
       </property>
      </widget>
-<<<<<<< HEAD
      <widget class="QLabel" name="label_106">
-=======
-     <widget class="QLabel" name="y5_label">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>100</x>
@@ -809,11 +584,7 @@
        <string>Y</string>
       </property>
      </widget>
-<<<<<<< HEAD
      <widget class="QPushButton" name="buildRectangle_button_6">
-=======
-     <widget class="QSpinBox" name="poly_x5_spinBox">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>50</x>
@@ -822,26 +593,11 @@
         <height>21</height>
        </rect>
       </property>
-<<<<<<< HEAD
       <property name="text">
        <string>Build</string>
       </property>
      </widget>
      <widget class="QPushButton" name="cancelRectangle_button_6">
-=======
-     </widget>
-     <widget class="QSpinBox" name="poly_y5_spinBox">
-      <property name="geometry">
-       <rect>
-        <x>90</x>
-        <y>470</y>
-        <width>42</width>
-        <height>22</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLabel" name="poly_numPoints_label">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>50</x>
@@ -854,11 +610,7 @@
        <string>Cancel</string>
       </property>
      </widget>
-<<<<<<< HEAD
      <widget class="QComboBox" name="penColor_comboBox_6">
-=======
-     <widget class="QLineEdit" name="poly_numPoints_lineEdit">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -914,13 +666,8 @@
       </item>
      </widget>
     </widget>
-<<<<<<< HEAD
     <widget class="QWidget" name="addSquare_page">
      <widget class="QLabel" name="label_145">
-=======
-    <widget class="QWidget" name="addRect_page">
-     <widget class="QLabel" name="rect_label">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>40</x>
@@ -936,11 +683,7 @@
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-<<<<<<< HEAD
      <widget class="QLabel" name="label_146">
-=======
-     <widget class="QLabel" name="rect_penStyle_label">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -993,11 +736,7 @@
        </property>
       </item>
      </widget>
-<<<<<<< HEAD
      <widget class="QLabel" name="label_147">
-=======
-     <widget class="QLabel" name="rect_penWidth_label">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -1020,11 +759,7 @@
        </rect>
       </property>
      </widget>
-<<<<<<< HEAD
      <widget class="QLabel" name="label_148">
-=======
-     <widget class="QLabel" name="rect_penColor_label">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -1092,11 +827,7 @@
        </property>
       </item>
      </widget>
-<<<<<<< HEAD
      <widget class="QLabel" name="label_149">
-=======
-     <widget class="QLabel" name="rect_penCap_label">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -1134,11 +865,7 @@
        </property>
       </item>
      </widget>
-<<<<<<< HEAD
      <widget class="QLabel" name="label_150">
-=======
-     <widget class="QLabel" name="rect_penJoin_label">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -1176,11 +903,7 @@
        </property>
       </item>
      </widget>
-<<<<<<< HEAD
      <widget class="QLabel" name="label_151">
-=======
-     <widget class="QLabel" name="rect_brushColor_label">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -1248,11 +971,7 @@
        </property>
       </item>
      </widget>
-<<<<<<< HEAD
      <widget class="QLabel" name="label_152">
-=======
-     <widget class="QLabel" name="rect_brushStyle_label">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -3102,11 +2821,7 @@
        </property>
       </item>
      </widget>
-<<<<<<< HEAD
      <widget class="QLabel" name="label_34">
-=======
-     <widget class="QLabel" name="rect_penLength_label">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -3119,11 +2834,7 @@
        <string>X1</string>
       </property>
      </widget>
-<<<<<<< HEAD
      <widget class="QSpinBox" name="length_spinBox_3">
-=======
-     <widget class="QSpinBox" name="rect_length_spinBox">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -3133,11 +2844,7 @@
        </rect>
       </property>
      </widget>
-<<<<<<< HEAD
      <widget class="QLabel" name="label_35">
-=======
-     <widget class="QLabel" name="rect_penWidth_label_2">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>90</x>
@@ -3150,11 +2857,7 @@
        <string>Y1</string>
       </property>
      </widget>
-<<<<<<< HEAD
      <widget class="QSpinBox" name="width_spinBox_3">
-=======
-     <widget class="QSpinBox" name="rect_width_spinBox">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>90</x>
@@ -3164,11 +2867,7 @@
        </rect>
       </property>
      </widget>
-<<<<<<< HEAD
      <widget class="QLabel" name="label_36">
-=======
-     <widget class="QLabel" name="rect_x_label">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -3191,11 +2890,7 @@
        </rect>
       </property>
      </widget>
-<<<<<<< HEAD
      <widget class="QLabel" name="label_37">
-=======
-     <widget class="QLabel" name="rect_y_label">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>90</x>
@@ -3245,13 +2940,8 @@
       </property>
      </widget>
     </widget>
-<<<<<<< HEAD
     <widget class="QWidget" name="addCircle_page">
      <widget class="QLabel" name="label_181">
-=======
-    <widget class="QWidget" name="addLine_page">
-     <widget class="QLabel" name="line_label">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>50</x>
@@ -3267,11 +2957,7 @@
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-<<<<<<< HEAD
      <widget class="QLabel" name="label_182">
-=======
-     <widget class="QLabel" name="penStyle_label_2">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -3324,11 +3010,7 @@
        </property>
       </item>
      </widget>
-<<<<<<< HEAD
      <widget class="QLabel" name="label_183">
-=======
-     <widget class="QLabel" name="line_penWidth_label">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -3351,11 +3033,7 @@
        </rect>
       </property>
      </widget>
-<<<<<<< HEAD
      <widget class="QLabel" name="label_184">
-=======
-     <widget class="QLabel" name="line_penColor_label">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -3423,11 +3101,7 @@
        </property>
       </item>
      </widget>
-<<<<<<< HEAD
      <widget class="QLabel" name="label_185">
-=======
-     <widget class="QLabel" name="line_penCap_label">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -3465,11 +3139,7 @@
        </property>
       </item>
      </widget>
-<<<<<<< HEAD
      <widget class="QLabel" name="label_186">
-=======
-     <widget class="QLabel" name="line_penJoin_label">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -3507,11 +3177,7 @@
        </property>
       </item>
      </widget>
-<<<<<<< HEAD
      <widget class="QLabel" name="label_187">
-=======
-     <widget class="QLabel" name="line_x1_label">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -3579,11 +3245,7 @@
        </property>
       </item>
      </widget>
-<<<<<<< HEAD
      <widget class="QLabel" name="label_188">
-=======
-     <widget class="QLabel" name="line_y1_label">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -3626,11 +3288,7 @@
        </property>
       </item>
      </widget>
-<<<<<<< HEAD
      <widget class="QLabel" name="label_189">
-=======
-     <widget class="QLabel" name="line_x2_label">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -3653,11 +3311,7 @@
        </rect>
       </property>
      </widget>
-<<<<<<< HEAD
      <widget class="QLabel" name="label_190">
-=======
-     <widget class="QLabel" name="line_y2_label">
->>>>>>> 1712307e038eee9555b801d36e04b6086c3ee1a8
       <property name="geometry">
        <rect>
         <x>10</x>
