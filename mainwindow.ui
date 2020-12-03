@@ -234,7 +234,7 @@
      <bool>true</bool>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>7</number>
     </property>
     <widget class="QWidget" name="logo_page">
      <widget class="QLabel" name="logo_label">
@@ -667,7 +667,7 @@
      </widget>
     </widget>
     <widget class="QWidget" name="addSquare_page">
-     <widget class="QLabel" name="label_145">
+     <widget class="QLabel" name="square_label">
       <property name="geometry">
        <rect>
         <x>40</x>
@@ -683,7 +683,7 @@
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QLabel" name="label_146">
+     <widget class="QLabel" name="square_penStyle_label">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -736,7 +736,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QLabel" name="label_147">
+     <widget class="QLabel" name="square_penWidth_label">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -759,7 +759,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QLabel" name="label_148">
+     <widget class="QLabel" name="square_penColor_label">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -827,7 +827,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QLabel" name="label_149">
+     <widget class="QLabel" name="square_penCap_label">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -865,7 +865,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QLabel" name="label_150">
+     <widget class="QLabel" name="square_penJoin_label">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -903,7 +903,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QLabel" name="label_151">
+     <widget class="QLabel" name="square_brushColor_label">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -971,7 +971,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QLabel" name="label_152">
+     <widget class="QLabel" name="square_brushStyle_label">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -1014,7 +1014,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QLabel" name="label_153">
+     <widget class="QLabel" name="square_length_label">
       <property name="geometry">
        <rect>
         <x>30</x>
@@ -1037,7 +1037,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QLabel" name="label_155">
+     <widget class="QLabel" name="square_x_label">
       <property name="geometry">
        <rect>
         <x>40</x>
@@ -1060,7 +1060,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QLabel" name="label_154">
+     <widget class="QLabel" name="square_width_label">
       <property name="geometry">
        <rect>
         <x>90</x>
@@ -1083,7 +1083,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QLabel" name="label_156">
+     <widget class="QLabel" name="square_y_label">
       <property name="geometry">
        <rect>
         <x>100</x>
@@ -1134,7 +1134,7 @@
      </widget>
     </widget>
     <widget class="QWidget" name="addPolyline_page">
-     <widget class="QLabel" name="label_48">
+     <widget class="QLabel" name="poly_label">
       <property name="geometry">
        <rect>
         <x>50</x>
@@ -1150,7 +1150,7 @@
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QLabel" name="label_49">
+     <widget class="QLabel" name="poly_penStyle_label">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -1203,7 +1203,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QLabel" name="label_50">
+     <widget class="QLabel" name="poly_penWidth_label">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -1226,7 +1226,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QLabel" name="label_51">
+     <widget class="QLabel" name="poly_penColor_label">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -1294,7 +1294,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QLabel" name="label_52">
+     <widget class="QLabel" name="poly_penCap_label">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -1332,7 +1332,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QLabel" name="label_53">
+     <widget class="QLabel" name="poly_penJoin_label">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -1370,7 +1370,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QLabel" name="label_54">
+     <widget class="QLabel" name="poly_x1_label">
       <property name="geometry">
        <rect>
         <x>30</x>
@@ -1393,7 +1393,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QLabel" name="label_56">
+     <widget class="QLabel" name="poly_x2_label">
       <property name="geometry">
        <rect>
         <x>30</x>
@@ -1452,7 +1452,7 @@
        <string>Cancel</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_55">
+     <widget class="QLabel" name="poly_y1_label">
       <property name="geometry">
        <rect>
         <x>90</x>
@@ -1465,7 +1465,7 @@
        <string>Y1</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_57">
+     <widget class="QLabel" name="poly_y2_label">
       <property name="geometry">
        <rect>
         <x>90</x>
@@ -1488,7 +1488,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QLabel" name="label_58">
+     <widget class="QLabel" name="poly_x3_label">
       <property name="geometry">
        <rect>
         <x>30</x>
@@ -1501,7 +1501,7 @@
        <string>X3</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_59">
+     <widget class="QLabel" name="poly_y3_label">
       <property name="geometry">
        <rect>
         <x>90</x>
@@ -1534,7 +1534,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QLabel" name="label_60">
+     <widget class="QLabel" name="poly_x4_label">
       <property name="geometry">
        <rect>
         <x>30</x>
@@ -1547,7 +1547,7 @@
        <string>X4</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_61">
+     <widget class="QLabel" name="poly_y4_label">
       <property name="geometry">
        <rect>
         <x>90</x>
@@ -1580,7 +1580,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QLabel" name="label_62">
+     <widget class="QLabel" name="poly_x5_label">
       <property name="geometry">
        <rect>
         <x>30</x>
@@ -1593,7 +1593,7 @@
        <string>X5</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_63">
+     <widget class="QLabel" name="poly_y5_label">
       <property name="geometry">
        <rect>
         <x>90</x>
@@ -1626,7 +1626,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QLabel" name="label_64">
+     <widget class="QLabel" name="poly_numPoints_label">
       <property name="geometry">
        <rect>
         <x>80</x>
@@ -2118,7 +2118,7 @@
      </widget>
     </widget>
     <widget class="QWidget" name="addEllipse_page">
-     <widget class="QLabel" name="label_157">
+     <widget class="QLabel" name="ellipse_label">
       <property name="geometry">
        <rect>
         <x>50</x>
@@ -2134,7 +2134,7 @@
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QLabel" name="label_158">
+     <widget class="QLabel" name="ellipse_penStyle_label">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -2187,7 +2187,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QLabel" name="label_159">
+     <widget class="QLabel" name="ellipse_penWidth_label">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -2210,7 +2210,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QLabel" name="label_160">
+     <widget class="QLabel" name="ellipse_penColor_label">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -2278,7 +2278,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QLabel" name="label_161">
+     <widget class="QLabel" name="ellipse_penCap_label">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -2316,7 +2316,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QLabel" name="label_162">
+     <widget class="QLabel" name="ellipse_penJoin_label">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -2354,7 +2354,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QLabel" name="label_163">
+     <widget class="QLabel" name="ellipse_brushColor_label">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -2422,7 +2422,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QLabel" name="label_164">
+     <widget class="QLabel" name="ellipse_brushColor_label_2">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -2585,7 +2585,7 @@
      </widget>
     </widget>
     <widget class="QWidget" name="addLine_page">
-     <widget class="QLabel" name="label_26">
+     <widget class="QLabel" name="line_label">
       <property name="geometry">
        <rect>
         <x>50</x>
@@ -2601,7 +2601,7 @@
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QLabel" name="label_27">
+     <widget class="QLabel" name="line_penStyle_label">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -2654,7 +2654,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QLabel" name="label_28">
+     <widget class="QLabel" name="line_penWidth_label">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -2677,7 +2677,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QLabel" name="label_29">
+     <widget class="QLabel" name="line_penColor_label">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -2745,7 +2745,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QLabel" name="label_30">
+     <widget class="QLabel" name="label_penCap_label">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -2783,7 +2783,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QLabel" name="label_31">
+     <widget class="QLabel" name="line_penJoin_label">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -2821,7 +2821,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QLabel" name="label_34">
+     <widget class="QLabel" name="line_x1_label">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -2844,7 +2844,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QLabel" name="label_35">
+     <widget class="QLabel" name="line_y1_label">
       <property name="geometry">
        <rect>
         <x>90</x>
@@ -2867,7 +2867,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QLabel" name="label_36">
+     <widget class="QLabel" name="line_x2_label">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -2890,7 +2890,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QLabel" name="label_37">
+     <widget class="QLabel" name="line_y2_label">
       <property name="geometry">
        <rect>
         <x>90</x>
@@ -2941,7 +2941,7 @@
      </widget>
     </widget>
     <widget class="QWidget" name="addCircle_page">
-     <widget class="QLabel" name="label_181">
+     <widget class="QLabel" name="circle_label">
       <property name="geometry">
        <rect>
         <x>50</x>
@@ -2957,7 +2957,7 @@
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QLabel" name="label_182">
+     <widget class="QLabel" name="circle_penStyle_label">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -3010,7 +3010,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QLabel" name="label_183">
+     <widget class="QLabel" name="circle_penWidth_label">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -3033,7 +3033,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QLabel" name="label_184">
+     <widget class="QLabel" name="circle_penColor_label">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -3101,7 +3101,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QLabel" name="label_185">
+     <widget class="QLabel" name="circle_penCap_label">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -3139,7 +3139,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QLabel" name="label_186">
+     <widget class="QLabel" name="circle_penJoin_label">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -3177,7 +3177,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QLabel" name="label_187">
+     <widget class="QLabel" name="circle_brushColor_label">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -3245,7 +3245,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QLabel" name="label_188">
+     <widget class="QLabel" name="circe_brushStyle_label">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -3288,7 +3288,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QLabel" name="label_189">
+     <widget class="QLabel" name="circle_length_label">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -3311,7 +3311,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QLabel" name="label_190">
+     <widget class="QLabel" name="circle_x_label">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -3360,7 +3360,7 @@
        <string>Cancel</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_191">
+     <widget class="QLabel" name="circle_width_label">
       <property name="geometry">
        <rect>
         <x>90</x>
@@ -3383,7 +3383,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QLabel" name="label_192">
+     <widget class="QLabel" name="circle_y_label">
       <property name="geometry">
        <rect>
         <x>90</x>
