@@ -128,6 +128,5 @@ public:
    */
     Shapes_Vector<QPoint>& getVertices();
 };
-};
 
 #endif // POLYGON_H

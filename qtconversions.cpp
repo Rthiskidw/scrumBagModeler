@@ -128,6 +128,10 @@ Qt::GlobalColor colorConversion(string color)
     {
         tempColor = Qt::black;
     }
+    else if(color == "magenta")
+    {
+        tempColor = Qt::magenta;
+    }
 
     return tempColor;
 }
