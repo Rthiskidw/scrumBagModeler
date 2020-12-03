@@ -42,6 +42,8 @@ private slots:
 
     void on_square_button_clicked();
 
+    void on_text_button_clicked();
+
 private:
     Ui::MainWindow *ui;
     QComboBox              *shapeComboBox;

@@ -57,12 +57,14 @@ void MainWindow::on_polygon_button_clicked()
 
 void MainWindow::on_circle_button_clicked()
 {
-
+    ui->shapeMenu->addWidget(ui->addCircle_page);
+    ui->shapeMenu->setCurrentWidget(ui->addCircle_page);
 }
 
 void MainWindow::on_ellipse_button_clicked()
 {
-
+    ui->shapeMenu->addWidget(ui->addEllipse_page);
+    ui->shapeMenu->setCurrentWidget(ui->addEllipse_page);
 }
 
 void MainWindow::on_rectangle_button_clicked()
@@ -72,5 +74,12 @@ void MainWindow::on_rectangle_button_clicked()
 }
 void MainWindow::on_square_button_clicked()
 {
+    ui->shapeMenu->addWidget(ui->addSquare_page);
+    ui->shapeMenu->setCurrentWidget(ui->addSquare_page);
+}
 
+void MainWindow::on_text_button_clicked()
+{
+    ui->shapeMenu->addWidget(ui->addText_page);
+    ui->shapeMenu->setCurrentWidget(ui->addText_page);
 }
