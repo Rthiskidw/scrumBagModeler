@@ -106,7 +106,7 @@ public:
     
     //! Getter Function to get Polygon's dimensions.
     /*!
-      \return 
+      \return dimensions
     */
     int* getDimensions() override;
     
