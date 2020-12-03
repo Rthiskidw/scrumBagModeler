@@ -3,6 +3,7 @@
 
 #include "shape.h"
 #include "qtconversions.h"
+#include "qt2stringconversion.h"
 #include <iostream>
 #include <string>
 #include <ios>
@@ -41,6 +42,8 @@ Shapes* getShapePtr(string shapeType, string color, int penWidth, string penStyl
  * \param v_shapes the vector of Shape pointers, passed in by reference
  */
 void parseShape(Shapes_Vector<Shapes*>& vShapeList);
+
+void seriallizer(Shapes_Vector<Shapes*>& vShapeList);
 
 
 #endif // SHAPEPARSER_H

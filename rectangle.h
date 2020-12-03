@@ -103,6 +103,8 @@ public:
     */
     QPoint& get_point();
 
+    int* getDimensions() override;
+
 
     //! Setter Function to set rectangle's x-coordinate.
     /*!

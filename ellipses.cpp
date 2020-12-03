@@ -55,7 +55,17 @@ double Ellipse::get_height() const
     return this->height;
 }
 
+int* Ellipse::getDimensions()
+{
+    QPoint p = get_center();
+    int *dimensoins = new int[4];
+    dimensoins[0] = p.x();
+    dimensoins[1] = p.y();
+    dimensoins[2] = get_width();
+    dimensoins[3] = get_height();
 
+    return dimensoins;
+}
 
 
 

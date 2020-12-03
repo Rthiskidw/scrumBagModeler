@@ -31,6 +31,8 @@ public:
 
     Polygon(QPaintDevice* dev = nullptr, int id = -1);
 
+    Polygon(Qt::GlobalColor setPenColor, Qt::PenStyle setPenStyle, Qt::PenCapStyle setCapStyle, Qt::PenJoinStyle setJointStyle, Qt::GlobalColor setBrushColor, Qt::BrushStyle setBrushStyle, int numberOfPts, QPoint* pointValues);
+
     ~Polygon() override {}
 
     virtual void draw(QPaintDevice *dev) override;
@@ -44,6 +46,8 @@ public:
     void setNumVertices(int numVertices);
 
     int getNumVertices()const;
+
+    int* getDimensions() override;
 
     void addVertex(const QPoint& vertex);
 

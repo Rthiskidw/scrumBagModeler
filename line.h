@@ -72,6 +72,8 @@ public:
     */
     QPoint& get_point_end();
 
+    int* getDimensions() override;
+
 
     //! Mutator function to set the points of a Line Object.
     /*!

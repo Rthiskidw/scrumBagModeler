@@ -96,9 +96,9 @@ Qt::BrushStyle brushStyleConversion(string brushStyle)
     {
         tempBrush = Qt::NoBrush;
     }
-    else if(brushStyle == "SolidPattern")
+    else if(brushStyle == "CrossPattern")
     {
-        tempBrush = Qt::SolidPattern;
+        tempBrush = Qt::CrossPattern;
     }
 
     return tempBrush;

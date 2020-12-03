@@ -62,6 +62,16 @@ QPoint& Rectangle::get_point()
     return this->point;
 }
 
+int* Rectangle::getDimensions()
+{
+    int* dimensions = new int[4];
+    dimensions[0] = get_x();
+    dimensions[1] = get_y();
+    dimensions[2] = get_width();
+    dimensions[3] = get_height();
+
+    return dimensions;
+}
 
 
 

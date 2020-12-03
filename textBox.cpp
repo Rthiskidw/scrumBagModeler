@@ -27,8 +27,15 @@ Text::Text(Qt::GlobalColor setFontColor, QString setText, QFont setFont, QPoint 
     this->text_font.setFamily("Times");
 }
 
-
-
+//Text::Text(const Text& otherText)
+//{
+//    this->text_string = otherText.text_string;
+//    this->text_font   = otherText.text_font;
+//    this->location    = otherText.location;
+//    this->flag        = otherText.flag;
+//    this->textBoxWidth = otherText.textBoxWidth;
+//    this->textBoxHeight = otherText.textBoxHeight;
+//}
 
 
 // ******--> { GETTERS } <--****** //
@@ -64,7 +71,18 @@ int Text::get_text_box_height() const
 }
 
 
+int* Text::getDimensions()
+{
+    int *dimensions = new int[4];
+    QPoint p = get_location();
 
+    dimensions[0] = p.x();
+    dimensions[1] = p.y();
+    dimensions[2] = get_text_box_width();
+    dimensions[3] = get_text_box_height();
+
+    return dimensions;
+}
 
 
 
@@ -105,7 +123,6 @@ void Text::set_text_box_height(int setHeight)
 {
     this->textBoxHeight = setHeight;
 }
-
 
 
 

@@ -18,6 +18,7 @@ SOURCES += \
     mainwindow.cpp \
     polygon.cpp \
     polyline.cpp \
+    qt2stringconversion.cpp \
     qtconversions.cpp \
     rectangle.cpp \
     shape.cpp \
@@ -33,6 +34,7 @@ HEADERS += \
     mainwindow.h \
     polygon.h \
     polyline.h \
+    qt2stringconversion.h \
     qtconversions.h \
     rectangle.h \
     shape.h \

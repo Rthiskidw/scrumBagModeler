@@ -35,6 +35,21 @@ QPoint& Line::get_point_end()
     return this->point_end;
 }
 
+int* Line::getDimensions()
+{
+    QPoint p1 = get_point_begin();
+    QPoint p2 = get_point_end();
+
+    int *dimensions = new int[4];
+
+    dimensions[0] = p1.x();
+    dimensions[1] = p1.y();
+    dimensions[2] = p2.x();
+    dimensions[3] = p2.y();
+
+    return dimensions;
+}
+
 
 
 

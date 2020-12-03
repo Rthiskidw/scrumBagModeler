@@ -108,6 +108,7 @@ public:
     QPainter& getQtpainter();
 
 
+    virtual int* getDimensions() = 0;
 
     //! Setter Function to set ShapeType
     /*!

@@ -57,6 +57,7 @@ public:
     */
     Text(Qt::GlobalColor setFontColor, QString setText, QFont setFont, QPoint setLocation, Qt::AlignmentFlag setFlag, int setWidth, int setHeight);     // Might change to allow family variable.
 
+//    Text(const Text& otherText);
 
     //! Destructor.
     /*!
@@ -105,6 +106,9 @@ public:
       \return textBoxHeight
     */
     int get_text_box_height() const;
+
+
+    int* getDimensions() override;
 
 
     //! Setter function to set the text of a Text Object.

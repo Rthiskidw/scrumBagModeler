@@ -82,6 +82,9 @@ public:
     double get_height() const;
 
 
+    int* getDimensions() override;
+
+
     //! Setter function to set the center of an Ellipse using QPoint coordinates.
     /*!
       \param setCenter is a Qpoint variable

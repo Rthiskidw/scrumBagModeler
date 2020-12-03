@@ -8,6 +8,15 @@
 #include <cmath>
 #include <QtDebug>
 
+Polygon::Polygon(Qt::GlobalColor setPenColor, Qt::PenStyle setPenStyle, Qt::PenCapStyle setCapStyle, Qt::PenJoinStyle setJointStyle, Qt::GlobalColor setBrushColor, Qt::BrushStyle setBrushStyle, int numberOfVerts, QPoint* pointValues)
+    : Shapes(setPenColor, setPenStyle, setCapStyle, setJointStyle, setBrushColor, setBrushStyle)
+{
+    numVerts = numberOfVerts;
+    for(int index = 0; index < numVerts; index++)
+    {
+        addVertex(pointValues[index]);
+    }
+}
 
 // ******--> { DRAW } <--****** //
 void Polygon::draw(QPaintDevice *device)
@@ -62,6 +71,19 @@ void Polygon::setNumVertices(int numVertices)
 int Polygon::getNumVertices() const
 {
     return numVerts; //returns the number of vertices in the polygon
+}
+
+int* Polygon::getDimensions()
+{
+    int* dimensions = new int[numVerts * 2];
+    QPoint *points = vertsArray;
+
+    for(int index = 0; index < numVerts; index++)
+    {
+        dimensions[index] = points[index].x();
+        dimensions[index + 1] = points[index].y();
+    }
+    return dimensions;
 }
 
 

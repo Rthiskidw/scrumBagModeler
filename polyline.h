@@ -62,6 +62,9 @@ public:
     int get_points() const;
 
 
+    int* getDimensions() override;
+
+
     //! Setter function to set a point of a Polyline using QPoint coordinates.
     /*!
       \param point is a Qpoint variable
