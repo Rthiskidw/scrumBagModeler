@@ -30,8 +30,9 @@ void Login::on_pushButton_clicked()
     {
         QMessageBox::information(this, "Login", "Username and password is correct");
         hide();
-        MainWindow* mainwindow = new MainWindow(this);
+        MainWindow* mainwindow = new MainWindow(this)
         mainwindow->show();//since valid usernam and password we can show the main window
+        mainwindow->hide();
     }
     else
     {
