@@ -15,13 +15,25 @@ ContactUs::~ContactUs()
     delete ui;
 }
 
-void ContactUs::on_pushButton_clicked()
+void ContactUs::on_submitButton_clicked()
 {
     QMessageBox::information(this, "Contact Us", "Thank you for contacting us!");
+    QString fileName = "feedback.txt";
+    QFile file(fileName);
+    QString feedback = ui->textEdit->toPlainText();
+
+    //if(file.open(QIODevice::WriteOnly | QIODevice::Append))
+    if(file.open(QIODevice::Append))
+    {
+        QTextStream stream(&file);
+        stream << feedback << Qt::endl;
+        stream << "------------------------------------------------------------" << Qt::endl;
+    }
+    file.close();
     hide();
 }
 
-void ContactUs::on_pushButton_2_clicked()
+void ContactUs::on_cancelButton_clicked()
 {
     hide();
 }
