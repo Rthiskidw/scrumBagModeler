@@ -15,9 +15,9 @@ canvas::canvas(QWidget *parent)
 void canvas::paintEvent(QPaintEvent *)
 {
     QPainter painter(this);
-    QPen paintpen(Qt::black);
-    paintpen.setWidth(6);
-    painter.drawLine(10,10,100,100);
+    //QPen paintpen(Qt::black);
+    //paintpen.setWidth(6);
+    //painter.drawLine(10,10,100,100);
 
     //int j = currentShapes[0]->get_id();
     //changing
