@@ -1116,7 +1116,7 @@
        <string>Length</string>
       </property>
      </widget>
-     <widget class="QSpinBox" name="length_spinBox_2">
+     <widget class="QSpinBox" name="rect_length_spinBox">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -1139,7 +1139,7 @@
        <string>Width</string>
       </property>
      </widget>
-     <widget class="QSpinBox" name="width_spinBox_2">
+     <widget class="QSpinBox" name="rect_width_spinBox">
       <property name="geometry">
        <rect>
         <x>60</x>
