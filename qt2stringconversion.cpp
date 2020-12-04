@@ -78,24 +78,6 @@ string penJoinStyleString(Qt::PenJoinStyle joinStyle)
     return tempJoinStyle;
 }
 
-string brushStringStyle(Qt::BrushStyle brushStyle)
-{
-    string tempBrushStyle;
-    switch (brushStyle)
-    {
-    case Qt::SolidPattern : tempBrushStyle = "SolidPattern";
-        break;
-    case Qt::VerPattern   : tempBrushStyle = "VerPattern";
-        break;
-    case Qt::HorPattern   : tempBrushStyle = "HorPattern";
-        break;
-    case Qt::NoBrush      : tempBrushStyle = "NoBrush";
-        break;
-    }
-
-    return tempBrushStyle;
-}
-
 string alignmentStringConversion(Qt::AlignmentFlag align)
 {
     string tempFlag;

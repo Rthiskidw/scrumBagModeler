@@ -28,6 +28,8 @@ void canvas::paintEvent(QPaintEvent *)
         shape->draw(this);
     }
 
+
+
 }
 
 void canvas::gettingVectorFromMain(const Shapes_Vector<Shapes*> shapesVector)

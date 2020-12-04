@@ -14,7 +14,7 @@ Polygon::Polygon(Qt::GlobalColor setPenColor, Qt::PenStyle setPenStyle, Qt::PenC
     numVerts = numberOfVerts;
     for(int index = 0; index < numVerts; index++)
     {
-        addVertex(pointValues[index]);
+        vertsArray[index] = pointValues[index];
     }
 }
 

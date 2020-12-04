@@ -43,6 +43,10 @@ Shapes* getShapePtr(string shapeType, string color, int penWidth, string penStyl
  */
 void parseShape(Shapes_Vector<Shapes*>& vShapeList);
 
+//! Goes through a list of shapes and outputs all its contents to "shapes.txt"
+/*! Updates the textfile with any new changes to the shapes
+ * \param vShapeList the vector of that contains all the shapes
+ */
 void seriallizer(Shapes_Vector<Shapes*>& vShapeList);
 
 
