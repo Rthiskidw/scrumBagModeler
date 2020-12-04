@@ -84,3 +84,91 @@ void MainWindow::on_text_button_clicked()
     ui->shapeMenu->addWidget(ui->addText_page);
     ui->shapeMenu->setCurrentWidget(ui->addText_page);
 }
+
+void MainWindow::on_cancelText_button_clicked()
+{
+    ui->shapeMenu->addWidget(ui->logo_page);
+    ui->shapeMenu->setCurrentWidget(ui->logo_page);
+}
+
+void MainWindow::on_cancelPolygon_button_clicked()
+{
+    ui->shapeMenu->addWidget(ui->logo_page);
+    ui->shapeMenu->setCurrentWidget(ui->logo_page);
+}
+
+void MainWindow::on_cancelSquare_button_clicked()
+{
+    ui->shapeMenu->addWidget(ui->logo_page);
+    ui->shapeMenu->setCurrentWidget(ui->logo_page);
+}
+
+void MainWindow::on_cancelPolyline_button_clicked()
+{
+    ui->shapeMenu->addWidget(ui->logo_page);
+    ui->shapeMenu->setCurrentWidget(ui->logo_page);
+}
+
+void MainWindow::on_cancelRectangle_button_clicked()
+{
+    ui->shapeMenu->addWidget(ui->logo_page);
+    ui->shapeMenu->setCurrentWidget(ui->logo_page);
+}
+
+void MainWindow::on_cancelEllipse_button_clicked()
+{
+    ui->shapeMenu->addWidget(ui->logo_page);
+    ui->shapeMenu->setCurrentWidget(ui->logo_page);
+}
+
+void MainWindow::on_cancelLine_button_clicked()
+{
+    ui->shapeMenu->addWidget(ui->logo_page);
+    ui->shapeMenu->setCurrentWidget(ui->logo_page);
+}
+
+void MainWindow::on_cancelCircle_button_clicked()
+{
+    ui->shapeMenu->addWidget(ui->logo_page);
+    ui->shapeMenu->setCurrentWidget(ui->logo_page);
+}
+
+void MainWindow::on_lineBuild_button_clicked()
+{
+
+}
+
+void MainWindow::on_circleBuild_button_clicked()
+{
+
+}
+
+void MainWindow::on_textBuild_button_clicked()
+{
+
+}
+
+void MainWindow::on_polygonBuild_button_clicked()
+{
+
+}
+
+void MainWindow::on_squareBuild_button_clicked()
+{
+
+}
+
+void MainWindow::on_polylineBuild_button_clicked()
+{
+
+}
+
+void MainWindow::on_rectangleBuild_button_clicked()
+{
+
+}
+
+void MainWindow::on_ellipseBuild_button_clicked()
+{
+
+}

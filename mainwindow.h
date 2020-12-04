@@ -7,7 +7,14 @@
 #include <QGridLayout>
 #include "vector.h"
 #include "shape.h"
+#include "line.h"
+#include "rectangle.h"
+#include "polyline.h"
+#include "polygon.h"
+#include "ellipses.h"
+#include "textBox.h"
 #include "canvas.h"
+using namespace Qt;
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -43,6 +50,38 @@ private slots:
     void on_square_button_clicked();
 
     void on_text_button_clicked();
+
+    void on_cancelText_button_clicked();
+
+    void on_cancelPolygon_button_clicked();
+
+    void on_cancelSquare_button_clicked();
+
+    void on_cancelPolyline_button_clicked();
+
+    void on_cancelRectangle_button_clicked();
+
+    void on_cancelEllipse_button_clicked();
+
+    void on_cancelLine_button_clicked();
+
+    void on_cancelCircle_button_clicked();
+
+    void on_lineBuild_button_clicked();
+
+    void on_circleBuild_button_clicked();
+
+    void on_textBuild_button_clicked();
+
+    void on_polygonBuild_button_clicked();
+
+    void on_squareBuild_button_clicked();
+
+    void on_polylineBuild_button_clicked();
+
+    void on_rectangleBuild_button_clicked();
+
+    void on_ellipseBuild_button_clicked();
 
 private:
     Ui::MainWindow *ui;

@@ -234,7 +234,7 @@
      <bool>true</bool>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>8</number>
     </property>
     <widget class="QWidget" name="logo_page">
      <widget class="QLabel" name="logo_label">
@@ -584,7 +584,7 @@
        <string>Y</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="buildRectangle_button_6">
+     <widget class="QPushButton" name="textBuild_button">
       <property name="geometry">
        <rect>
         <x>40</x>
@@ -597,7 +597,7 @@
        <string>Build</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="cancelRectangle_button_6">
+     <widget class="QPushButton" name="cancelText_button">
       <property name="geometry">
        <rect>
         <x>40</x>
@@ -1156,7 +1156,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QPushButton" name="buildRectangle_button_8">
+     <widget class="QPushButton" name="polygonBuild_button">
       <property name="geometry">
        <rect>
         <x>30</x>
@@ -1169,7 +1169,7 @@
        <string>Build</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="cancelRectangle_button_8">
+     <widget class="QPushButton" name="cancelPolygon_button">
       <property name="geometry">
        <rect>
         <x>30</x>
@@ -1623,7 +1623,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QPushButton" name="buildRectangle_button_12">
+     <widget class="QPushButton" name="squareBuild_button">
       <property name="geometry">
        <rect>
         <x>30</x>
@@ -1636,7 +1636,7 @@
        <string>Build</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="cancelRectangle_button_12">
+     <widget class="QPushButton" name="cancelSquare_button">
       <property name="geometry">
        <rect>
         <x>30</x>
@@ -1943,7 +1943,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QPushButton" name="buildRectangle_button_5">
+     <widget class="QPushButton" name="polylineBuild_button">
       <property name="geometry">
        <rect>
         <x>40</x>
@@ -1956,7 +1956,7 @@
        <string>Build</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="cancelRectangle_button_5">
+     <widget class="QPushButton" name="cancelPolyline_button">
       <property name="geometry">
        <rect>
         <x>40</x>
@@ -2607,7 +2607,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QPushButton" name="buildRectangle_button_2">
+     <widget class="QPushButton" name="rectangleBuild_button">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -2620,7 +2620,7 @@
        <string>Build</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="cancelRectangle_button_2">
+     <widget class="QPushButton" name="cancelRectangle_button">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -3028,7 +3028,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QPushButton" name="buildRectangle_button_13">
+     <widget class="QPushButton" name="ellipseBuild_button">
       <property name="geometry">
        <rect>
         <x>40</x>
@@ -3041,7 +3041,7 @@
        <string>Build</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="cancelRectangle_button_13">
+     <widget class="QPushButton" name="cancelEllipse_button">
       <property name="geometry">
        <rect>
         <x>40</x>
@@ -3131,7 +3131,7 @@
        <string>Pen Style</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="penStyle_comboBox_3">
+     <widget class="QComboBox" name="line_penStyle_box">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -3184,7 +3184,7 @@
        <string>Pen Width</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_3">
+     <widget class="QLineEdit" name="line_penWidth_box">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -3207,7 +3207,7 @@
        <string>Pen Color</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="penColor_comboBox_3">
+     <widget class="QComboBox" name="line_penColor_box">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -3275,7 +3275,7 @@
        <string>Pen Cap Style</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="penCapStyle_comboBox_3">
+     <widget class="QComboBox" name="line_penCapStyle_box">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -3310,10 +3310,10 @@
        </rect>
       </property>
       <property name="text">
-       <string>Pen Join Style</string>
+       <string>Pen Joint Style</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="penJoinStyle_comboBox_3">
+     <widget class="QComboBox" name="line_penJointStyle_box">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -3351,7 +3351,7 @@
        <string>X1</string>
       </property>
      </widget>
-     <widget class="QSpinBox" name="length_spinBox_3">
+     <widget class="QSpinBox" name="line_x1_box">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -3374,7 +3374,7 @@
        <string>Y1</string>
       </property>
      </widget>
-     <widget class="QSpinBox" name="width_spinBox_3">
+     <widget class="QSpinBox" name="line_y1_box">
       <property name="geometry">
        <rect>
         <x>90</x>
@@ -3397,7 +3397,7 @@
        <string>X2</string>
       </property>
      </widget>
-     <widget class="QSpinBox" name="xCoordinate_spinBox_3">
+     <widget class="QSpinBox" name="line_x2_box">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -3420,7 +3420,7 @@
        <string>Y2</string>
       </property>
      </widget>
-     <widget class="QSpinBox" name="yCoordinate_spinBox_3">
+     <widget class="QSpinBox" name="line_y2_box">
       <property name="geometry">
        <rect>
         <x>90</x>
@@ -3430,7 +3430,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QPushButton" name="buildRectangle_button_3">
+     <widget class="QPushButton" name="lineBuild_button">
       <property name="geometry">
        <rect>
         <x>40</x>
@@ -3443,7 +3443,7 @@
        <string>Build</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="cancelRectangle_button_3">
+     <widget class="QPushButton" name="cancelLine_button">
       <property name="geometry">
        <rect>
         <x>40</x>
@@ -3851,7 +3851,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QPushButton" name="buildRectangle_button_15">
+     <widget class="QPushButton" name="circleBuild_button">
       <property name="geometry">
        <rect>
         <x>30</x>
@@ -3864,7 +3864,7 @@
        <string>Build</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="cancelRectangle_button_15">
+     <widget class="QPushButton" name="cancelCircle_button">
       <property name="geometry">
        <rect>
         <x>30</x>
