@@ -61,7 +61,7 @@ public:
     /*!
       \param device
     */
-    virtual void draw(QPaintDevice *dev) override;
+    void draw(QPaintDevice *device) override;
 
 
     //! Function that moves the rectangle at a certain point.
@@ -70,7 +70,7 @@ public:
       \param y
       \param vertex
     */
-    virtual void move(int x, int y, int vertex) override;
+    void move(int x, int y, int vertex) override;
     
     
 
