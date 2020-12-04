@@ -1,6 +1,6 @@
 # 2D Graphics Modeler
 
-### Team Members: Dan Mateos, Jake Merill, Sophia ..., Ryan Solanki, Reed Wilson, Alan Vuong
+### Team Members: Dan Mateos, Jake Merill, Ryan Solanki, Craig Spengler, Reed Wilson, Alan Vuong, Sophia Yonus
 
 # Project Description
 ### You are to create software for modeling basic 2D graphics objects. The modeler will demonstrate the capabilities of 2D Graphics Modeler Inc.’s graphics engine. Potential customers will be looking for a 2D graphics rendering librarywhich can be integrated into their own software suite.
