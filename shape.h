@@ -30,7 +30,13 @@ public:
 
     /** \enum type Shapes, used to distinguish between shapes.
      */
-    enum ShapeType {NoShape, Line, Polyline, Polygon, Rectangle, Ellipse, Text};
+    enum ShapeType {NoShape,
+                    Line,
+                    Polyline,
+                    Polygon,
+                    Rectangle,
+                    Ellipse,
+                    Text};
 
 
     //! Default Constructor.
