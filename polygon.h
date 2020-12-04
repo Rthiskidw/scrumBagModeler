@@ -19,6 +19,11 @@ using namespace std;
 #include "shape.h"
 
 
+
+//!  Class Polygon
+/*!
+  Class to construct a Polygon.
+*/
 class Polygon : public Shapes
 {
 private:
