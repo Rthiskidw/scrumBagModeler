@@ -19,6 +19,11 @@ using namespace std;
 #include "shape.h"
 
 
+
+//!  Class Polygon
+/*!
+  Class to construct a Polygon.
+*/
 class Polygon : public Shapes
 {
 private:
@@ -57,20 +62,20 @@ public:
     ~Polygon() override {}
 
 
-    //! Function that draws the rectangle on the canvas.
+    //! Function that draws the Polygon on the canvas.
     /*!
       \param device
     */
-    virtual void draw(QPaintDevice *dev) override;
+    void draw(QPaintDevice *device) override;
 
 
-    //! Function that moves the rectangle at a certain point.
+    //! Function that moves the Polygon at a certain point.
     /*!
       \param x
       \param y
       \param vertex
     */
-    virtual void move(int x, int y, int vertex) override;
+    void move(int x, int y, int vertex) override;
     
     
 

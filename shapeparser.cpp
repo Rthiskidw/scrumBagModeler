@@ -353,7 +353,7 @@ void seriallizer(Shapes_Vector<Shapes*>& vShapeList)
                     <<"\nPenCapSyle: " << penCapStyleString(tempPen.capStyle())
                     <<"\nPenJoinStyle: " << penJoinStyleString(tempPen.joinStyle())
                     <<"\nBrushColor: " << penColorString(brushColorCode)
-                    <<"\nBrushStyle: " << brushStringStyle(brush.style())
+                    <<"\nBrushStyle: " << brushStyleStringConversion(brush.style())
                     <<"\n\n";
         }
     }
