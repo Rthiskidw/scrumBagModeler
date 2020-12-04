@@ -32,11 +32,49 @@ void canvas::gettingVectorFromMain(const Shapes_Vector<Shapes*> shapesVector)
     currentShapes = shapesVector;
 }
 
+void canvas::addShape(Shapes* shapeIn)
+{
+    currentShapes.push_back(shapeIn);
+    numShapesRA++;
+    //shapeIn->draw(this);
+}
+void canvas::chopShape(int indexRemove)
+{
+    Shapes_Vector<Shapes*>::iterator i;
+    for(i = currentShapes.begin(); i < currentShapes.end(); ++i)
+        if((*i)->get_id() == indexRemove)
+        {
+            currentShapes.erase(i);
+            numShapesRA--;
+            break;
+        }
+}
+
 void canvas::moveShape(int index, int coord, int x, int y)
 {
     for(int i = 0; i < currentShapes.size(); i++)
         if(currentShapes[i]->get_id() == index){
             currentShapes[i]->move(x,y,coord); break; }
+}
+
+int canvas::getSize()
+{
+    return currentShapes.size();
+}
+
+QSize canvas::sizeHint() const
+{
+    return QSize(1000,500);
+}
+
+QSize canvas::minimumSizeHint() const
+{
+    return QSize(1000,500);
+}
+
+int canvas::getnumShapesRA()
+{
+    return numShapesRA;
 }
 
 Shapes::ShapeType canvas::getShapeType(QString shapeStr)

@@ -22,6 +22,8 @@ class canvas : public QWidget
 public:
     explicit canvas(QWidget *parent = nullptr);
     void setShapeVector(const Shapes_Vector<Shapes*> v);
+    QSize sizeHint() const override;
+    QSize minimumSizeHint() const override;
     void gettingVectorFromMain(const Shapes_Vector<Shapes*> shapesVector);
     void paintEvent(QPaintEvent *) override;
 
@@ -38,7 +40,7 @@ signals:
 private:
     Shapes_Vector<Shapes*> currentShapes;
     const QImage canvasObject;
-
+    int numShapesRA;
 
     QString getStringColor(QColor color);
     QString getStringPenCap(Qt::PenCapStyle penCapStyle);
