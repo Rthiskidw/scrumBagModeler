@@ -52,7 +52,8 @@ void MainWindow::on_polyline_button_clicked()
 
 void MainWindow::on_polygon_button_clicked()
 {
-
+    ui->shapeMenu->addWidget(ui->addPolygon_page);
+    ui->shapeMenu->setCurrentWidget(ui->addPolygon_page);
 }
 
 void MainWindow::on_circle_button_clicked()
