@@ -12,24 +12,24 @@
 # Program Checklist
 ## 1) Provide satisfied customer testimonials (solicit for additional testimonials). Guest users may enter testimonials. The testimonials should be persistent between executions.
 __Status - *Complete*__
-"\nHeader File - contactus.h"
-"\nCPP Source File - contactus.cpp"
-"\nFrontend UI - contactus.ui"
+"Header File - contactus.h
+CPP Source File - contactus.cpp
+Frontend UI - contactus.ui"
 
 ## 2) Provide “contact us” method with team name and logo.
 __Status - *Complete*__
-"\nHeader File - contactus.h"
-"\nCPP Source File - contactus.cpp"
-"\nFrontend UI - contactus.ui"
+"Header File - contactus.h
+CPP Source File - contactus.cpp
+Frontend UI - contactus.ui"
 
 ## 3) Display all graphic objects (i.e. shapes including text) in rendering window. The shape id will be displayed above each shape identifying it. The rendering area to display shapes must have minimum dimensions of 1000 pixels (horizontal) by 500 pixels (vertical). The coordinate system is defined such that the top left corner of the point (1000,500).
 **"Status - *In Progress*"**
 
 ## 4) Your program should read from a shape file that keeps track of allshapes currently being rendered by the 2D modeler. Shapes are identified by their type: line, polyline, polygon, rectangle, ellipse, text. Shapes have properties: shape dimensions, pen color, penwidth, pen style, pen cap style, pen join style, brush color, brush shape. Text has properties: shape dimensions, text string, text
 __Status - *Complete*__
-"\nHeader File - shapeparser.cpp"
-"\nCPP Source File -- shapeparser.h"
-"\nImplemented in -- mainwindow.cpp(Line 15)"
+"Header File - shapeparser.cpp
+CPP Source File -- shapeparser.h
+Implemented in -- mainwindow.cpp(Line 15)"
 
 ## 5) Your program should be able to move shapes, including text, being rendered. This is accomplished via a move shape form. All changes are visible in the rendering area. – administrator only
 **"Status - *In Progress*"**
