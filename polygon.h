@@ -57,14 +57,14 @@ public:
     ~Polygon() override {}
 
 
-    //! Function that draws the rectangle on the canvas.
+    //! Function that draws the Polygon on the canvas.
     /*!
       \param device
     */
     virtual void draw(QPaintDevice *dev) override;
 
 
-    //! Function that moves the rectangle at a certain point.
+    //! Function that moves the Polygon at a certain point.
     /*!
       \param x
       \param y
