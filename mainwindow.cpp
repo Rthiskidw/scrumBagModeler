@@ -197,3 +197,8 @@ void MainWindow::on_cancelMove_button_clicked()
     ui->shapeMenu->addWidget(ui->addRect_page);
     ui->shapeMenu->setCurrentWidget(ui->addRect_page);
 }
+
+void MainWindow::on_resetButton_clicked()
+{
+
+}

@@ -56,9 +56,12 @@ void Line::set_points(const QPoint &set_point_begin, const QPoint &set_point_end
 
 void Line::move(const int x_pos, const int y_pos, int index)
 {
-    QPoint temp(x_pos, y_pos);
+    QPoint input(x_pos, y_pos);
+    QPoint temp;
 
-    point_begin = temp;
+    temp = point_begin - input;
+    point_begin = input;
+    point_end = point_end - temp;
 }
 
 // ******--> { DRAW } <--****** //

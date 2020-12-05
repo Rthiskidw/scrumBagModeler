@@ -28,6 +28,7 @@ class Line : public Shapes
 private:
     QPoint point_begin;
     QPoint point_end;
+    //QPoint point_mid;
 public:
 
     //! Default constructor.
