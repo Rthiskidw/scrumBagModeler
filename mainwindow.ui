@@ -221,7 +221,15 @@
      <bool>true</bool>
     </property>
     <property name="currentIndex">
+<<<<<<< HEAD
      <number>3</number>
+=======
+     <number>2</number>
+
+     <number>5</number>
+     <number>6</number>
+
+>>>>>>> f2271876c4e0c2b29555eca05755a4e9e4138fea
     </property>
     <widget class="QWidget" name="logo_page">
      <widget class="QLabel" name="logo_label">
