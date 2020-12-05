@@ -132,6 +132,10 @@ Qt::GlobalColor colorConversion(string color)
     {
         tempColor = Qt::magenta;
     }
+    else if(color == "yellow")
+    {
+        tempColor = Qt::yellow;
+    }
 
     return tempColor;
 }

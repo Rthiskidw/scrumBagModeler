@@ -76,13 +76,16 @@ int Polygon::getNumVertices() const
 int* Polygon::getDimensions()
 {
     int* dimensions = new int[numVerts * 2];
-    QPoint *points = vertsArray;
 
-    for(int index = 0; index < numVerts; index++)
-    {
-        dimensions[index] = points[index].x();
-        dimensions[index + 1] = points[index].y();
-    }
+        dimensions[0] = vertsArray[0].x();
+        dimensions[1] = vertsArray[0].y();
+        dimensions[2] = vertsArray[1].x();
+        dimensions[3] = vertsArray[1].y();
+        dimensions[4] = vertsArray[2].x();
+        dimensions[5] = vertsArray[2].y();
+        dimensions[6] = vertsArray[3].x();
+        dimensions[7] = vertsArray[3].y();
+
     return dimensions;
 }
 

@@ -37,13 +37,15 @@ int Polyline::get_points() const
 int* Polyline::getDimensions()
 {
     int* dimensions = new int[numberOfPoints * 2];
-    QPoint *points = pointArray;
 
-    for(int index = 0; index < numberOfPoints; index++)
-    {
-        dimensions[index] = points[index].x();
-        dimensions[index + 1] = points[index].y();
-    }
+    dimensions[0] = pointArray[0].x();
+    dimensions[1] = pointArray[0].y();
+    dimensions[2] = pointArray[1].x();
+    dimensions[3] = pointArray[1].y();
+    dimensions[4] = pointArray[2].x();
+    dimensions[5] = pointArray[2].y();
+    dimensions[6] = pointArray[3].x();
+    dimensions[7] = pointArray[3].y();
 
     return dimensions;
 }

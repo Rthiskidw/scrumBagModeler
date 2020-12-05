@@ -3,7 +3,7 @@
 string penColorString(QString color)
 {
     string tempColor;
-    if(color == "#008000")
+    if(color == "#00ff00")
     {
         tempColor = "green";
     }
@@ -15,7 +15,7 @@ string penColorString(QString color)
     {
         tempColor = "cyan";
     }
-    else if(color == "#800000")
+    else if(color == "#ff0000")
     {
         tempColor = "red";
     }
@@ -23,6 +23,19 @@ string penColorString(QString color)
     {
         tempColor = "black";
     }
+    else if(color == "#ffffff")
+    {
+        tempColor = "white";
+    }
+    else if(color == "#ffff00")
+    {
+        tempColor = "yellow";
+    }
+    else if(color == "#ff00ff")
+    {
+        tempColor = "magenta";
+    }
+
     return tempColor;
 }
 
