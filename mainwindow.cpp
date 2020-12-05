@@ -97,44 +97,37 @@ void MainWindow::on_cancelText_button_clicked()
 
 void MainWindow::on_cancelPolygon_button_clicked()
 {
-    ui->shapeMenu->addWidget(ui->logo_page);
-    ui->shapeMenu->setCurrentWidget(ui->logo_page);
+   on_cancelText_button_clicked();
 }
 
 void MainWindow::on_cancelSquare_button_clicked()
 {
-    ui->shapeMenu->addWidget(ui->logo_page);
-    ui->shapeMenu->setCurrentWidget(ui->logo_page);
+    on_cancelText_button_clicked();
 }
 
 void MainWindow::on_cancelPolyline_button_clicked()
 {
-    ui->shapeMenu->addWidget(ui->logo_page);
-    ui->shapeMenu->setCurrentWidget(ui->logo_page);
+    on_cancelText_button_clicked();
 }
 
 void MainWindow::on_cancelRectangle_button_clicked()
 {
-    ui->shapeMenu->addWidget(ui->logo_page);
-    ui->shapeMenu->setCurrentWidget(ui->logo_page);
+    on_cancelText_button_clicked();
 }
 
 void MainWindow::on_cancelEllipse_button_clicked()
 {
-    ui->shapeMenu->addWidget(ui->logo_page);
-    ui->shapeMenu->setCurrentWidget(ui->logo_page);
+    on_cancelText_button_clicked();
 }
 
 void MainWindow::on_cancelLine_button_clicked()
 {
-    ui->shapeMenu->addWidget(ui->logo_page);
-    ui->shapeMenu->setCurrentWidget(ui->logo_page);
+    on_cancelText_button_clicked();
 }
 
 void MainWindow::on_cancelCircle_button_clicked()
 {
-    ui->shapeMenu->addWidget(ui->logo_page);
-    ui->shapeMenu->setCurrentWidget(ui->logo_page);
+    on_cancelText_button_clicked();
 }
 
 void MainWindow::on_lineBuild_button_clicked()
@@ -198,7 +191,20 @@ void MainWindow::on_cancelMove_button_clicked()
     ui->shapeMenu->setCurrentWidget(ui->addRect_page);
 }
 
-void MainWindow::on_resetButton_clicked()
+void MainWindow::on_eraseConfirm_button_clicked()
 {
+    int shapeID = ui->eraseShape_line_edit->text().toInt();
+    ui->CanvasObject->chopShape(shapeID);
+    ui->CanvasObject->update();
+}
 
+void MainWindow::on_cancelErase_button_clicked()
+{
+    on_cancelText_button_clicked();
+}
+
+void MainWindow::on_eraseButton_clicked()
+{
+    ui->shapeMenu->addWidget(ui->eraseShape_page);
+    ui->shapeMenu->setCurrentWidget(ui->eraseShape_page);
 }

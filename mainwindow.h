@@ -91,6 +91,12 @@ private slots:
 
     void on_resetButton_clicked();
 
+    void on_eraseConfirm_button_clicked();
+
+    void on_cancelErase_button_clicked();
+
+    void on_eraseButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     canvas *Canvas;
