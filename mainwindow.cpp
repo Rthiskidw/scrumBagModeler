@@ -10,12 +10,16 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
+
     ui->setupUi(this);
 
-    parseShape(shapeList);                              //parsing shape file filling shape list
-    ui->CanvasObject->gettingVectorFromMain(shapeList); //giving canvas shape vector
+   parser = new Shape_Parser;
+   parser->parseShape(shapeList);                    //parsing shape file filling shape list
 
+    ui->CanvasObject->gettingVectorFromMain(shapeList); //giving canvas shape vector
     ui->shapeMenu->setCurrentWidget(ui->logo_page);
+
+    //Canvas = new canvas;
 }
 
 MainWindow::~MainWindow()
@@ -171,4 +175,25 @@ void MainWindow::on_rectangleBuild_button_clicked()
 void MainWindow::on_ellipseBuild_button_clicked()
 {
 
+}
+
+void MainWindow::on_moveButton_clicked()
+{
+    ui->shapeMenu->addWidget(ui->moveShape_page);
+    ui->shapeMenu->setCurrentWidget(ui->moveShape_page);
+}
+
+void MainWindow::on_moveConfirm_button_clicked()
+{
+    int shapeID = ui->move_id->text().toInt();
+    int x = ui->move_x->text().toInt();
+    int y = ui->move_y->text().toInt();
+    ui->CanvasObject->moveShape(shapeID, 0, x, y);
+    ui->CanvasObject->update();
+}
+
+void MainWindow::on_cancelMove_button_clicked()
+{
+    ui->shapeMenu->addWidget(ui->addRect_page);
+    ui->shapeMenu->setCurrentWidget(ui->addRect_page);
 }

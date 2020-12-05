@@ -8,8 +8,6 @@
 #include <cmath>
 #include <QtDebug>
 
-
-
 // ******--> { CONSTRUCTORS } <--****** //
 
 
@@ -19,9 +17,6 @@ Line::Line(Qt::GlobalColor setPenColor, Qt::PenStyle setPenStyle, Qt::PenCapStyl
     this->set_shape(ShapeType::Line);
     this->set_points(begin, end);
 }
-
-
-
 
 // ******--> { GETTERS } <--****** //
 
@@ -50,20 +45,12 @@ int* Line::getDimensions()
     return dimensions;
 }
 
-
-
-
-
-
 // ******--> { SETTERS } <--****** //
 void Line::set_points(const QPoint &set_point_begin, const QPoint &set_point_end)
 {
     this->point_begin = set_point_begin;
     this->point_end   = set_point_end;
 }
-
-
-
 
 // ******--> { MOVE } <--****** //
 
@@ -80,8 +67,6 @@ void Line::move(const int x_pos, const int y_pos, int index)
                 break;
     }
 }
-
-
 
 // ******--> { DRAW } <--****** //
 

@@ -11,7 +11,15 @@
 
 //!Gets a single string from the input file and extracts the useful information
 //! Retruns this information as a string
-string getStringFromFile(ifstream &file)
+Shape_Parser::Shape_Parser()
+{
+
+}
+Shape_Parser::~Shape_Parser()
+{
+
+}
+string Shape_Parser::getStringFromFile(ifstream &file)
 {
     string temp;
 
@@ -23,7 +31,7 @@ string getStringFromFile(ifstream &file)
 
 //! Gets a pointer to a new polymorphic shape depending on the string passed in
 //! Initializes the new shape with the data passed in the parameters
-Shapes* getShapePtr(string shapeType, string color, int penWidth, string penStyle, string capStyle,
+Shapes* Shape_Parser::getShapePtr(string shapeType, string color, int penWidth, string penStyle, string capStyle,
                     string joinStyle, string brushColor, string brushStyle, int tempNumDimensions, int *tempDimensions)
 {
     Shapes* shapePtr = nullptr;
@@ -114,7 +122,7 @@ Shapes* getShapePtr(string shapeType, string color, int penWidth, string penStyl
     return shapePtr;
 }
 
-void parseShape(Shapes_Vector<Shapes*>& vShapeList)
+void Shape_Parser::parseShape(Shapes_Vector<Shapes*>& vShapeList)
 {
     int    index = 0;
     int    tempId = 0;
@@ -206,7 +214,7 @@ void parseShape(Shapes_Vector<Shapes*>& vShapeList)
     dataFile.close();
 }
 
-void seriallizer(Shapes_Vector<Shapes*>& vShapeList)
+void Shape_Parser::seriallizer(Shapes_Vector<Shapes*>& vShapeList)
 {
 
     ofstream outFile;

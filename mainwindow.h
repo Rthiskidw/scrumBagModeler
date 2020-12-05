@@ -83,8 +83,16 @@ private slots:
 
     void on_ellipseBuild_button_clicked();
 
+    void on_moveButton_clicked();
+
+    void on_moveConfirm_button_clicked();
+
+    void on_cancelMove_button_clicked();
+
 private:
     Ui::MainWindow *ui;
+    canvas *Canvas;
+    Shape_Parser* parser;
     QComboBox              *shapeComboBox;
     QLabel                 *shapeLabel;
     Shapes_Vector<Shapes*>  shapeList;
