@@ -47,7 +47,6 @@ void canvas::chopShape(int indexRemove)
         {
             delete *i;
             currentShapes.erase(i);
-             cout << "testing current ID: " << (*i)->get_id() << endl << endl;
             numShapesRA--;
             break;
         }
