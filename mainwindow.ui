@@ -221,15 +221,7 @@
      <bool>true</bool>
     </property>
     <property name="currentIndex">
-<<<<<<< HEAD
      <number>3</number>
-=======
-     <number>2</number>
-
-     <number>5</number>
-     <number>6</number>
-
->>>>>>> f2271876c4e0c2b29555eca05755a4e9e4138fea
     </property>
     <widget class="QWidget" name="logo_page">
      <widget class="QLabel" name="logo_label">
@@ -1548,6 +1540,9 @@
         <height>22</height>
        </rect>
       </property>
+      <property name="maximum">
+       <number>400</number>
+      </property>
      </widget>
      <widget class="QLabel" name="square_x_label">
       <property name="geometry">
@@ -1571,6 +1566,9 @@
         <height>22</height>
        </rect>
       </property>
+      <property name="maximum">
+       <number>1001</number>
+      </property>
      </widget>
      <widget class="QLabel" name="square_y_label">
       <property name="geometry">
@@ -1593,6 +1591,9 @@
         <width>42</width>
         <height>22</height>
        </rect>
+      </property>
+      <property name="maximum">
+       <number>561</number>
       </property>
      </widget>
      <widget class="QPushButton" name="squareBuild_button">
