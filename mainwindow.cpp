@@ -191,6 +191,12 @@ void MainWindow::on_cancelMove_button_clicked()
     ui->shapeMenu->setCurrentWidget(ui->addRect_page);
 }
 
+void MainWindow::on_eraseButton_clicked()
+{
+    ui->shapeMenu->addWidget(ui->eraseShape_page);
+    ui->shapeMenu->setCurrentWidget(ui->eraseShape_page);
+}
+
 void MainWindow::on_eraseConfirm_button_clicked()
 {
     int shapeID = ui->eraseShape_line_edit->text().toInt();
@@ -203,8 +209,3 @@ void MainWindow::on_cancelErase_button_clicked()
     on_cancelText_button_clicked();
 }
 
-void MainWindow::on_eraseButton_clicked()
-{
-    ui->shapeMenu->addWidget(ui->eraseShape_page);
-    ui->shapeMenu->setCurrentWidget(ui->eraseShape_page);
-}
