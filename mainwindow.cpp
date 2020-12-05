@@ -203,7 +203,37 @@ void MainWindow::on_polygonBuild_button_clicked()
 
 void MainWindow::on_squareBuild_button_clicked()
 {
+    GlobalColor SquareColor;
+    PenStyle SquarePenStyle;
+    PenCapStyle SquarePenCapStyle;
+    PenJoinStyle SquarePenJoinStyle;
+    GlobalColor SquareBrushColor;
+    BrushStyle SquareBrushStyle;
+    int SquareX;
+    int SquareY;
+    double SquareWidth;
+    double SquareLength;
 
+
+    SquareColor = ui->CanvasObject->getColor(ui->penColor_comboBox_12->currentText());
+    SquarePenStyle = ui->CanvasObject->getPenStyle(ui->penStyle_comboBox_9->currentText());
+    SquarePenCapStyle = ui->CanvasObject->getPenCapStyle(ui->penCapStyle_comboBox_9->currentText());
+    SquarePenJoinStyle = ui->CanvasObject->getPenJointStyle(ui->penJoinStyle_comboBox_9->currentText());
+    SquareBrushColor = ui->CanvasObject->getColor(ui->brushColor_comboBox_4->currentText());
+    SquareBrushStyle = ui->CanvasObject->getBrushStyle(ui->brushStyle_comboBox_4->currentText());
+    SquareLength = ui->length_spinBox_9->text().toInt();
+    SquareWidth = SquareLength;
+    SquareX = ui->xCoordinate_spinBox_9->text().toInt();
+    SquareY = ui->yCoordinate_spinBox_9->text().toInt();
+
+    Shapes *square = new Rectangle(SquareColor, SquarePenStyle, SquarePenCapStyle, SquarePenJoinStyle, SquareBrushColor, SquareBrushStyle, SquareX, SquareY, SquareWidth, SquareLength);
+
+    ui->CanvasObject->addShape(square);
+
+    ui->CanvasObject->update();
+
+    ui->shapeMenu->addWidget(ui->logo_page);
+    ui->shapeMenu->setCurrentWidget(ui->logo_page);
 }
 
 void MainWindow::on_polylineBuild_button_clicked()
@@ -222,7 +252,7 @@ void MainWindow::on_rectangleBuild_button_clicked()
     int rectX;
     int rectY;
     double rectWidth;
-    double rectHeight;
+    double rectLength;
 
 
     RectColor = ui->CanvasObject->getColor(ui->penColor_comboBox_2->currentText());
@@ -231,12 +261,12 @@ void MainWindow::on_rectangleBuild_button_clicked()
     RectPenJoinStyle = ui->CanvasObject->getPenJointStyle(ui->penJoinStyle_comboBox_2->currentText());
     RectBrushColor = ui->CanvasObject->getColor(ui->brushColor_comboBox_2->currentText());
     RectBrushStyle = ui->CanvasObject->getBrushStyle(ui->brushStyle_comboBox_2->currentText());
-    rectHeight = ui->length_spinBox_2->text().toInt();
+    rectLength = ui->length_spinBox_2->text().toInt();
     rectWidth = ui->width_spinBox_2->text().toInt();
     rectX = ui->xCoordinate_spinBox_2->text().toInt();
     rectY = ui->yCoordinate_spinBox_2->text().toInt();
 
-    Shapes *rect = new Rectangle(RectColor, RectPenStyle, RectPenCapStyle, RectPenJoinStyle, RectBrushColor, RectBrushStyle, rectX, rectY, rectWidth, rectHeight);
+    Shapes *rect = new Rectangle(RectColor, RectPenStyle, RectPenCapStyle, RectPenJoinStyle, RectBrushColor, RectBrushStyle, rectX, rectY, rectWidth, rectLength);
 
     ui->CanvasObject->addShape(rect);
 

@@ -221,14 +221,7 @@
      <bool>true</bool>
     </property>
     <property name="currentIndex">
-<<<<<<< HEAD
-     <number>2</number>
-=======
-
-     <number>5</number>
-     <number>6</number>
-
->>>>>>> 26c74b58894d21fb92b740b1156c60723da3f6a8
+     <number>3</number>
     </property>
     <widget class="QWidget" name="logo_page">
      <widget class="QLabel" name="logo_label">
@@ -1528,7 +1521,7 @@
      <widget class="QLabel" name="square_length_label">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>41</x>
         <y>380</y>
         <width>51</width>
         <height>16</height>
@@ -1541,7 +1534,7 @@
      <widget class="QSpinBox" name="length_spinBox_9">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>40</x>
         <y>400</y>
         <width>42</width>
         <height>22</height>
@@ -1566,29 +1559,6 @@
        <rect>
         <x>10</x>
         <y>450</y>
-        <width>42</width>
-        <height>22</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLabel" name="square_width_label">
-      <property name="geometry">
-       <rect>
-        <x>70</x>
-        <y>380</y>
-        <width>61</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Width</string>
-      </property>
-     </widget>
-     <widget class="QSpinBox" name="width_spinBox_27">
-      <property name="geometry">
-       <rect>
-        <x>70</x>
-        <y>400</y>
         <width>42</width>
         <height>22</height>
        </rect>
