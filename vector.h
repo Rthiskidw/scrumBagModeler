@@ -113,6 +113,7 @@ public:
     //! increase vector size by one; initialize the new element with d
     void push_back(Type d)
     {
+        cout << "Hi";
         if (space == 0)
             reserve(8);         //! start with space for 8 elements
         else if (size_v == space)

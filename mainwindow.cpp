@@ -208,6 +208,9 @@ void MainWindow::on_moveConfirm_button_clicked()
     int y = ui->move_y->text().toInt();
     ui->CanvasObject->moveShape(shapeID, 0, x, y);
     ui->CanvasObject->update();
+
+    ui->shapeMenu->addWidget(ui->logo_page);
+    ui->shapeMenu->setCurrentWidget(ui->logo_page);
 }
 
 void MainWindow::on_cancelMove_button_clicked()
@@ -227,6 +230,9 @@ void MainWindow::on_eraseConfirm_button_clicked()
     int shapeID = ui->eraseShape_line_edit->text().toInt();
     ui->CanvasObject->chopShape(shapeID);
     ui->CanvasObject->update();
+
+    ui->shapeMenu->addWidget(ui->logo_page);
+    ui->shapeMenu->setCurrentWidget(ui->logo_page);
 }
 
 void MainWindow::on_cancelErase_button_clicked()
