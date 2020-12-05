@@ -16,6 +16,7 @@
 int main(int argc, char *argv[])
 {
 
+    cout << "Hi";
     QApplication a(argc, argv);
     MainWindow window;
     window.show();
