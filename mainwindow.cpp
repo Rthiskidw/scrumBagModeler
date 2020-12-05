@@ -155,6 +155,9 @@ void MainWindow::on_lineBuild_button_clicked()
 
     ui->CanvasObject->update();
 
+    ui->shapeMenu->addWidget(ui->logo_page);
+    ui->shapeMenu->setCurrentWidget(ui->logo_page);
+
 }
 
 void MainWindow::on_circleBuild_button_clicked()

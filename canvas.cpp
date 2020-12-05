@@ -101,21 +101,21 @@ Shapes::ShapeType canvas::getShapeType(QString shapeStr)
 
 Qt::GlobalColor canvas::getColor(QString colorStr)
 {
-    if(colorStr == "blue")
+    if(colorStr == "Blue")
         return Qt::blue;
-    else if(colorStr == "red")
+    else if(colorStr == "Red")
         return Qt::red;
-    else if(colorStr == "green")
+    else if(colorStr == "Green")
         return Qt::green;
-    else if(colorStr == "yellow")
+    else if(colorStr == "Yellow")
         return Qt::yellow;
-    else if(colorStr == "black")
+    else if(colorStr == "Black")
         return Qt::black;
-    else if(colorStr == "white")
+    else if(colorStr == "White")
         return Qt::white;
-    else if(colorStr == "cyan")
+    else if(colorStr == "Cyan")
         return Qt::cyan;
-    else if(colorStr == "magenta")
+    else if(colorStr == "Magenta")
         return Qt::magenta;
     else
         return Qt::gray;
@@ -124,9 +124,9 @@ Qt::GlobalColor canvas::getColor(QString colorStr)
 Qt::PenCapStyle canvas::getPenCapStyle(QString capStr)
 {
 
-    if(capStr == "SquareCap")
+    if(capStr == "Square")
         return Qt::SquareCap;
-    else if(capStr == "FlatCap")
+    else if(capStr == "Flat")
         return Qt::FlatCap;
     else
         return Qt::RoundCap;
@@ -136,13 +136,13 @@ Qt::PenStyle canvas::getPenStyle(QString penStr)
 {
     if(penStr == "NoPen")
         return Qt::NoPen;
-    else if(penStr == "SolidLine")
+    else if(penStr == "Solid Line")
         return Qt::SolidLine;
-    else if(penStr == "DashLine")
+    else if(penStr == "Dash Line")
         return Qt::DashLine;
-    else if(penStr == "DotLine")
+    else if(penStr == "Dot Line")
         return Qt::DotLine;
-    else if(penStr == "DashDotLine")
+    else if(penStr == "Dash Dot Line")
         return Qt::DashDotLine;
     else
         return Qt::DashDotDotLine;
@@ -209,23 +209,23 @@ QFont::Weight canvas::getFontWeight(QString fontWeightStr)
 QString canvas::getStringColor(QColor color)
 {
     if(color == Qt::blue)
-        return "blue";
+        return "Blue";
     else if(color == Qt::red)
-        return "red";
+        return "Red";
     else if(color == Qt::green)
-        return "green";
+        return "Green";
     else if(color == Qt::yellow)
-        return "yellow";
+        return "Yellow";
     else if(color == Qt::black)
-        return "black";
+        return "Black";
     else if(color == Qt::white)
-        return "white";
+        return "White";
     else if(color == Qt::cyan)
-        return "cyan";
+        return "Cyan";
     else if(color == Qt::magenta)
-        return "magenta";
+        return "Magenta";
     else
-        return "gray";
+        return "Gray";
 }
 
 
