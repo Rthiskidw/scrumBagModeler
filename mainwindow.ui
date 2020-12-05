@@ -221,7 +221,11 @@
      <bool>true</bool>
     </property>
     <property name="currentIndex">
+<<<<<<< HEAD
      <number>5</number>
+=======
+     <number>6</number>
+>>>>>>> 1c3fa438c498034bc5156e5eaa3e1b2e32a0ad50
     </property>
     <widget class="QWidget" name="logo_page">
      <widget class="QLabel" name="logo_label">
@@ -2663,7 +2667,7 @@
        <string>Pen Style</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="penStyle_comboBox_10">
+     <widget class="QComboBox" name="ellipsePenStyle_box">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -2716,7 +2720,7 @@
        <string>Pen Width</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_13">
+     <widget class="QLineEdit" name="ellipsePenWidth_box">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -2739,7 +2743,7 @@
        <string>Pen Color</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="penColor_comboBox_13">
+     <widget class="QComboBox" name="ellipsePenColor_box">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -2807,7 +2811,7 @@
        <string>Pen Cap Style</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="penCapStyle_comboBox_10">
+     <widget class="QComboBox" name="ellipsePenCapStyle_box">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -2845,7 +2849,7 @@
        <string>Pen Join Style</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="penJoinStyle_comboBox_10">
+     <widget class="QComboBox" name="ellipsePenJoinStyle_box">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -2883,7 +2887,7 @@
        <string>Brush Color</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="brushColor_comboBox_5">
+     <widget class="QComboBox" name="ellipseBrushColor_box">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -2951,7 +2955,7 @@
        <string>Brush Style</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="brushStyle_comboBox_5">
+     <widget class="QComboBox" name="ellipseBrushStyle_box">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -2991,10 +2995,10 @@
        </rect>
       </property>
       <property name="text">
-       <string>Length</string>
+       <string>Height</string>
       </property>
      </widget>
-     <widget class="QSpinBox" name="length_spinBox_10">
+     <widget class="QSpinBox" name="ellipseHeight_box">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -3002,6 +3006,9 @@
         <width>42</width>
         <height>22</height>
        </rect>
+      </property>
+      <property name="maximum">
+       <number>500</number>
       </property>
      </widget>
      <widget class="QLabel" name="label_166">
@@ -3017,7 +3024,7 @@
        <string>X</string>
       </property>
      </widget>
-     <widget class="QSpinBox" name="xCoordinate_spinBox_10">
+     <widget class="QSpinBox" name="ellipseX_box">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -3025,6 +3032,9 @@
         <width>42</width>
         <height>22</height>
        </rect>
+      </property>
+      <property name="maximum">
+       <number>500</number>
       </property>
      </widget>
      <widget class="QPushButton" name="ellipseBuild_button">
@@ -3066,7 +3076,7 @@
        <string>Width</string>
       </property>
      </widget>
-     <widget class="QSpinBox" name="width_spinBox_28">
+     <widget class="QSpinBox" name="ellipseWidth_box">
       <property name="geometry">
        <rect>
         <x>90</x>
@@ -3074,6 +3084,9 @@
         <width>42</width>
         <height>22</height>
        </rect>
+      </property>
+      <property name="maximum">
+       <number>500</number>
       </property>
      </widget>
      <widget class="QLabel" name="label_168">
@@ -3089,7 +3102,7 @@
        <string>Y</string>
       </property>
      </widget>
-     <widget class="QSpinBox" name="yCoordinate_spinBox_10">
+     <widget class="QSpinBox" name="ellipseY_box">
       <property name="geometry">
        <rect>
         <x>90</x>
@@ -3097,6 +3110,9 @@
         <width>42</width>
         <height>22</height>
        </rect>
+      </property>
+      <property name="maximum">
+       <number>500</number>
       </property>
      </widget>
     </widget>
@@ -3501,7 +3517,7 @@
        <string>Pen Style</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="penStyle_comboBox_12">
+     <widget class="QComboBox" name="circlePenStyle_box">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -3554,7 +3570,7 @@
        <string>Pen Width</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_15">
+     <widget class="QLineEdit" name="circlePenWidth_box">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -3577,7 +3593,7 @@
        <string>Pen Color</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="penColor_comboBox_15">
+     <widget class="QComboBox" name="circlePenColor_box">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -3645,7 +3661,7 @@
        <string>Pen Cap Style</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="penCapStyle_comboBox_12">
+     <widget class="QComboBox" name="circlePenCapStyle_box">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -3683,7 +3699,7 @@
        <string>Pen Join Style</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="penJoinStyle_comboBox_12">
+     <widget class="QComboBox" name="circlePenJoinStyle_box">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -3721,7 +3737,7 @@
        <string>Brush Color</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="brushColor_comboBox_7">
+     <widget class="QComboBox" name="circleBrushColor_box">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -3789,7 +3805,7 @@
        <string>Brush Style</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="brushStyle_comboBox_7">
+     <widget class="QComboBox" name="circleBrushStyle_box">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -3829,10 +3845,10 @@
        </rect>
       </property>
       <property name="text">
-       <string>Length</string>
+       <string>Height</string>
       </property>
      </widget>
-     <widget class="QSpinBox" name="length_spinBox_12">
+     <widget class="QSpinBox" name="circleHeight_box">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -3842,7 +3858,7 @@
        </rect>
       </property>
       <property name="maximum">
-       <number>1000</number>
+       <number>500</number>
       </property>
      </widget>
      <widget class="QLabel" name="circle_x_label">
@@ -3858,7 +3874,7 @@
        <string>X</string>
       </property>
      </widget>
-     <widget class="QSpinBox" name="xCoordinate_spinBox_12">
+     <widget class="QSpinBox" name="circleX_box">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -3868,7 +3884,7 @@
        </rect>
       </property>
       <property name="maximum">
-       <number>1000</number>
+       <number>500</number>
       </property>
      </widget>
      <widget class="QPushButton" name="circleBuild_button">
@@ -3910,7 +3926,7 @@
        <string>Width</string>
       </property>
      </widget>
-     <widget class="QSpinBox" name="width_spinBox_30">
+     <widget class="QSpinBox" name="circleWidth_box">
       <property name="geometry">
        <rect>
         <x>90</x>
@@ -3936,7 +3952,7 @@
        <string>Y</string>
       </property>
      </widget>
-     <widget class="QSpinBox" name="yCoordinate_spinBox_12">
+     <widget class="QSpinBox" name="circleY_box">
       <property name="geometry">
        <rect>
         <x>90</x>

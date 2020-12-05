@@ -235,6 +235,8 @@ void Shape_Parser::seriallizer(Shapes_Vector<Shapes*>& vShapeList)
         if(shape-> get_shape() == Shapes::ShapeType::Text)
         {
 
+            qInfo() << "Testing Pen Color" << colorCode;
+
             int *dimensions = shape->getDimensions();
             Text *tempText = dynamic_cast<Text *>(shape);
             QFont font = tempText->get_text_font();
@@ -270,7 +272,7 @@ void Shape_Parser::seriallizer(Shapes_Vector<Shapes*>& vShapeList)
             else
             {
                 outFile<<"\nShapeType: Polyline";
-                outFile << "\nShpapeDimensions: ";
+                outFile << "\nShapeDimensions: ";
                 for(int index = 0; index < 8; index++)
                 {
                     if(index != 7)
@@ -282,7 +284,7 @@ void Shape_Parser::seriallizer(Shapes_Vector<Shapes*>& vShapeList)
             outFile <<"\nPenColor: " << penColorString(colorCode)
                     <<"\nPenWidth: " << to_string(tempPen.width())
                     <<"\nPenStyle: " << penStyleString(tempPen.style())
-                    <<"\nPenCapSyle: " << penCapStyleString(tempPen.capStyle())
+                    <<"\nPenCapStyle: " << penCapStyleString(tempPen.capStyle())
                     <<"\nPenJoinStyle: " << penJoinStyleString(tempPen.joinStyle())
                     <<"\n\n";
         }
@@ -292,11 +294,12 @@ void Shape_Parser::seriallizer(Shapes_Vector<Shapes*>& vShapeList)
             QBrush brush = shape->get_brush();
             QColor brushColor = brush.color();
             QString brushColorCode = brushColor.name();
+            qInfo() << "TESTING BRUSH COLOR NAME " << brushColorCode << "\n";
 
             if(shape-> get_shape() == Shapes::ShapeType::Polygon)
             {
                 outFile<<"\nShapeType: Polygon";
-                outFile << "\nShpapeDimensions: ";
+                outFile << "\nShapeDimensions: ";
                 for(int index = 0; index < 8; index++)
                 {
                     if(index != 7)
@@ -310,7 +313,7 @@ void Shape_Parser::seriallizer(Shapes_Vector<Shapes*>& vShapeList)
                 if( dimensions[2] == dimensions[3])
                 {
                     outFile << "\nShapeType: Square";
-                    outFile << "\nShpapeDimensions: ";
+                    outFile << "\nShapeDimensions: ";
                     for(int index = 0; index < 3; index++)
                     {
                         if(index != 2)
@@ -322,7 +325,7 @@ void Shape_Parser::seriallizer(Shapes_Vector<Shapes*>& vShapeList)
                 else
                 {
                     outFile<<"\nShapeType: Rectangle";
-                    outFile << "\nShpapeDimensions: ";
+                    outFile << "\nShapeDimensions: ";
                     for(int index = 0; index < 4; index++)
                     {
                         if(index != 3)
@@ -337,7 +340,7 @@ void Shape_Parser::seriallizer(Shapes_Vector<Shapes*>& vShapeList)
                 if( dimensions[2] == dimensions[3])
                 {
                     outFile << "\nShapeType: Circle";
-                    outFile << "\nShpapeDimensions: ";
+                    outFile << "\nShapeDimensions: ";
                     for(int index = 0; index < 3; index++)
                     {
                         if(index != 2)
@@ -349,7 +352,7 @@ void Shape_Parser::seriallizer(Shapes_Vector<Shapes*>& vShapeList)
                 else
                 {
                     outFile<<"\nShapeType: Ellipse";
-                    outFile << "\nShpapeDimensions: ";
+                    outFile << "\nShapeDimensions: ";
                     for(int index = 0; index < 4; index++)
                     {
                         if(index != 3)
