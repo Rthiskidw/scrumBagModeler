@@ -187,7 +187,37 @@ void MainWindow::on_polylineBuild_button_clicked()
 
 void MainWindow::on_rectangleBuild_button_clicked()
 {
+    GlobalColor RectColor;
+    PenStyle RectPenStyle;
+    PenCapStyle RectPenCapStyle;
+    PenJoinStyle RectPenJoinStyle;
+    GlobalColor RectBrushColor;
+    BrushStyle RectBrushStyle;
+    int rectX;
+    int rectY;
+    double rectWidth;
+    double rectHeight;
 
+
+    RectColor = ui->CanvasObject->getColor(ui->penColor_comboBox_2->currentText());
+    RectPenStyle = ui->CanvasObject->getPenStyle(ui->penStyle_comboBox_2->currentText());
+    RectPenCapStyle = ui->CanvasObject->getPenCapStyle(ui->penCapStyle_comboBox_2->currentText());
+    RectPenJoinStyle = ui->CanvasObject->getPenJointStyle(ui->penJoinStyle_comboBox_2->currentText());
+    RectBrushColor = ui->CanvasObject->getColor(ui->brushColor_comboBox_2->currentText());
+    RectBrushStyle = ui->CanvasObject->getBrushStyle(ui->brushStyle_comboBox_2->currentText());
+    rectHeight = ui->length_spinBox_2->text().toInt();
+    rectWidth = ui->width_spinBox_2->text().toInt();
+    rectX = ui->xCoordinate_spinBox_2->text().toInt();
+    rectY = ui->yCoordinate_spinBox_2->text().toInt();
+
+    Shapes *rect = new Rectangle(RectColor, RectPenStyle, RectPenCapStyle, RectPenJoinStyle, RectBrushColor, RectBrushStyle, rectX, rectY, rectWidth, rectHeight);
+
+    ui->CanvasObject->addShape(rect);
+
+    ui->CanvasObject->update();
+
+    ui->shapeMenu->addWidget(ui->logo_page);
+    ui->shapeMenu->setCurrentWidget(ui->logo_page);
 }
 
 void MainWindow::on_ellipseBuild_button_clicked()
