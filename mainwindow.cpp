@@ -132,6 +132,28 @@ void MainWindow::on_cancelCircle_button_clicked()
 
 void MainWindow::on_lineBuild_button_clicked()
 {
+    GlobalColor lineColor;
+    PenStyle linePenStyle;
+    PenCapStyle linePenCapStyle;
+    PenJoinStyle linePenJoinStyle;
+    GlobalColor lineBrushColor;
+    BrushStyle lineBrushStyle;
+
+    lineColor = ui->CanvasObject->getColor(ui->line_penColor_box->currentText());
+    linePenStyle = ui->CanvasObject->getPenStyle(ui->line_penStyle_box->currentText());
+    linePenCapStyle = ui->CanvasObject->getPenCapStyle(ui->line_penCapStyle_box->currentText());
+    linePenJoinStyle = ui->CanvasObject->getPenJointStyle(ui->line_penJointStyle_box->currentText());
+    lineBrushColor = lineColor;
+    lineBrushStyle = SolidPattern;
+
+    QPoint P1(ui->line_x1_box->text().toInt(), ui->line_y1_box->text().toInt());
+    QPoint P2(ui->line_x2_box->text().toInt(), ui->line_y2_box->text().toInt());
+
+    Shapes *line = new Line(lineColor, linePenStyle, linePenCapStyle, linePenJoinStyle, lineBrushColor, lineBrushStyle, P1, P2);
+
+    ui->CanvasObject->addShape(line);
+
+    ui->CanvasObject->update();
 
 }
 

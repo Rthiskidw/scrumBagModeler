@@ -35,13 +35,6 @@ public:
     void chopShape(int indexRemove);//Shape remove
     void moveShape(int indexMove, int coordMove, int x, int y); //Move shape
 
-signals:
-
-private:
-    Shapes_Vector<Shapes*> currentShapes;
-    const QImage canvasObject;
-    int numShapesRA;
-
     QString getStringColor(QColor color);
     QString getStringPenCap(Qt::PenCapStyle penCapStyle);
     QString getStringPenStyle(Qt::PenStyle penStyle);
@@ -60,6 +53,13 @@ private:
     Qt::AlignmentFlag getFlag(QString flag);
     QFont::Style      getFontStyle(QString fontStyle);
     QFont::Weight     getFontWeight(QString fontWeight);
+
+signals:
+
+private:
+    Shapes_Vector<Shapes*> currentShapes;
+    const QImage canvasObject;
+    int numShapesRA;
 };
 
 #endif // CANVAS_H

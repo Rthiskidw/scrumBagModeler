@@ -221,7 +221,7 @@
      <bool>true</bool>
     </property>
     <property name="currentIndex">
-     <number>10</number>
+     <number>8</number>
     </property>
     <widget class="QWidget" name="logo_page">
      <widget class="QLabel" name="logo_label">
