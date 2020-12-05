@@ -181,7 +181,6 @@ void MainWindow::on_circleBuild_button_clicked()
     double W = ui->circleWidth_box->text().toInt();
     double H = ui->circleHeight_box->text().toInt();
 
-    //Ellipse(Qt::GlobalColor setPenColor, Qt::PenStyle setPenStyle, Qt::PenCapStyle setCapStyle, Qt::PenJoinStyle setJointStyle, Qt::GlobalColor setBrushColor, Qt::BrushStyle setBrushStyle, int setX, int setY, double setWidth, double setHeight)
     Shapes *circle = new Ellipse(color, penStyle, penCapStyle, penJoinStyle, brushColor, brushStyle, X, Y, W, H);
 
     ui->CanvasObject->addShape(circle);
@@ -238,7 +237,6 @@ void MainWindow::on_ellipseBuild_button_clicked()
     double W = ui->ellipseWidth_box->text().toInt();
     double H = ui->ellipseHeight_box->text().toInt();
 
-    //Ellipse(Qt::GlobalColor setPenColor, Qt::PenStyle setPenStyle, Qt::PenCapStyle setCapStyle, Qt::PenJoinStyle setJointStyle, Qt::GlobalColor setBrushColor, Qt::BrushStyle setBrushStyle, int setX, int setY, double setWidth, double setHeight)
     Shapes *ellipse = new Ellipse(color, penStyle, penCapStyle, penJoinStyle, brushColor, brushStyle, X, Y, W, H);
 
     ui->CanvasObject->addShape(ellipse);
