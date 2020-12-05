@@ -162,7 +162,34 @@ void MainWindow::on_lineBuild_button_clicked()
 
 void MainWindow::on_circleBuild_button_clicked()
 {
+    GlobalColor color;
+    PenStyle penStyle;
+    PenCapStyle penCapStyle;
+    PenJoinStyle penJoinStyle;
+    GlobalColor brushColor;
+    BrushStyle brushStyle;
 
+    color = ui->CanvasObject->getColor(ui->circlePenColor_box->currentText());
+    penStyle = ui->CanvasObject->getPenStyle(ui->circlePenStyle_box->currentText());
+    penCapStyle = ui->CanvasObject->getPenCapStyle(ui->circlePenCapStyle_box->currentText());
+    penJoinStyle = ui->CanvasObject->getPenJointStyle(ui->circlePenJoinStyle_box->currentText());
+    brushColor = ui->CanvasObject->getColor(ui->circleBrushColor_box->currentText());
+    brushStyle = ui->CanvasObject->getBrushStyle(ui->circleBrushStyle_box->currentText());
+
+    int X = ui->circleX_box->text().toInt();
+    int Y = ui->circleY_box->text().toInt();
+    double W = ui->circleWidth_box->text().toInt();
+    double H = ui->circleHeight_box->text().toInt();
+
+    //Ellipse(Qt::GlobalColor setPenColor, Qt::PenStyle setPenStyle, Qt::PenCapStyle setCapStyle, Qt::PenJoinStyle setJointStyle, Qt::GlobalColor setBrushColor, Qt::BrushStyle setBrushStyle, int setX, int setY, double setWidth, double setHeight)
+    Shapes *circle = new Ellipse(color, penStyle, penCapStyle, penJoinStyle, brushColor, brushStyle, X, Y, W, H);
+
+    ui->CanvasObject->addShape(circle);
+
+    ui->CanvasObject->update();
+
+    ui->shapeMenu->addWidget(ui->logo_page);
+    ui->shapeMenu->setCurrentWidget(ui->logo_page);
 }
 
 void MainWindow::on_textBuild_button_clicked()
@@ -192,7 +219,34 @@ void MainWindow::on_rectangleBuild_button_clicked()
 
 void MainWindow::on_ellipseBuild_button_clicked()
 {
+    GlobalColor color;
+    PenStyle penStyle;
+    PenCapStyle penCapStyle;
+    PenJoinStyle penJoinStyle;
+    GlobalColor brushColor;
+    BrushStyle brushStyle;
 
+    color = ui->CanvasObject->getColor(ui->ellipsePenColor_box->currentText());
+    penStyle = ui->CanvasObject->getPenStyle(ui->ellipsePenStyle_box->currentText());
+    penCapStyle = ui->CanvasObject->getPenCapStyle(ui->ellipsePenCapStyle_box->currentText());
+    penJoinStyle = ui->CanvasObject->getPenJointStyle(ui->ellipsePenJoinStyle_box->currentText());
+    brushColor = ui->CanvasObject->getColor(ui->ellipseBrushColor_box->currentText());
+    brushStyle = ui->CanvasObject->getBrushStyle(ui->ellipseBrushStyle_box->currentText());
+
+    int X = ui->ellipseX_box->text().toInt();
+    int Y = ui->ellipseY_box->text().toInt();
+    double W = ui->ellipseWidth_box->text().toInt();
+    double H = ui->ellipseHeight_box->text().toInt();
+
+    //Ellipse(Qt::GlobalColor setPenColor, Qt::PenStyle setPenStyle, Qt::PenCapStyle setCapStyle, Qt::PenJoinStyle setJointStyle, Qt::GlobalColor setBrushColor, Qt::BrushStyle setBrushStyle, int setX, int setY, double setWidth, double setHeight)
+    Shapes *ellipse = new Ellipse(color, penStyle, penCapStyle, penJoinStyle, brushColor, brushStyle, X, Y, W, H);
+
+    ui->CanvasObject->addShape(ellipse);
+
+    ui->CanvasObject->update();
+
+    ui->shapeMenu->addWidget(ui->logo_page);
+    ui->shapeMenu->setCurrentWidget(ui->logo_page);
 }
 
 void MainWindow::on_moveButton_clicked()
