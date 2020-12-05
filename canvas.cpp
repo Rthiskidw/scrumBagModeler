@@ -42,12 +42,15 @@ void canvas::chopShape(int indexRemove)
 {
     Shapes_Vector<Shapes*>::iterator i;
     for(i = currentShapes.begin(); i < currentShapes.end(); ++i)
+    {
         if((*i)->get_id() == indexRemove)
         {
+            delete *i;
             currentShapes.erase(i);
             numShapesRA--;
             break;
         }
+    }
 }
 
 void canvas::moveShape(int index, int coord, int x, int y)

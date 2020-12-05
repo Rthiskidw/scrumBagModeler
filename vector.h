@@ -225,7 +225,7 @@ public:
             return p;
         for (iterator pos = p + 1; pos != end(); ++pos)
             *(pos - 1) = *pos; //! copy element one position to the left of p
-        delete (end() - 1);
+        //delete (end() - 1);
         --size_v;
         return p;
     }
