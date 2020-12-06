@@ -193,7 +193,7 @@ QFont::Style canvas::getFontStyle(QString fontStyleStr)
         return QFont::StyleNormal;
     else if(fontStyleStr == "Italic")
         return QFont::StyleItalic;
-    else
+    else if(fontStyleStr == "Oblique")
         return QFont::StyleOblique;
 }
 

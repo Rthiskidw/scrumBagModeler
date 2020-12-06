@@ -203,7 +203,11 @@ void MainWindow::on_textBuild_button_clicked()
 
     color = ui->CanvasObject->getColor(ui->textColor_box->currentText());
     getText = ui->textInput_box->toPlainText();
+<<<<<<< HEAD
     //font.setStyle(fontStyleConversion(ui->textFontStyle_box->currentText()));
+=======
+    font.setStyle(ui->CanvasObject->getFontStyle(ui->textFontStyle_box->currentText()));
+>>>>>>> e7c4c2c8b5f2d347d7847f3f15286d41f779e261
     //font = ui->CanvasObject->getFont(ui->textFontStyle_box->currentText());
     alignment = ui->CanvasObject->getFlag(ui->textAllignment_box->currentText());
 
@@ -215,11 +219,19 @@ void MainWindow::on_textBuild_button_clicked()
     width = ui->textBoxWidth_box->text().toInt();
 
     Shapes *text = new Text(color, getText, font, coordinate, alignment, width, height);
+<<<<<<< HEAD
 
     ui->CanvasObject->addShape(text);
 
     ui->CanvasObject->update();
 
+=======
+
+    ui->CanvasObject->addShape(text);
+
+    ui->CanvasObject->update();
+
+>>>>>>> e7c4c2c8b5f2d347d7847f3f15286d41f779e261
     ui->shapeMenu->addWidget(ui->logo_page);
     ui->shapeMenu->setCurrentWidget(ui->logo_page);
 }
