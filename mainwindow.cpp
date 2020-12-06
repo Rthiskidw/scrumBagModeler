@@ -5,6 +5,8 @@
 #include "shapeparser.h"
 #include "reportwindow.h"
 #include "canvas.h"
+#include "shapesorter.cpp"
+#include <sstream>
 //class canvas;
 
 MainWindow::MainWindow(QWidget *parent)
@@ -12,13 +14,13 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
 
-    ui->setupUi(this);
+   ui->setupUi(this);
 
    parser = new Shape_Parser;
-   parser->parseShape(shapeList);                    //parsing shape file filling shape list
+   parser->parseShape(shapeList);                       //parsing shape file filling shape list
 
-    ui->CanvasObject->gettingVectorFromMain(shapeList); //giving canvas shape vector
-    ui->shapeMenu->setCurrentWidget(ui->logo_page);
+   ui->CanvasObject->gettingVectorFromMain(shapeList); //giving canvas shape vector
+   ui->shapeMenu->setCurrentWidget(ui->logo_page);
 
     //Canvas = new canvas;
 }
@@ -356,7 +358,13 @@ void MainWindow::on_cancelErase_button_clicked()
 
 void MainWindow::on_actionSort_By_ID_triggered()
 {
+
+    sortByID(shapeList);
+
     QString hey = "hey";
+    stringstream text;
+
+
     auto report = new reportWindow(hey,this);
     report->open();
 }

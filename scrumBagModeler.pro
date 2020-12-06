@@ -24,6 +24,7 @@ SOURCES += \
     reportwindow.cpp \
     shape.cpp \
     shapeparser.cpp \
+    shapesorter.cpp \
     textBox.cpp \
 
 HEADERS += \
