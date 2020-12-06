@@ -214,7 +214,6 @@ void MainWindow::on_textBuild_button_clicked()
     height = ui->textBoxHeight_box->text().toInt();
     width = ui->textBoxWidth_box->text().toInt();
 
-    //Text(Qt::GlobalColor setFontColor, QString setText, QFont setFont, QPoint setLocation, Qt::AlignmentFlag setFlag, int setWidth, int setHeight)
     Shapes *text = new Text(color, getText, font, coordinate, alignment, width, height);
 
     ui->CanvasObject->addShape(text);

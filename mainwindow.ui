@@ -221,11 +221,11 @@
      <bool>true</bool>
     </property>
     <property name="currentIndex">
-<<<<<<< Updated upstream
+
      <number>2</number>
-=======
+
      <number>1</number>
->>>>>>> Stashed changes
+
     </property>
     <widget class="QWidget" name="logo_page">
      <widget class="QLabel" name="logo_label">
