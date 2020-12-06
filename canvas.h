@@ -15,6 +15,11 @@
 #include "shape.h"
 #include "shapeparser.h"
 
+
+//!  Class canvas
+/*!
+  Class to construct the canvas that displays shapes on screen.
+*/
 class canvas : public QWidget
 {
     Q_OBJECT
