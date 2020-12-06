@@ -221,7 +221,11 @@
      <bool>true</bool>
     </property>
     <property name="currentIndex">
+<<<<<<< Updated upstream
      <number>2</number>
+=======
+     <number>1</number>
+>>>>>>> Stashed changes
     </property>
     <widget class="QWidget" name="logo_page">
      <widget class="QLabel" name="logo_label">
@@ -297,7 +301,7 @@
        <string>Text</string>
       </property>
      </widget>
-     <widget class="QTextEdit" name="text_box">
+     <widget class="QTextEdit" name="textInput_box">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -333,7 +337,7 @@
        <string>Text Allignment</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="text_allignment_box">
+     <widget class="QComboBox" name="textAllignment_box">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -358,7 +362,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QLabel" name="label_105">
+     <widget class="QLabel" name="label_103">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -368,110 +372,39 @@
        </rect>
       </property>
       <property name="text">
-       <string>Text Point Size</string>
+       <string>Text Font Style</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="text_pointsize_box">
+     <widget class="QComboBox" name="textFontStyle_box">
       <property name="geometry">
        <rect>
         <x>10</x>
         <y>220</y>
-        <width>71</width>
-        <height>20</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_102">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>250</y>
-        <width>131</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Text Font Family</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="text_fontfamily_box">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>270</y>
-        <width>69</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <kerning>true</kerning>
-       </font>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="minimumContentsLength">
-       <number>0</number>
-      </property>
-      <property name="frame">
-       <bool>false</bool>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_103">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>290</y>
-        <width>131</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Text Font Style</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="text_fontstyle_box">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>310</y>
         <width>111</width>
         <height>22</height>
        </rect>
       </property>
-     </widget>
-     <widget class="QLabel" name="label_108">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>340</y>
-        <width>131</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Text Font Weight</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="text_fontweight_box">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>360</y>
-        <width>111</width>
-        <height>22</height>
-       </rect>
-      </property>
+      <item>
+       <property name="text">
+        <string>Normal</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Italic</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Oblique</string>
+       </property>
+      </item>
      </widget>
      <widget class="QLabel" name="label_110">
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>390</y>
+        <y>250</y>
         <width>71</width>
         <height>21</height>
        </rect>
@@ -480,11 +413,11 @@
        <string>Box Width</string>
       </property>
      </widget>
-     <widget class="QSpinBox" name="text_box_width">
+     <widget class="QSpinBox" name="textBoxWidth_box">
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>410</y>
+        <y>270</y>
         <width>51</width>
         <height>22</height>
        </rect>
@@ -497,7 +430,7 @@
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>440</y>
+        <y>300</y>
         <width>31</width>
         <height>21</height>
        </rect>
@@ -506,11 +439,11 @@
        <string>X</string>
       </property>
      </widget>
-     <widget class="QSpinBox" name="text_x">
+     <widget class="QSpinBox" name="textX_box">
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>460</y>
+        <y>320</y>
         <width>51</width>
         <height>22</height>
        </rect>
@@ -519,11 +452,11 @@
        <number>1000</number>
       </property>
      </widget>
-     <widget class="QSpinBox" name="text_y">
+     <widget class="QSpinBox" name="textY_box">
       <property name="geometry">
        <rect>
         <x>90</x>
-        <y>460</y>
+        <y>320</y>
         <width>51</width>
         <height>22</height>
        </rect>
@@ -532,11 +465,11 @@
        <number>500</number>
       </property>
      </widget>
-     <widget class="QSpinBox" name="text_y_2">
+     <widget class="QSpinBox" name="textBoxHeight_box">
       <property name="geometry">
        <rect>
         <x>90</x>
-        <y>410</y>
+        <y>270</y>
         <width>51</width>
         <height>22</height>
        </rect>
@@ -549,7 +482,7 @@
       <property name="geometry">
        <rect>
         <x>90</x>
-        <y>390</y>
+        <y>250</y>
         <width>81</width>
         <height>21</height>
        </rect>
@@ -562,7 +495,7 @@
       <property name="geometry">
        <rect>
         <x>100</x>
-        <y>440</y>
+        <y>300</y>
         <width>31</width>
         <height>21</height>
        </rect>
@@ -575,7 +508,7 @@
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>500</y>
+        <y>410</y>
         <width>71</width>
         <height>21</height>
        </rect>
@@ -588,7 +521,7 @@
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>530</y>
+        <y>440</y>
         <width>71</width>
         <height>21</height>
        </rect>
@@ -597,7 +530,7 @@
        <string>Cancel</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="penColor_comboBox_6">
+     <widget class="QComboBox" name="textColor_box">
       <property name="geometry">
        <rect>
         <x>10</x>

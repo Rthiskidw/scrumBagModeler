@@ -194,7 +194,35 @@ void MainWindow::on_circleBuild_button_clicked()
 
 void MainWindow::on_textBuild_button_clicked()
 {
+    GlobalColor color;
+    QString getText;
+    QFont font;
+    AlignmentFlag alignment;
+    int height;
+    int width;
 
+    color = ui->CanvasObject->getColor(ui->textColor_box->currentText());
+    getText = ui->textInput_box->toPlainText();
+    //font.setStyle(fontStyleConversion(ui->textFontStyle_box->currentText()));
+    //font = ui->CanvasObject->getFont(ui->textFontStyle_box->currentText());
+    alignment = ui->CanvasObject->getFlag(ui->textAllignment_box->currentText());
+
+    int X = ui->textX_box->text().toInt();
+    int Y = ui->textY_box->text().toInt();
+    QPoint coordinate(X,Y);
+
+    height = ui->textBoxHeight_box->text().toInt();
+    width = ui->textBoxWidth_box->text().toInt();
+
+    //Text(Qt::GlobalColor setFontColor, QString setText, QFont setFont, QPoint setLocation, Qt::AlignmentFlag setFlag, int setWidth, int setHeight)
+    Shapes *text = new Text(color, getText, font, coordinate, alignment, width, height);
+
+    ui->CanvasObject->addShape(text);
+
+    ui->CanvasObject->update();
+
+    ui->shapeMenu->addWidget(ui->logo_page);
+    ui->shapeMenu->setCurrentWidget(ui->logo_page);
 }
 
 void MainWindow::on_polygonBuild_button_clicked()

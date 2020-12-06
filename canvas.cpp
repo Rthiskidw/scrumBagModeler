@@ -179,23 +179,19 @@ Qt::BrushStyle canvas::getBrushStyle(QString brushStr)
 
 Qt::AlignmentFlag canvas::getFlag(QString flagStr)
 {
-    if(flagStr == "AlignLeft")
+    if(flagStr == "Left")
         return Qt::AlignLeft;
-    else if(flagStr == "AlignRight")
+    else if(flagStr == "Right")
         return Qt::AlignRight;
-    else if(flagStr == "AlignTop")
-        return Qt::AlignTop;
-    else if(flagStr == "AlignBottom")
-        return Qt::AlignBottom;
     else
         return Qt::AlignCenter;
 }
 
 QFont::Style canvas::getFontStyle(QString fontStyleStr)
 {
-    if(fontStyleStr == "StyleNormal")
+    if(fontStyleStr == "Normal")
         return QFont::StyleNormal;
-    else if(fontStyleStr == "StyleItalic")
+    else if(fontStyleStr == "Italic")
         return QFont::StyleItalic;
     else
         return QFont::StyleOblique;
