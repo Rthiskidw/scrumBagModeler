@@ -1,4 +1,5 @@
 #include "canvas.h"
+#include "shapeparser.h"
 #include <QDebug>
 #include <iostream>
 #include <QString>
@@ -25,6 +26,12 @@ void canvas::paintEvent(QPaintEvent *)
     {
         shape->draw(this);
     }
+}
+
+void canvas::saveShape()
+{
+    Shape_Parser *parser = new Shape_Parser;
+    parser->seriallizer(currentShapes);
 }
 
 void canvas::gettingVectorFromMain(const Shapes_Vector<Shapes*> shapesVector)
@@ -172,25 +179,21 @@ Qt::BrushStyle canvas::getBrushStyle(QString brushStr)
 
 Qt::AlignmentFlag canvas::getFlag(QString flagStr)
 {
-    if(flagStr == "AlignLeft")
+    if(flagStr == "Left")
         return Qt::AlignLeft;
-    else if(flagStr == "AlignRight")
+    else if(flagStr == "Right")
         return Qt::AlignRight;
-    else if(flagStr == "AlignTop")
-        return Qt::AlignTop;
-    else if(flagStr == "AlignBottom")
-        return Qt::AlignBottom;
     else
         return Qt::AlignCenter;
 }
 
 QFont::Style canvas::getFontStyle(QString fontStyleStr)
 {
-    if(fontStyleStr == "StyleNormal")
+    if(fontStyleStr == "Normal")
         return QFont::StyleNormal;
-    else if(fontStyleStr == "StyleItalic")
+    else if(fontStyleStr == "Italic")
         return QFont::StyleItalic;
-    else
+    else if(fontStyleStr == "Oblique")
         return QFont::StyleOblique;
 }
 

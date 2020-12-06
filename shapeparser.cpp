@@ -49,11 +49,17 @@ Shapes* Shape_Parser::getShapePtr(string shapeType, string color, int penWidth, 
         //Creats an array of QPoints
         QPoint *values;
         values = new QPoint[tempNumDimensions / 2];
+        int q = 0;
+        int p = 1;
 
-        values[0] = QPoint(tempDimensions[0], tempDimensions[1]);
-        values[1] = QPoint(tempDimensions[2], tempDimensions[3]);
-        values[2] = QPoint(tempDimensions[4], tempDimensions[5]);
-        values[3] = QPoint(tempDimensions[6], tempDimensions[7]);
+        for(int index = 0; index < (tempNumDimensions/2); index++)
+        {
+
+            values[index] = QPoint(tempDimensions[index + q], tempDimensions[index + p]);
+
+            ++q;
+            ++p;
+        }
 
         shapePtr = new Polyline(colorConversion(color), penStyleConversion(penStyle), penCapConversion(capStyle), penJoinConversion(joinStyle),
                                 colorConversion(brushColor), brushStyleConversion(brushStyle), (tempNumDimensions/2), values);
@@ -65,13 +71,17 @@ Shapes* Shape_Parser::getShapePtr(string shapeType, string color, int penWidth, 
         //Creats an array of QPoints
         QPoint *values;
         values = new QPoint[tempNumDimensions / 2];
+        int q = 0;
+        int p = 1;
 
+        for(int index = 0; index < (tempNumDimensions/2); index++)
+        {
 
-        values[0] = QPoint(tempDimensions[0], tempDimensions[1]);
-        values[1] = QPoint(tempDimensions[2], tempDimensions[3]);
-        values[2] = QPoint(tempDimensions[4], tempDimensions[5]);
-        values[3] = QPoint(tempDimensions[6], tempDimensions[7]);
+            values[index] = QPoint(tempDimensions[index + q], tempDimensions[index + p]);
 
+            ++q;
+            ++p;
+        }
 
         shapePtr = new Polygon(colorConversion(color), penStyleConversion(penStyle), penCapConversion(capStyle), penJoinConversion(joinStyle),
                                colorConversion(brushColor), brushStyleConversion(brushStyle), (tempNumDimensions/2), values);

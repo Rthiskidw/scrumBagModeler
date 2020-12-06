@@ -142,7 +142,7 @@ void Text::draw(QPaintDevice *device)
 {
     qpainter.begin(device);
     qpainter.setPen(get_pen());
-    qpainter.setBrush(get_brush());
+    qpainter.setFont(text_font);
     qpainter.drawText(location.x(), location.y(), textBoxWidth, textBoxHeight, flag, text_string);
     qpainter.drawText(location, QString::number(get_id()));
     qpainter.end();

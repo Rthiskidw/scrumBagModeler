@@ -196,12 +196,80 @@ void MainWindow::on_circleBuild_button_clicked()
 
 void MainWindow::on_textBuild_button_clicked()
 {
+    GlobalColor color;
+    QString getText;
+    QFont font;
+    AlignmentFlag alignment;
+    int height;
+    int width;
 
+    color = ui->CanvasObject->getColor(ui->textColor_box->currentText());
+    getText = ui->textInput_box->toPlainText();
+    //font.setStyle(fontStyleConversion(ui->textFontStyle_box->currentText()));
+    font.setStyle(ui->CanvasObject->getFontStyle(ui->textFontStyle_box->currentText()));
+    //font = ui->CanvasObject->getFont(ui->textFontStyle_box->currentText());
+    alignment = ui->CanvasObject->getFlag(ui->textAllignment_box->currentText());
+
+    int X = ui->textX_box->text().toInt();
+    int Y = ui->textY_box->text().toInt();
+    QPoint coordinate(X,Y);
+
+    height = ui->textBoxHeight_box->text().toInt();
+    width = ui->textBoxWidth_box->text().toInt();
+
+    Shapes *text = new Text(color, getText, font, coordinate, alignment, width, height);
+
+    ui->CanvasObject->addShape(text);
+
+    ui->CanvasObject->update();
+
+    ui->CanvasObject->addShape(text);
+
+    ui->CanvasObject->update();
+    ui->shapeMenu->addWidget(ui->logo_page);
+    ui->shapeMenu->setCurrentWidget(ui->logo_page);
 }
 
 void MainWindow::on_polygonBuild_button_clicked()
 {
+    GlobalColor PolygonColor;
+    PenStyle PolygonPenStyle;
+    PenCapStyle PolygonPenCapStyle;
+    PenJoinStyle PolygonPenJoinStyle;
+    GlobalColor PolygonBrushColor;
+    BrushStyle PolygonBrushStyle;
+    int totalPoints = 4;
+    QPoint pointArray[4];
 
+    QPoint one(ui->polygonX1_box->text().toInt(), ui->polygonY1_box->text().toInt());
+    pointArray[0] = one;
+
+    QPoint two(ui->polygonX2_box->text().toInt(), ui->polygonY2_box->text().toInt());
+    pointArray[1] = two;
+
+    QPoint three(ui->polygonX3_box->text().toInt(), ui->polygonY3_box->text().toInt());
+    pointArray[2] = three;
+
+    QPoint four(ui->polygonX4_box->text().toInt(), ui->polygonY4_box->text().toInt());
+    pointArray[3] = four;
+
+    PolygonColor = ui->CanvasObject->getColor(ui->polygonPenColor_box->currentText());
+    PolygonPenStyle = ui->CanvasObject->getPenStyle(ui->polygonPenStyle_box->currentText());
+    PolygonPenCapStyle = ui->CanvasObject->getPenCapStyle(ui->polygonPenCapStyle_box->currentText());
+    PolygonPenJoinStyle = ui->CanvasObject->getPenJointStyle(ui->polygonPenJoinStyle_box->currentText());
+    PolygonBrushColor = ui->CanvasObject->getColor(ui->polyBrushColor_comboBox->currentText());
+    PolygonBrushStyle = ui->CanvasObject->getBrushStyle(ui->polyBrushStyle_comboBox->currentText());
+
+
+    Shapes *polygon = new Polygon(PolygonColor, PolygonPenStyle, PolygonPenCapStyle, PolygonPenJoinStyle, PolygonBrushColor, PolygonBrushStyle, totalPoints, pointArray);
+    polygon->set_shape(Shapes::ShapeType::Polygon);
+    polygon->set_width(1);
+    ui->CanvasObject->addShape(polygon);
+
+    ui->CanvasObject->update();
+
+    ui->shapeMenu->addWidget(ui->logo_page);
+    ui->shapeMenu->setCurrentWidget(ui->logo_page);
 }
 
 void MainWindow::on_squareBuild_button_clicked()
@@ -241,7 +309,91 @@ void MainWindow::on_squareBuild_button_clicked()
 
 void MainWindow::on_polylineBuild_button_clicked()
 {
+    GlobalColor PolyLineColor;
+    PenStyle PolyLinePenStyle;
+    PenCapStyle PolyLinePenCapStyle;
+    PenJoinStyle PolyLinePenJoinStyle;
+    GlobalColor PolyLineBrushColor;
+    BrushStyle PolyLineBrushStyle;
+    int polyLineTotalPoints;
+    polyLineTotalPoints = ui->lineEdit_6->text().toInt();
+    QPoint polyLinePointArray[polyLineTotalPoints];
 
+    if (polyLineTotalPoints == 1)
+    {
+        QPoint one(ui->polyLine_XspinBox_1->text().toInt(), ui->polyLine_YspinBox_1->text().toInt());
+        polyLinePointArray[0] = one;
+    }
+    else if (polyLineTotalPoints == 2)
+    {
+        QPoint one(ui->polyLine_XspinBox_1->text().toInt(), ui->polyLine_YspinBox_1->text().toInt());
+        polyLinePointArray[0] = one;
+
+        QPoint two(ui->polyLine_XspinBox_2->text().toInt(), ui->polyLine_YspinBox_2->text().toInt());
+        polyLinePointArray[1] = two;
+    }
+    else if (polyLineTotalPoints == 3)
+    {
+        QPoint one(ui->polyLine_XspinBox_1->text().toInt(), ui->polyLine_YspinBox_1->text().toInt());
+        polyLinePointArray[0] = one;
+
+        QPoint two(ui->polyLine_XspinBox_2->text().toInt(), ui->polyLine_YspinBox_2->text().toInt());
+        polyLinePointArray[1] = two;
+
+        QPoint three(ui->polyLine_XspinBox_3->text().toInt(), ui->polyLine_YspinBox_3->text().toInt());
+        polyLinePointArray[2] = three;
+    }
+    else if (polyLineTotalPoints == 4)
+    {
+        QPoint one(ui->polyLine_XspinBox_1->text().toInt(), ui->polyLine_YspinBox_1->text().toInt());
+        polyLinePointArray[0] = one;
+
+        QPoint two(ui->polyLine_XspinBox_2->text().toInt(), ui->polyLine_YspinBox_2->text().toInt());
+        polyLinePointArray[1] = two;
+
+        QPoint three(ui->polyLine_XspinBox_3->text().toInt(), ui->polyLine_YspinBox_3->text().toInt());
+        polyLinePointArray[2] = three;
+
+        QPoint four(ui->polyLine_XspinBox_4->text().toInt(), ui->polyLine_YspinBox_4->text().toInt());
+        polyLinePointArray[3] = four;
+    }
+    else
+    {
+        QPoint one(ui->polyLine_XspinBox_1->text().toInt(), ui->polyLine_YspinBox_1->text().toInt());
+        polyLinePointArray[0] = one;
+
+        QPoint two(ui->polyLine_XspinBox_2->text().toInt(), ui->polyLine_YspinBox_2->text().toInt());
+        polyLinePointArray[1] = two;
+
+        QPoint three(ui->polyLine_XspinBox_3->text().toInt(), ui->polyLine_YspinBox_3->text().toInt());
+        polyLinePointArray[2] = three;
+
+        QPoint four(ui->polyLine_XspinBox_4->text().toInt(), ui->polyLine_YspinBox_4->text().toInt());
+        polyLinePointArray[3] = four;
+
+        QPoint five(ui->polyLine_XspinBox_5->text().toInt(), ui->polyLine_YspinBox_5->text().toInt());
+        polyLinePointArray[4] = five;
+    }
+
+
+    PolyLineColor = ui->CanvasObject->getColor(ui->polyLinePenColor_comboBox->currentText());
+    PolyLinePenStyle = ui->CanvasObject->getPenStyle(ui->polyLinePenStyle_comboBox->currentText());
+    PolyLinePenCapStyle = ui->CanvasObject->getPenCapStyle(ui->polyLinePenCapStyle_comboBox->currentText());
+    PolyLinePenJoinStyle = ui->CanvasObject->getPenJointStyle(ui->polyLinePenJoinStyle_comboBox->currentText());
+    PolyLineBrushColor = ui->CanvasObject->getColor(ui->polyLineBrushColor_comboBox->currentText());
+    PolyLineBrushStyle = ui->CanvasObject->getBrushStyle(ui->polyLineBrushStyle_comboBox->currentText());
+
+
+
+    Shapes *polyLine = new Polyline(PolyLineColor, PolyLinePenStyle, PolyLinePenCapStyle, PolyLinePenJoinStyle, PolyLineBrushColor, PolyLineBrushStyle, polyLineTotalPoints, polyLinePointArray);
+    //polygon->set_shape(Shapes::ShapeType::Polygon);
+    //polygon->set_width(1);
+    ui->CanvasObject->addShape(polyLine);
+
+    ui->CanvasObject->update();
+
+    ui->shapeMenu->addWidget(ui->logo_page);
+    ui->shapeMenu->setCurrentWidget(ui->logo_page);
 }
 
 void MainWindow::on_rectangleBuild_button_clicked()
@@ -377,4 +529,9 @@ void MainWindow::on_actionSort_By_Area_triggered()
 void MainWindow::on_actionSort_By_Perimeter_triggered()
 {
 
+}
+
+void MainWindow::on_saveButton_clicked()
+{
+    ui->CanvasObject->saveShape();
 }
