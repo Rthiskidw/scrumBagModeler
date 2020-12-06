@@ -510,24 +510,24 @@ void MainWindow::on_cancelErase_button_clicked()
 
 void MainWindow::on_actionSort_By_ID_triggered()
 {
-
     sortByID(shapeList);
-
-    QString hey = "hey";
-    stringstream text;
-
-
-    auto report = new reportWindow(hey,this);
-    report->open();
+    stringstream output = seriallizer(shapeList);
+    auto report = new reportWindow(QString::fromStdString(output.str()).replace(": ", ":\t"),this);
+    report->show();
 }
 
 void MainWindow::on_actionSort_By_Area_triggered()
 {
-
+    QString hey = "hey";
+    auto report = new reportWindow(hey,this);
+    report->show();
 }
 
 void MainWindow::on_actionSort_By_Perimeter_triggered()
 {
+    QString hey = "hey";
+    auto report = new reportWindow(hey,this);
+    report->show();
 
 }
 

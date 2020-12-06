@@ -185,6 +185,11 @@ public:
     */
     virtual void move(const int x_pos, const int y_pos, int index) = 0;
 
+    //! Finds shape with lesser ID
+    /*!
+      \param theOtherShape
+    */
+    bool operator<(const Shapes &theOtherShape) const;
 
 protected:
     QPainter& getQtPainter();
