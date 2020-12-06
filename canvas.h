@@ -32,6 +32,7 @@ public:
     int getSize();
     int getnumShapesRA();
 
+    void saveShape();
     void chopShape(int indexRemove);//Shape remove
     void moveShape(int indexMove, int coordMove, int x, int y); //Move shape
 

@@ -4204,7 +4204,7 @@
      <x>0</x>
      <y>0</y>
      <width>1277</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -4219,8 +4219,17 @@
     </property>
     <addaction name="actionContact_Us"/>
    </widget>
+   <widget class="QMenu" name="menuShape_Reports">
+    <property name="title">
+     <string>Shape Reports</string>
+    </property>
+    <addaction name="actionSort_By_ID"/>
+    <addaction name="actionSort_By_Area"/>
+    <addaction name="actionSort_By_Perimeter"/>
+   </widget>
    <addaction name="menuFile"/>
    <addaction name="menuHelp"/>
+   <addaction name="menuShape_Reports"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionLogin">
@@ -4231,6 +4240,21 @@
   <action name="actionContact_Us">
    <property name="text">
     <string>Contact Us</string>
+   </property>
+  </action>
+  <action name="actionSort_By_ID">
+   <property name="text">
+    <string>Sort By ID</string>
+   </property>
+  </action>
+  <action name="actionSort_By_Area">
+   <property name="text">
+    <string>Sort By Area</string>
+   </property>
+  </action>
+  <action name="actionSort_By_Perimeter">
+   <property name="text">
+    <string>Sort By Perimeter</string>
    </property>
   </action>
  </widget>

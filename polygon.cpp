@@ -77,15 +77,17 @@ int Polygon::getNumVertices() const
 int* Polygon::getDimensions()
 {
     int* dimensions = new int[numVerts * 2];
+    int q = 0;
+    int  p = 1;
 
-        dimensions[0] = vertsArray[0].x();
-        dimensions[1] = vertsArray[0].y();
-        dimensions[2] = vertsArray[1].x();
-        dimensions[3] = vertsArray[1].y();
-        dimensions[4] = vertsArray[2].x();
-        dimensions[5] = vertsArray[2].y();
-        dimensions[6] = vertsArray[3].x();
-        dimensions[7] = vertsArray[3].y();
+    for(int index = 0; index < (numVerts *2); index++)
+    {
+        dimensions[index + q] = vertsArray[index].x();
+        dimensions[index + p] = vertsArray[index].y();
+
+        ++q;
+        ++p;
+    }
 
     return dimensions;
 }
