@@ -21,6 +21,7 @@ SOURCES += \
     qt2stringconversion.cpp \
     qtconversions.cpp \
     rectangle.cpp \
+    reportwindow.cpp \
     shape.cpp \
     shapeparser.cpp \
     textBox.cpp \
@@ -37,6 +38,7 @@ HEADERS += \
     qt2stringconversion.h \
     qtconversions.h \
     rectangle.h \
+    reportwindow.h \
     shape.h \
     shapeparser.h \
     vector.h \
@@ -45,7 +47,8 @@ HEADERS += \
 FORMS += \
     contactus.ui \
     login.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    reportwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -3,6 +3,7 @@
 #include "login.h"
 #include "contactus.h"
 #include "shapeparser.h"
+#include "reportwindow.h"
 #include "canvas.h"
 //class canvas;
 
@@ -352,3 +353,20 @@ void MainWindow::on_cancelErase_button_clicked()
     on_cancelText_button_clicked();
 }
 
+
+void MainWindow::on_actionSort_By_ID_triggered()
+{
+    QString hey = "hey";
+    auto report = new reportWindow(hey,this);
+    report->open();
+}
+
+void MainWindow::on_actionSort_By_Area_triggered()
+{
+
+}
+
+void MainWindow::on_actionSort_By_Perimeter_triggered()
+{
+
+}
