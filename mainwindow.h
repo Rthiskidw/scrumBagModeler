@@ -22,13 +22,26 @@ QT_END_NAMESPACE
 
 class canvas;
 
-
+//!  Class MainWindow
+/*!
+  Class to construct the main window.
+*/
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
+
+    //! Default constructor.
+    /*!
+      \param parent pointer to a QWidget.
+    */
     MainWindow(QWidget *parent = nullptr);
+    
+    
+    //! Destructor.
+    /*!
+    */
     ~MainWindow();
 
 private slots:
