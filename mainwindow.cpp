@@ -203,7 +203,7 @@ void MainWindow::on_textBuild_button_clicked()
 
     color = ui->CanvasObject->getColor(ui->textColor_box->currentText());
     getText = ui->textInput_box->toPlainText();
-    //font.setStyle(fontStyleConversion(ui->textFontStyle_box->currentText()));
+    font.setStyle(ui->CanvasObject->getFontStyle(ui->textFontStyle_box->currentText()));
     //font = ui->CanvasObject->getFont(ui->textFontStyle_box->currentText());
     alignment = ui->CanvasObject->getFlag(ui->textAllignment_box->currentText());
 
