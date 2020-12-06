@@ -221,21 +221,9 @@
      <bool>true</bool>
     </property>
     <property name="currentIndex">
-<<<<<<< HEAD
-<<<<<<< HEAD
      <number>4</number>
-=======
-=======
->>>>>>> e7c4c2c8b5f2d347d7847f3f15286d41f779e261
-
      <number>2</number>
-
      <number>1</number>
-
-<<<<<<< HEAD
->>>>>>> 094ba74a4228952c9e95ee035cca31f8e677be76
-=======
->>>>>>> e7c4c2c8b5f2d347d7847f3f15286d41f779e261
     </property>
     <widget class="QWidget" name="logo_page">
      <widget class="QLabel" name="logo_label">

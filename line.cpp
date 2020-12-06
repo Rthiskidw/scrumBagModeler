@@ -56,27 +56,13 @@ void Line::set_points(const QPoint &set_point_begin, const QPoint &set_point_end
 
 void Line::move(const int x_pos, const int y_pos, int index)
 {
-<<<<<<< Updated upstream
+
     QPoint input(x_pos, y_pos);
     QPoint temp;
 
     temp = point_begin - input;
     point_begin = input;
     point_end = point_end - temp;
-=======
-    QPoint tempEnd(x_pos,y_pos);
-    this->set_points(tempX, tempEnd);
-    /* QPoint temp(x_pos, y_pos);
-    switch (index)
-    {
-        case 1: point_begin = temp;
-                break;
-        case 2: point_end = temp;
-                break;
-        default:
-                break;
-    }*/
->>>>>>> Stashed changes
 }
 
 // ******--> { DRAW } <--****** //
