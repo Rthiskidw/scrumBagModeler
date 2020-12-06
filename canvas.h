@@ -102,7 +102,7 @@ public:
     void chopShape(int indexRemove);//Shape remove
     
     
-     //! Getter Function to get the number of shapes on the render area.
+     //! Function to move a shape on the canvas.
     /*!
       \param indexMove
       \param coordMove
