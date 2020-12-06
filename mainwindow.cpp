@@ -7,7 +7,6 @@
 #include "canvas.h"
 #include "shapesorter.cpp"
 #include <sstream>
-//class canvas;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -512,7 +511,7 @@ void MainWindow::on_actionSort_By_ID_triggered()
 {
     std::sort(shapeList.begin(),shapeList.end());
     stringstream output = seriallizer(shapeList);
-    auto report = new reportWindow(QString::fromStdString(output.str()).replace(": ", ":\t"),this);
+    reportWindow* report = new reportWindow(QString::fromStdString(output.str()).replace(": ", ":\t"),this);
     report->show();
 }
 

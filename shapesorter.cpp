@@ -1,7 +1,5 @@
 #include "shapesorter.h"
 
-
-
 stringstream seriallizer(Shapes_Vector<Shapes*>& vShapeList)
 {
     stringstream outString;

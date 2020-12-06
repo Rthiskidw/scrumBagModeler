@@ -119,10 +119,10 @@ void Shapes::default_style()
 // ************************************************************************** //
 
 
-//bool Shapes::operator<(const Shapes &theOtherShape) const
-//{
-//    return(id < theOtherShape.get_id());
-//}
+bool Shapes::operator<(const Shapes &theOtherShape) const
+{
+    return(id < theOtherShape.get_id());
+}
 
 
 

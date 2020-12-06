@@ -24,8 +24,8 @@ void ContactUs::on_submitButton_clicked()
     if(file.open(QIODevice::Append))
     {
         QTextStream stream(&file);
-        stream << feedback << Qt::endl;
-        stream << "------------------------------------------------------------" << Qt::endl;
+        stream << feedback << "/n";
+        stream << "------------------------------------------------------------" << "/n";
     }
     file.close();
     hide();
