@@ -38,14 +38,17 @@ int* Polyline::getDimensions()
 {
     int* dimensions = new int[numberOfPoints * 2];
 
-    dimensions[0] = pointArray[0].x();
-    dimensions[1] = pointArray[0].y();
-    dimensions[2] = pointArray[1].x();
-    dimensions[3] = pointArray[1].y();
-    dimensions[4] = pointArray[2].x();
-    dimensions[5] = pointArray[2].y();
-    dimensions[6] = pointArray[3].x();
-    dimensions[7] = pointArray[3].y();
+    int q = 0;
+    int  p = 1;
+
+    for(int index = 0; index < (numberOfPoints * 2); index++)
+    {
+        dimensions[index + q] = pointArray[index].x();
+        dimensions[index + p] = pointArray[index].y();
+
+        ++q;
+        ++p;
+    }
 
     return dimensions;
 }

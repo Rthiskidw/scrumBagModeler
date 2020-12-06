@@ -370,3 +370,8 @@ void MainWindow::on_actionSort_By_Perimeter_triggered()
 {
 
 }
+
+void MainWindow::on_saveButton_clicked()
+{
+    ui->CanvasObject->saveShape();
+}

@@ -1,4 +1,5 @@
 #include "canvas.h"
+#include "shapeparser.h"
 #include <QDebug>
 #include <iostream>
 #include <QString>
@@ -25,6 +26,12 @@ void canvas::paintEvent(QPaintEvent *)
     {
         shape->draw(this);
     }
+}
+
+void canvas::saveShape()
+{
+    Shape_Parser *parser = new Shape_Parser;
+    parser->seriallizer(currentShapes);
 }
 
 void canvas::gettingVectorFromMain(const Shapes_Vector<Shapes*> shapesVector)

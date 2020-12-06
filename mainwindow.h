@@ -101,6 +101,8 @@ private slots:
 
     void on_actionSort_By_Perimeter_triggered();
 
+    void on_saveButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     canvas *Canvas;
