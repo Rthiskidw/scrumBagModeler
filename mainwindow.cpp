@@ -198,7 +198,45 @@ void MainWindow::on_textBuild_button_clicked()
 
 void MainWindow::on_polygonBuild_button_clicked()
 {
+    GlobalColor PolygonColor;
+    PenStyle PolygonPenStyle;
+    PenCapStyle PolygonPenCapStyle;
+    PenJoinStyle PolygonPenJoinStyle;
+    GlobalColor PolygonBrushColor;
+    BrushStyle PolygonBrushStyle;
+    int totalPoints = 4;
+    QPoint pointArray[4];
 
+    QPoint one(ui->polygonX1_box->text().toInt(), ui->polygonY1_box->text().toInt());
+    pointArray[0] = one;
+
+    QPoint two(ui->polygonX2_box->text().toInt(), ui->polygonY2_box->text().toInt());
+    pointArray[1] = two;
+
+    QPoint three(ui->polygonX3_box->text().toInt(), ui->polygonY3_box->text().toInt());
+    pointArray[2] = three;
+
+    QPoint four(ui->polygonX4_box->text().toInt(), ui->polygonY4_box->text().toInt());
+    pointArray[3] = four;
+
+    QPoint* arrayPtr = &pointArray[0];
+
+    PolygonColor = ui->CanvasObject->getColor(ui->polygonPenColor_box->currentText());
+    PolygonPenStyle = ui->CanvasObject->getPenStyle(ui->polygonPenStyle_box->currentText());
+    PolygonPenCapStyle = ui->CanvasObject->getPenCapStyle(ui->polygonPenCapStyle_box->currentText());
+    PolygonPenJoinStyle = ui->CanvasObject->getPenJointStyle(ui->polygonPenJoinStyle_box->currentText());
+    PolygonBrushColor = ui->CanvasObject->getColor(ui->polyBrushColor_comboBox->currentText());
+    PolygonBrushStyle = ui->CanvasObject->getBrushStyle(ui->polyBrushStyle_comboBox->currentText());
+
+
+    Shapes *polygon = new Polygon(PolygonColor, PolygonPenStyle, PolygonPenCapStyle, PolygonPenJoinStyle, PolygonBrushColor, PolygonBrushStyle, totalPoints, arrayPtr);
+    polygon->set_shape(Shapes::ShapeType::Polygon);
+    ui->CanvasObject->addShape(polygon);
+
+    ui->CanvasObject->update();
+
+    ui->shapeMenu->addWidget(ui->logo_page);
+    ui->shapeMenu->setCurrentWidget(ui->logo_page);
 }
 
 void MainWindow::on_squareBuild_button_clicked()

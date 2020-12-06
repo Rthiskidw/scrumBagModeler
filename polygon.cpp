@@ -21,6 +21,7 @@ Polygon::Polygon(Qt::GlobalColor setPenColor, Qt::PenStyle setPenStyle, Qt::PenC
 // ******--> { DRAW } <--****** //
 void Polygon::draw(QPaintDevice *device)
 {
+
     qpainter.begin(device);
     qpainter.setPen(get_pen());
     qpainter.setBrush(get_brush());
