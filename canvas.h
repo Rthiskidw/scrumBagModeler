@@ -40,6 +40,7 @@ public:
    
     /*
     
+    
     //! Function to 
     /*!
       \return QSize(1000,500)
@@ -52,6 +53,7 @@ public:
       \return QSize(1000,500)
     */    
     QSize minimumSizeHint() const override;
+    
     
     */
     
