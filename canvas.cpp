@@ -161,11 +161,11 @@ Qt::PenJoinStyle canvas::getPenJointStyle(QString penJointStr)
 
 Qt::BrushStyle canvas::getBrushStyle(QString brushStr)
 {
-    if(brushStr == "SolidPattern")
+    if(brushStr == "Solid")
         return Qt::SolidPattern;
-    else if(brushStr == "HorPattern")
+    else if(brushStr == "Horizontal")
         return Qt::HorPattern;
-    else if(brushStr == "VerPattern")
+    else if(brushStr == "Vertical")
         return Qt::VerPattern;
     else
         return Qt::NoBrush;
