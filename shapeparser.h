@@ -65,7 +65,7 @@ public:
     /*! Updates the textfile with any new changes to the shapes
      * \param vShapeList the vector of that contains all the shapes
      */
-    void seriallizer(Shapes_Vector<Shapes*>& vShapeList);
+    void seriallizer(Shapes_Vector<Shapes*>& vShapeList, int numShapes);
 
 private:
     int dimensions[10];

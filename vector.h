@@ -103,7 +103,7 @@ public:
     void resize(int newsize)
     {
         reserve(newsize);
-        for (int i = size_v; i < newsize; ++i)
+        for (int i = size_v; i < newsize; i++)
         {
             elem[i] = 0; //! initialize new elements
         }

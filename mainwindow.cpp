@@ -153,6 +153,7 @@ void MainWindow::on_lineBuild_button_clicked()
     QPoint P2(ui->line_x2_box->text().toInt(), ui->line_y2_box->text().toInt());
 
     Shapes *line = new Line(lineColor, linePenStyle, linePenCapStyle, linePenJoinStyle, lineBrushColor, lineBrushStyle, P1, P2);
+    line->set_shape(Shapes::Line);
 
     ui->CanvasObject->addShape(line);
 
@@ -185,6 +186,7 @@ void MainWindow::on_circleBuild_button_clicked()
     double H = ui->circleHeight_box->text().toInt();
 
     Shapes *circle = new Ellipse(color, penStyle, penCapStyle, penJoinStyle, brushColor, brushStyle, X, Y, W, H);
+    circle->set_shape(Shapes::Ellipse);
 
     ui->CanvasObject->addShape(circle);
 
@@ -218,10 +220,7 @@ void MainWindow::on_textBuild_button_clicked()
     width = ui->textBoxWidth_box->text().toInt();
 
     Shapes *text = new Text(color, getText, font, coordinate, alignment, width, height);
-
-    ui->CanvasObject->addShape(text);
-
-    ui->CanvasObject->update();
+    text ->set_shape(Shapes::Text);
 
     ui->CanvasObject->addShape(text);
 
@@ -263,7 +262,7 @@ void MainWindow::on_polygonBuild_button_clicked()
 
     Shapes *polygon = new Polygon(PolygonColor, PolygonPenStyle, PolygonPenCapStyle, PolygonPenJoinStyle, PolygonBrushColor, PolygonBrushStyle, totalPoints, pointArray);
     polygon->set_shape(Shapes::ShapeType::Polygon);
-    polygon->set_width(1);
+//    polygon->set_width(1);
     ui->CanvasObject->addShape(polygon);
 
     ui->CanvasObject->update();
@@ -298,6 +297,7 @@ void MainWindow::on_squareBuild_button_clicked()
     SquareY = ui->yCoordinate_spinBox_9->text().toInt();
 
     Shapes *square = new Rectangle(SquareColor, SquarePenStyle, SquarePenCapStyle, SquarePenJoinStyle, SquareBrushColor, SquareBrushStyle, SquareX, SquareY, SquareWidth, SquareLength);
+    square ->set_shape(Shapes::Rectangle);
 
     ui->CanvasObject->addShape(square);
 
@@ -386,7 +386,7 @@ void MainWindow::on_polylineBuild_button_clicked()
 
 
     Shapes *polyLine = new Polyline(PolyLineColor, PolyLinePenStyle, PolyLinePenCapStyle, PolyLinePenJoinStyle, PolyLineBrushColor, PolyLineBrushStyle, polyLineTotalPoints, polyLinePointArray);
-    //polygon->set_shape(Shapes::ShapeType::Polygon);
+    polyLine->set_shape(Shapes::ShapeType::Polygon);
     //polygon->set_width(1);
     ui->CanvasObject->addShape(polyLine);
 
@@ -422,6 +422,7 @@ void MainWindow::on_rectangleBuild_button_clicked()
     rectY = ui->yCoordinate_spinBox_2->text().toInt();
 
     Shapes *rect = new Rectangle(RectColor, RectPenStyle, RectPenCapStyle, RectPenJoinStyle, RectBrushColor, RectBrushStyle, rectX, rectY, rectWidth, rectLength);
+    rect->set_shape(Shapes::Rectangle);
 
     ui->CanvasObject->addShape(rect);
 
@@ -453,6 +454,7 @@ void MainWindow::on_ellipseBuild_button_clicked()
     double H = ui->ellipseHeight_box->text().toInt();
 
     Shapes *ellipse = new Ellipse(color, penStyle, penCapStyle, penJoinStyle, brushColor, brushStyle, X, Y, W, H);
+    ellipse->set_shape(Shapes::Ellipse);
 
     ui->CanvasObject->addShape(ellipse);
 

@@ -32,11 +32,13 @@ void canvas::paintEvent(QPaintEvent *)
 void canvas::saveShape()
 {
     Shape_Parser *parser = new Shape_Parser;
-    parser->seriallizer(currentShapes);
+    parser->seriallizer(currentShapes, numShapesRA);
+    delete parser;
 }
 
 void canvas::gettingVectorFromMain(const Shapes_Vector<Shapes*> shapesVector)
 {
+    numShapesRA = shapesVector.size();
     currentShapes = shapesVector;
 }
 

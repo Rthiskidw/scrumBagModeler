@@ -147,7 +147,7 @@ void Shape_Parser::parseShape(Shapes_Vector<Shapes*>& vShapeList)
     ifstream dataFile;
     dataFile.open("shapes.txt");
 
-    while(dataFile && index < 8)
+    while(dataFile.good())
     {
         tempId = stoi(getStringFromFile(dataFile));
 
@@ -228,27 +228,27 @@ void Shape_Parser::parseShape(Shapes_Vector<Shapes*>& vShapeList)
     dataFile.close();
 }
 
-void Shape_Parser::seriallizer(Shapes_Vector<Shapes*>& vShapeList)
+void Shape_Parser::seriallizer(Shapes_Vector<Shapes*>& vShapeList, int numShapes)
 {
 
     ofstream outFile;
     outFile.open("shapes.txt");
 
-    for ( Shapes* shape : vShapeList)
+    for (int index = 0; index < numShapes; index++)
     {
-        QPen tempPen = shape->get_pen();
+        QPen tempPen = vShapeList[index]->get_pen();
         QColor penColor = tempPen.color();
         QString colorCode = penColor.name();
 
-        outFile << "ShapeId: " + to_string(shape->get_id());
+        outFile << "ShapeId: " + to_string(vShapeList[index]->get_id());
 
-        if(shape-> get_shape() == Shapes::ShapeType::Text)
+        if(vShapeList[index]-> get_shape() == Shapes::ShapeType::Text)
         {
 
             qInfo() << "Testing Pen Color" << colorCode;
 
-            int *dimensions = shape->getDimensions();
-            Text *tempText = dynamic_cast<Text *>(shape);
+            int *dimensions = vShapeList[index]->getDimensions();
+            Text *tempText = dynamic_cast<Text *>(vShapeList[index]);
             QFont font = tempText->get_text_font();
             outFile << "\nShapeType: Text";
             outFile << "\nShapeDimensions: ";
@@ -260,21 +260,28 @@ void Shape_Parser::seriallizer(Shapes_Vector<Shapes*>& vShapeList)
                     outFile << to_string(dimensions[index]);
             }
             outFile << "\nTextString: " << tempText->get_text_string().toStdString()
-                    << "\nTextColor : " << penColorString(colorCode)
+                    << "\nTextColor: " << penColorString(colorCode)
                     << "\nTextAlignment: " << alignmentStringConversion(tempText->get_alignment_flag())
                     << "\nTextPointSize: " << to_string(font.pointSize())
                     << "\nTextFontFamily: " << font.family().toStdString()
                     << "\nTextFontStyle: " << fontStyleStringConversion(font.style())
-                    << "\nTextFontWeight: " << fontWeightStringConversion(font.weight())
-                    << "\n\n";
+                    << "\nTextFontWeight: " << fontWeightStringConversion(font.weight());
+            if(index == numShapes -1)
+            {
+                outFile << "\n";
+            }
+            else
+            {
+                outFile << "\n\n";
+            }
 
         }
-        else if(shape-> get_shape() == Shapes::ShapeType::Line ||
-                shape-> get_shape() == Shapes::ShapeType::Polyline)
+        else if(vShapeList[index]-> get_shape() == Shapes::ShapeType::Line ||
+                vShapeList[index]-> get_shape() == Shapes::ShapeType::Polyline)
         {
-            int *dimensions = shape->getDimensions();
+            int *dimensions = vShapeList[index]->getDimensions();
 
-            if(shape-> get_shape() == Shapes::ShapeType::Line)
+            if(vShapeList[index]-> get_shape() == Shapes::ShapeType::Line)
             {
                 outFile <<"\nShapeType: Line";
                 outFile <<"\nShapeDimensions: " + to_string(dimensions[0]) + ", " + to_string(dimensions[1]) + ", " + to_string(dimensions[2]) + ", " + to_string(dimensions[3]);
@@ -295,18 +302,25 @@ void Shape_Parser::seriallizer(Shapes_Vector<Shapes*>& vShapeList)
                     <<"\nPenWidth: " << to_string(tempPen.width())
                     <<"\nPenStyle: " << penStyleString(tempPen.style())
                     <<"\nPenCapStyle: " << penCapStyleString(tempPen.capStyle())
-                    <<"\nPenJoinStyle: " << penJoinStyleString(tempPen.joinStyle())
-                    <<"\n\n";
+                    <<"\nPenJoinStyle: " << penJoinStyleString(tempPen.joinStyle());
+                      if(index == numShapes -1)
+                      {
+                          outFile << "\n";
+                      }
+                      else
+                      {
+                          outFile << "\n\n";
+                      }
         }
         else
         {
-            int *dimensions = shape->getDimensions();
-            QBrush brush = shape->get_brush();
+            int *dimensions = vShapeList[index]->getDimensions();
+            QBrush brush = vShapeList[index]->get_brush();
             QColor brushColor = brush.color();
             QString brushColorCode = brushColor.name();
             qInfo() << "TESTING BRUSH COLOR NAME " << brushColorCode << "\n";
 
-            if(shape-> get_shape() == Shapes::ShapeType::Polygon)
+            if(vShapeList[index]-> get_shape() == Shapes::ShapeType::Polygon)
             {
                 outFile<<"\nShapeType: Polygon";
                 outFile << "\nShapeDimensions: ";
@@ -318,7 +332,7 @@ void Shape_Parser::seriallizer(Shapes_Vector<Shapes*>& vShapeList)
                         outFile << to_string(dimensions[index]);
                 }
             }
-            else if(shape-> get_shape() == Shapes::ShapeType::Rectangle)
+            else if(vShapeList[index]-> get_shape() == Shapes::ShapeType::Rectangle)
             {
                 if( dimensions[2] == dimensions[3])
                 {
@@ -345,7 +359,7 @@ void Shape_Parser::seriallizer(Shapes_Vector<Shapes*>& vShapeList)
                     }
                 }
             }
-            else if(shape-> get_shape() == Shapes::ShapeType::Ellipse)
+            else if(vShapeList[index]-> get_shape() == Shapes::ShapeType::Ellipse)
             {
                 if( dimensions[2] == dimensions[3])
                 {
@@ -375,11 +389,20 @@ void Shape_Parser::seriallizer(Shapes_Vector<Shapes*>& vShapeList)
             outFile <<"\nPenColor: " << penColorString(colorCode)
                     <<"\nPenWidth: " << to_string(tempPen.width())
                     <<"\nPenStyle: " << penStyleString(tempPen.style())
-                    <<"\nPenCapSyle: " << penCapStyleString(tempPen.capStyle())
+                    <<"\nPenCapStyle: " << penCapStyleString(tempPen.capStyle())
                     <<"\nPenJoinStyle: " << penJoinStyleString(tempPen.joinStyle())
                     <<"\nBrushColor: " << penColorString(brushColorCode)
-                    <<"\nBrushStyle: " << brushStyleStringConversion(brush.style())
-                    <<"\n\n";
+                    <<"\nBrushStyle: " << brushStyleStringConversion(brush.style());
+                      if(index == numShapes -1)
+                      {
+                          outFile << "\n";
+                      }
+                      else
+                      {
+                          outFile << "\n\n";
+                      }
         }
+
     }
+    outFile.close();
 }

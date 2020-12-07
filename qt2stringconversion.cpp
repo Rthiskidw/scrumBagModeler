@@ -52,7 +52,7 @@ string penStyleString(Qt::PenStyle style)
         break;
     case Qt::DashDotLine    : tempStyle = "DashDotLine";
         break;
-    case Qt::DashDotDotLine : tempStyle = "DashDotDotLIne";
+    case Qt::DashDotDotLine : tempStyle = "DashDotDotLine";
         break;
     }
 
