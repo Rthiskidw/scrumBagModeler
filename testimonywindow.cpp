@@ -58,7 +58,3 @@ void TestimonyWindow::on_cancelButton_clicked()
 
 
 //}
-
-
-
-

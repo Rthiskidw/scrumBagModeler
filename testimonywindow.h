@@ -26,4 +26,3 @@ private:
 };
 
 #endif // TESTIMONYWINDOW_H
-
