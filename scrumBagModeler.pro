@@ -42,6 +42,7 @@ HEADERS += \
     reportwindow.h \
     shape.h \
     shapeparser.h \
+    shapesorter.h \
     vector.h \
     textBox.h \
 

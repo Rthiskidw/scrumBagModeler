@@ -108,6 +108,11 @@ public:
     int get_text_box_height() const;
 
 
+
+    //! Getter function to get the dimensions of the Text Object.
+    /*!
+      \return dimensions
+    */
     int* getDimensions() override;
 
 

@@ -82,6 +82,10 @@ public:
     double get_height() const;
 
 
+    //! Getter function to get the dimensions of the Ellipse.
+    /*!
+      \return dimensions
+    */
     int* getDimensions() override;
 
 

@@ -62,6 +62,11 @@ public:
     int get_points() const;
 
 
+
+    //! Getter function to get the dimensions of the Polyline.
+    /*!
+      \return dimensions
+    */
     int* getDimensions() override;
 
 

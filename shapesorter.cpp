@@ -1,28 +1,4 @@
-#include "vector.h"
-#include "shape.h"
-#include "shapeparser.h"
-#include "shape.h"
-#include "line.h"
-#include "rectangle.h"
-#include "polyline.h"
-#include "polygon.h"
-#include "ellipses.h"
-#include "textBox.h"
-#include <vector>
-#include <sstream>
-
-
-
-void sortByID(Shapes_Vector<Shapes*>& vectorOfShapes)
-{
-    for (int i = 0; i < vectorOfShapes.size(); ++i)
-    {
-        if (!(*vectorOfShapes[i] < *vectorOfShapes[i+1]))
-        {
-            std::swap(vectorOfShapes[i],vectorOfShapes[i+1]);
-        }
-    }
-}
+#include "shapesorter.h"
 
 stringstream seriallizer(Shapes_Vector<Shapes*>& vShapeList)
 {
