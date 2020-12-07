@@ -74,8 +74,6 @@ int canvas::getSize()
 
 
 /*
-
-
 QSize canvas::sizeHint() const
 {
     return QSize(1000,500);
@@ -85,8 +83,6 @@ QSize canvas::minimumSizeHint() const
 {
     return QSize(1000,500);
 }
-
-
 */
 
 int canvas::getnumShapesRA()

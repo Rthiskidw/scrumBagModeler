@@ -45,13 +45,13 @@ public:
     /*!
       \return QSize(1000,500)
     */
-    QSize sizeHint() const override;
+   //QSize sizeHint() const override;
     
     
     //! Function to 
     /*!
       \return QSize(1000,500)
-    */    
+    /*
     QSize minimumSizeHint() const override;
     
     
