@@ -509,10 +509,10 @@ void MainWindow::on_cancelErase_button_clicked()
 
 void MainWindow::on_actionSort_By_ID_triggered()
 {
-    std::sort(shapeList.begin(),shapeList.end());
-    stringstream output = seriallizer(shapeList);
-    reportWindow* report = new reportWindow(QString::fromStdString(output.str()).replace(": ", ":\t"),this);
-    report->show();
+    //std::sort(shapeList.begin(),shapeList.end());
+    //stringstream output = seriallizer(shapeList);
+    //reportWindow* report = new reportWindow(QString::fromStdString(output.str()).replace(": ", ":\t"),this);
+    //report->show();
 }
 
 void MainWindow::on_actionSort_By_Area_triggered()
