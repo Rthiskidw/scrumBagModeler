@@ -63,7 +63,7 @@ public:
 
 
 
-    //! Getter function to get the dimensions of the Ellipse.
+    //! Getter function to get the dimensions of the Polyline.
     /*!
       \return dimensions
     */
