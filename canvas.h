@@ -42,7 +42,7 @@ public:
     //! Function to set a shapes vector from main to currentShapes.
     /*!
       \param shapesVector
-    *\
+    */
     void gettingVectorFromMain(const Shapes_Vector<Shapes*> shapesVector);
     
     
@@ -50,34 +50,34 @@ public:
     //! Function to paint an event on the canvas.
     /*!
       \param pointer
-    *\
+    */
     void paintEvent(QPaintEvent *) override;
     
     
     //! Function to push a new shape to the currentShapes vector.
     /*!
       \param shapeIn
-    *\
+    */
     void addShape(Shapes* shapeIn);
     
        
     //! Getter Function to get the size of the shapes vector.
     /*!
       \return currentShapes.size()
-    *\
+    */
     int getSize();
     
     
     //! Getter Function to get the number of shapes on the render area.
     /*!
       \return numShapesRA
-    *\
+    */
     int getnumShapesRA();
     
 
     //! Saves a shape using the shape parser and serializer.
     /*
-    *\
+    */
     void saveShape();
     
     
