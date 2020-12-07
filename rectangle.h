@@ -103,6 +103,12 @@ public:
     */
     QPoint& get_point();
 
+
+
+    //! Getter function to get the dimensions of the Rectangle.
+    /*!
+      \return dimensions
+    */
     int* getDimensions() override;
 
 
