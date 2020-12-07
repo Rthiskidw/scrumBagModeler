@@ -24,6 +24,7 @@ SOURCES += \
     reportwindow.cpp \
     shape.cpp \
     shapeparser.cpp \
+    testimonywindow.cpp \
     textBox.cpp \
 
 HEADERS += \
@@ -41,6 +42,7 @@ HEADERS += \
     reportwindow.h \
     shape.h \
     shapeparser.h \
+    testimonywindow.h \
     vector.h \
     textBox.h \
 
@@ -48,7 +50,8 @@ FORMS += \
     contactus.ui \
     login.ui \
     mainwindow.ui \
-    reportwindow.ui
+    reportwindow.ui \
+    testimonywindow.ui \
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -56,7 +59,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
-    shapes.txt
+    shapes.txt \
+    testimonials.txt \
 
 RESOURCES += \
     Resources.qrc

@@ -535,3 +535,9 @@ void MainWindow::on_saveButton_clicked()
 {
     ui->CanvasObject->saveShape();
 }
+
+void MainWindow::on_actionView_Add_Testimonials_triggered()
+{
+    auto* testimonyWindow = new TestimonyWindow(this);
+    testimonyWindow->show();
+}

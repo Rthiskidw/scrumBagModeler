@@ -3,6 +3,7 @@
 #include <QDebug>
 #include <iostream>
 #include <QString>
+#include "testimonywindow.h"
 using namespace std;
 
 canvas::canvas(QWidget *parent)

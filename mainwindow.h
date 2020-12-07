@@ -14,6 +14,7 @@
 #include "ellipses.h"
 #include "textBox.h"
 #include "canvas.h"
+
 using namespace Qt;
 
 QT_BEGIN_NAMESPACE
@@ -278,6 +279,8 @@ private slots:
     /*!
     */
     void on_saveButton_clicked();
+
+    void on_actionView_Add_Testimonials_triggered();
 
 private:
     Ui::MainWindow *ui;
