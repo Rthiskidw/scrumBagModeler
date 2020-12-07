@@ -38,6 +38,7 @@ public:
     */
     void setShapeVector(const Shapes_Vector<Shapes*> v);
    
+    /*
     
     //! Function to 
     /*!
@@ -51,6 +52,8 @@ public:
       \return QSize(1000,500)
     */    
     QSize minimumSizeHint() const override;
+    
+    */
     
     
     //! Function to set a shapes vector from main to currentShapes.
