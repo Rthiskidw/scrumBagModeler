@@ -5,7 +5,9 @@
 #include "shapeparser.h"
 #include "reportwindow.h"
 #include "canvas.h"
+
 //#include "shapesorter.cpp"
+
 #include <sstream>
 
 MainWindow::MainWindow(QWidget *parent)
