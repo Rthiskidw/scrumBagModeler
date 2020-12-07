@@ -114,6 +114,10 @@ public:
     QPainter& getQtpainter();
 
 
+    //! Getter function to get the dimensions of the Shape.
+    /*!
+      \return dimensions
+    */
     virtual int* getDimensions() = 0;
 
     //! Setter Function to set ShapeType
