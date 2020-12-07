@@ -25,6 +25,7 @@ SOURCES += \
     shape.cpp \
     shapeparser.cpp \
     shapesorter.cpp \
+    testimonywindow.cpp \
     textBox.cpp \
 
 HEADERS += \
@@ -43,14 +44,17 @@ HEADERS += \
     shape.h \
     shapeparser.h \
     shapesorter.h \
+    testimonywindow.h \
     vector.h \
     textBox.h \
 
 FORMS += \
+    C:/Users/Alan Vuong/Desktop/testimonywindow.ui \
     contactus.ui \
     login.ui \
     mainwindow.ui \
-    reportwindow.ui
+    reportwindow.ui \
+    testimonywindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
