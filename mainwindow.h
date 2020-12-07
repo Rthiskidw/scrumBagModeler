@@ -47,6 +47,7 @@ public:
 private slots:
     void on_actionLogin_triggered();
     void on_actionContact_Us_triggered();
+    void on_actionView_Add_Testimonials_triggered();
 
     void on_line_button_clicked();
 

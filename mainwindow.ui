@@ -221,8 +221,6 @@
      <bool>true</bool>
     </property>
     <property name="currentIndex">
-     <number>4</number>
-     <number>2</number>
      <number>1</number>
     </property>
     <widget class="QWidget" name="logo_page">
@@ -4290,6 +4288,7 @@
      <string>Help</string>
     </property>
     <addaction name="actionContact_Us"/>
+    <addaction name="actionView_Add_Testimonials"/>
    </widget>
    <widget class="QMenu" name="menuShape_Reports">
     <property name="title">
@@ -4327,6 +4326,11 @@
   <action name="actionSort_By_Perimeter">
    <property name="text">
     <string>Sort By Perimeter</string>
+   </property>
+  </action>
+  <action name="actionView_Add_Testimonials">
+   <property name="text">
+    <string>View/Add Testimonials</string>
    </property>
   </action>
  </widget>

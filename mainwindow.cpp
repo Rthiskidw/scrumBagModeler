@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include "login.h"
 #include "contactus.h"
+#include "testimonywindow.h"
 #include "shapeparser.h"
 #include "reportwindow.h"
 #include "canvas.h"
@@ -43,7 +44,11 @@ void MainWindow::on_actionContact_Us_triggered()
     contactUs->show();
 }
 
-
+void MainWindow::on_actionView_Add_Testimonials_triggered()
+{
+    auto* testimonyWindow = new TestimonyWindow(this);
+    testimonyWindow->show();
+}
 
 void MainWindow::on_line_button_clicked()
 {
