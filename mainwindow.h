@@ -55,7 +55,6 @@ private slots:
     /*!
     */
     void on_actionContact_Us_triggered();
-    void on_actionView_Add_Testimonials_triggered();
 
 
 

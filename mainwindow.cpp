@@ -45,12 +45,6 @@ void MainWindow::on_actionContact_Us_triggered()
     contactUs->show();
 }
 
-void MainWindow::on_actionView_Add_Testimonials_triggered()
-{
-    auto* testimonyWindow = new TestimonyWindow(this);
-    testimonyWindow->show();
-}
-
 void MainWindow::on_line_button_clicked()
 {
     ui->shapeMenu->addWidget(ui->addLine_page);
