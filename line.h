@@ -73,6 +73,12 @@ public:
     */
     QPoint& get_point_end();
 
+
+
+    //! Getter function to get the dimensions of the Line.
+    /*!
+      \return dimensions
+    */
     int* getDimensions() override;
 
 
