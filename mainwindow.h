@@ -57,8 +57,10 @@ private slots:
     */
     void on_actionContact_Us_triggered();
 
-
-
+    //! Function to show the View/Add Testimonies screen.
+    /*!
+    */
+    void on_actionView_Add_Testimonials_triggered();
 
 
     //! Function to create a line widget for the interface.
@@ -279,8 +281,6 @@ private slots:
     /*!
     */
     void on_saveButton_clicked();
-
-    void on_actionView_Add_Testimonials_triggered();
 
 private:
     Ui::MainWindow *ui;

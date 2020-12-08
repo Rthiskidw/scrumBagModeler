@@ -1,5 +1,6 @@
 #include "testimonywindow.h"
 #include "ui_testimonywindow.h"
+#include "viewtestimonies.h"
 
 #include <QMessageBox>
 #include <QPixmap>
@@ -37,24 +38,23 @@ void TestimonyWindow::on_cancelButton_clicked()
     hide();
 }
 
-//void TestimonyWindow::on_viewTestimonies_clicked()
-//{
-//    QLabel *textLabel = new QLabel;
-//    QString fileName = "testimonials.txt";
-//    QFile file(fileName);
-//    //if(file.open(QIODevice::ReadOnly))
+void TestimonyWindow::on_view_testimonies_clicked()
+{
+        QString fileName = "testimonials.txt";
+        QFile file(fileName);
+        QString line;
 
-//    QString line;
-//    QTextStream textIn(&fileName);
-//    while(!textIn.atEnd())
-//    {
-//        line = textIn.readLine();
-//        line.append(textIn.readLine());
-//    }
-//    textLabel->setText(line);
-//    file.close();
+        if(file.open(QIODevice::ReadOnly | QIODevice::Text))
+        {
+            QTextStream stream(&file);
+            QTextStream ReadFile(&file);
+            while(!stream.atEnd())
+            {
+                line.append(stream.readLine() + "\n");
+            }
+        file.close();
+    }
 
-//    cout << line;
-
-
-//}
+    auto* viewTestimonies = new ViewTestimonies(line,this);
+    viewTestimonies->show();
+}

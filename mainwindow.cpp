@@ -23,8 +23,6 @@ MainWindow::MainWindow(QWidget *parent)
 
    ui->CanvasObject->gettingVectorFromMain(shapeList); //giving canvas shape vector
    ui->shapeMenu->setCurrentWidget(ui->logo_page);
-
-    //Canvas = new canvas;
 }
 
 MainWindow::~MainWindow()
@@ -43,6 +41,12 @@ void MainWindow::on_actionContact_Us_triggered()
 {
     auto* contactUs = new ContactUs(this);
     contactUs->show();
+}
+
+void MainWindow::on_actionView_Add_Testimonials_triggered()
+{
+    auto* testimonyWindow = new TestimonyWindow(this);
+    testimonyWindow->show();
 }
 
 void MainWindow::on_line_button_clicked()
@@ -538,8 +542,3 @@ void MainWindow::on_saveButton_clicked()
     ui->CanvasObject->saveShape();
 }
 
-void MainWindow::on_actionView_Add_Testimonials_triggered()
-{
-    auto* testimonyWindow = new TestimonyWindow(this);
-    testimonyWindow->show();
-}
